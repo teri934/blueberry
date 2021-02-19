@@ -1262,7 +1262,9 @@ int layout notification_template_part_time 0x7f0b0037
 int layout select_dialog_item_material 0x7f0b0038
 int layout select_dialog_multichoice_material 0x7f0b0039
 int layout select_dialog_singlechoice_material 0x7f0b003a
-int layout support_simple_spinner_dropdown_item 0x7f0b003b
+int layout sound_recordings 0x7f0b003b
+int layout sound_recordings_menu 0x7f0b003c
+int layout support_simple_spinner_dropdown_item 0x7f0b003d
 int menu activity_main_drawer 0x7f0c0000
 int menu menu_main 0x7f0c0001
 int mipmap ic_launcher 0x7f0d0000
