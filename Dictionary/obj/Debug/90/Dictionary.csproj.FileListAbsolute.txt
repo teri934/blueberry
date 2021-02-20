@@ -1,7 +1,14 @@
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Resources\Resource.designer.cs
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.dll
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.pdb
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.apk
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.aab
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.aab
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk.idsig
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\build.props
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\adb.props
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res.flag
@@ -14,13 +21,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\29\jl\fi
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\30\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\31\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.dll
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.pdb
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.apk
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.aab
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.aab
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk.idsig
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.cs.flag
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csproj.CoreCompileInputs.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.dll
@@ -63,7 +64,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\mipmap-
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values-sk\strings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values-cs\strings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_recordings.xml
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\uploadflags.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Dictionary.dll
@@ -182,6 +182,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\MainFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\RecordingsFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
@@ -265,3 +266,4 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_Conv
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache

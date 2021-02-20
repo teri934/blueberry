@@ -23,8 +23,8 @@ namespace Dictionary
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            //fab.Click += FabOnClick;
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
@@ -36,29 +36,17 @@ namespace Dictionary
 
 
 
-
-            Button recordings = FindViewById<Button>(Resource.Id.recordings_button);
-			recordings.Click += Recordings_Click;
-
-
-
-
-            //b.Click += delegate
-            //{
-            //    Toast.MakeText(Application.Context, "Mám rád chleba.", ToastLength.Long).Show();
-            //};
-
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            ft.Replace(Resource.Id.place_holder, new Fragments.MainFragment());
+            ft.Commit();
         }
 
-		private void Recordings_Click(object sender, EventArgs e)
-		{
-			FragmentTransaction ft = FragmentManager.BeginTransaction();
-			ft.Replace(Resource.Id.place_holder, new Fragments.RecordingsFragment());
-			ft.AddToBackStack(null);
-			ft.Commit();
-		}
+        //b.Click += delegate
+        //{
+        //    Toast.MakeText(Application.Context, "Mám rád chleba.", ToastLength.Long).Show();
+        //};
 
-		public override void OnBackPressed()
+        public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             if(drawer.IsDrawerOpen(GravityCompat.Start))
