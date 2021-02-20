@@ -17,8 +17,15 @@ namespace Fragments
 	{
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
-			// Defines the xml file for the fragment
-			return inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
+			LinearLayout list = view.FindViewById<LinearLayout>(Dictionary.Resource.Id.sounds_list);
+
+			for (int i = 0; i < 5; i++)
+			{
+				list.AddView(new Button(Application.Context));
+			}
+
+			return view;
 		}
 
 	}
@@ -40,7 +47,8 @@ namespace Fragments
 			ft.AddToBackStack(null);
 			ft.Commit();
 
-			MediaPlayer player;
+			MediaPlayer player = MediaPlayer.Create(Application.Context, Dictionary.Resource.Raw.banana);
+			player.Start();
 		}
 	}
 }
