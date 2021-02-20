@@ -53,7 +53,7 @@ namespace Dictionary
 		private void Recordings_Click(object sender, EventArgs e)
 		{
             FragmentTransaction ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.recordings_button, new Fragments.RecordingsFragment());
+            ft.Replace(Resource.Id.app_bar_main, new Fragments.RecordingsFragment());
             ft.AddToBackStack(null);
             ft.Commit();
         }
