@@ -14,10 +14,10 @@ namespace Fragments
 {
 	class RecordingsFragment : Fragment
 	{
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
-        {
-            // Defines the xml file for the fragment
-            return inflater.Inflate(Resource.Layout.main_recordings, parent, false);
-        }
+        //public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+        //{
+        //    // Defines the xml file for the fragment
+        //    return inflater.Inflate(Resource.Layout.content_recordings, parent, false);
+        //}
     }
 }

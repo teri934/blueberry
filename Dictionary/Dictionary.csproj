@@ -133,9 +133,6 @@
     <AndroidResource Include="Resources\values-cs\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\main_recordings.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\content_recordings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
