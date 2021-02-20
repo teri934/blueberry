@@ -37,7 +37,11 @@ namespace Dictionary
 
 
 
-            //Button b = FindViewById<Button>(Resource.Id.button1);
+            Button recordings = FindViewById<Button>(Resource.Id.recordings_button);
+			recordings.Click += Recordings_Click;
+
+
+
 
             //b.Click += delegate
             //{
@@ -46,7 +50,15 @@ namespace Dictionary
 
         }
 
-        public override void OnBackPressed()
+		private void Recordings_Click(object sender, EventArgs e)
+		{
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            ft.Replace(Resource.Id.recordings_button, new Fragments.RecordingsFragment());
+            ft.AddToBackStack(null);
+            ft.Commit();
+        }
+
+		public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             if(drawer.IsDrawerOpen(GravityCompat.Start))
