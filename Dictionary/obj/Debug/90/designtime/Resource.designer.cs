@@ -3388,7 +3388,7 @@ namespace Dictionary
 			public const int checkbox = 2131230770;
 			
 			// aapt resource value: 0x7F080033
-			public const int choose__language = 2131230771;
+			public const int choose_language = 2131230771;
 			
 			// aapt resource value: 0x7F080034
 			public const int chronometer = 2131230772;

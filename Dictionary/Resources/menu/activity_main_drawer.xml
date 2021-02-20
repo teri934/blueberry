@@ -11,7 +11,7 @@
     </group>
 
     <item 
-      android:id="@+id/choose _language"
+      android:id="@+id/choose_language"
       android:title="@string/change_language">
         <menu>
             <item

@@ -52,11 +52,11 @@ namespace Dictionary
 
 		private void Recordings_Click(object sender, EventArgs e)
 		{
-            FragmentTransaction ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.app_bar_main, new Fragments.RecordingsFragment());
-            ft.AddToBackStack(null);
-            ft.Commit();
-        }
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Replace(Resource.Id.place_holder, new Fragments.RecordingsFragment());
+			ft.AddToBackStack(null);
+			ft.Commit();
+		}
 
 		public override void OnBackPressed()
         {
