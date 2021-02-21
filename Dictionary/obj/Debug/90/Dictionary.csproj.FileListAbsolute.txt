@@ -1,11 +1,3 @@
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Resources\Resource.designer.cs
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.dll
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.pdb
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.apk
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.aab
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.aab
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk.idsig
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\build.props
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\adb.props
@@ -24,6 +16,15 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\fi
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.cs.flag
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Resources\Resource.designer.cs
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.dll
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\Dictionary.pdb
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.apk
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary.aab
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.aab
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companyname.dictionary-Signed.apk.idsig
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.pdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\bin\com.companyname.dictionary.apk
@@ -196,7 +197,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\wom
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\work.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\would_you_like_a_bag.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\yellow.mp3
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\placeholders.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\sound_button.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\uploadflags.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Dictionary.dll
