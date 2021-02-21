@@ -65,7 +65,7 @@ namespace Fragments
 			b.Click += Sound_Click;
 			Log.Debug("f", "sound");
 			return view;
-		}
+		}   
 
 		void Sound_Click(object sender, EventArgs e)
 		{
