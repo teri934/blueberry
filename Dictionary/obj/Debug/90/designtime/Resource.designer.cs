@@ -3155,86 +3155,77 @@ namespace Dictionary
 			// aapt resource value: 0x7F07005B
 			public const int design_snackbar_background = 2131165275;
 			
+			// aapt resource value: 0x7F070060
+			public const int icon = 2131165280;
+			
 			// aapt resource value: 0x7F07005C
 			public const int ic_menu_camera = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int ic_menu_gallery = 2131165277;
+			public const int ic_mtrl_chip_checked_black = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int ic_menu_manage = 2131165278;
+			public const int ic_mtrl_chip_checked_circle = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int ic_menu_send = 2131165279;
-			
-			// aapt resource value: 0x7F070060
-			public const int ic_menu_share = 2131165280;
+			public const int ic_mtrl_chip_close_circle = 2131165279;
 			
 			// aapt resource value: 0x7F070061
-			public const int ic_menu_slideshow = 2131165281;
+			public const int mtrl_snackbar_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int ic_mtrl_chip_checked_black = 2131165282;
+			public const int mtrl_tabs_default_indicator = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int ic_mtrl_chip_checked_circle = 2131165283;
+			public const int navigation_empty_icon = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int ic_mtrl_chip_close_circle = 2131165284;
+			public const int notification_action_background = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int mtrl_snackbar_background = 2131165285;
+			public const int notification_bg = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int mtrl_tabs_default_indicator = 2131165286;
+			public const int notification_bg_low = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int navigation_empty_icon = 2131165287;
+			public const int notification_bg_low_normal = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int notification_action_background = 2131165288;
+			public const int notification_bg_low_pressed = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int notification_bg = 2131165289;
+			public const int notification_bg_normal = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int notification_bg_low = 2131165290;
+			public const int notification_bg_normal_pressed = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int notification_bg_low_normal = 2131165291;
+			public const int notification_icon_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int notification_bg_low_pressed = 2131165292;
+			public const int notification_template_icon_bg = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int notification_bg_normal = 2131165293;
+			public const int notification_template_icon_low_bg = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int notification_bg_normal_pressed = 2131165294;
+			public const int notification_tile_bg = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int notification_icon_background = 2131165295;
+			public const int notify_panel_notification_icon_bg = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_template_icon_bg = 2131165296;
+			public const int side_nav_bar = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_template_icon_low_bg = 2131165297;
+			public const int tooltip_frame_dark = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_tile_bg = 2131165298;
+			public const int tooltip_frame_light = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notify_panel_notification_icon_bg = 2131165299;
-			
-			// aapt resource value: 0x7F070074
-			public const int side_nav_bar = 2131165300;
-			
-			// aapt resource value: 0x7F070075
-			public const int tooltip_frame_dark = 2131165301;
-			
-			// aapt resource value: 0x7F070076
-			public const int tooltip_frame_light = 2131165302;
+			public const int volume_up = 2131165299;
 			
 			static Drawable()
 			{
@@ -4308,332 +4299,296 @@ namespace Dictionary
 			// aapt resource value: 0x7F0E0016
 			public const int dishwasher = 2131623958;
 			
-			// aapt resource value: 0x7F0E001B
-			public const int dog = 2131623963;
-			
-			// aapt resource value: 0x7F0E001C
-			public const int door = 2131623964;
-			
 			// aapt resource value: 0x7F0E0017
-			public const int do_you_have_postcards = 2131623959;
+			public const int door = 2131623959;
 			
 			// aapt resource value: 0x7F0E0018
-			public const int do_you_like_cheese = 2131623960;
+			public const int drugstore = 2131623960;
 			
 			// aapt resource value: 0x7F0E0019
-			public const int do_you_sell_stamps = 2131623961;
+			public const int emergency = 2131623961;
 			
 			// aapt resource value: 0x7F0E001A
-			public const int do_you_speak_english = 2131623962;
+			public const int excuse = 2131623962;
+			
+			// aapt resource value: 0x7F0E001B
+			public const int favourite_name = 2131623963;
+			
+			// aapt resource value: 0x7F0E001C
+			public const int fire = 2131623964;
 			
 			// aapt resource value: 0x7F0E001D
-			public const int drugstore = 2131623965;
+			public const int first_person = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int emergency = 2131623966;
+			public const int first_person_pl = 2131623966;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int excuse = 2131623967;
+			public const int first_person_pl_possessive = 2131623967;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int favourite_name = 2131623968;
+			public const int first_person_possessive = 2131623968;
 			
 			// aapt resource value: 0x7F0E0021
-			public const int fire = 2131623969;
+			public const int fish = 2131623969;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int first_person = 2131623970;
+			public const int fish_and_chips = 2131623970;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int first_person_pl = 2131623971;
+			public const int flour = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int first_person_pl_possessive = 2131623972;
+			public const int forest = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int first_person_possessive = 2131623973;
+			public const int fork = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int fish = 2131623974;
+			public const int fruit = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int fish_and_chips = 2131623975;
+			public const int garden = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int flour = 2131623976;
-			
-			// aapt resource value: 0x7F0E0029
-			public const int forest = 2131623977;
+			public const int gate_a = 2131623976;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int fork = 2131623978;
+			public const int goodbye = 2131623978;
+			
+			// aapt resource value: 0x7F0E0029
+			public const int good_luck = 2131623977;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int fruit = 2131623979;
+			public const int green = 2131623979;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int garden = 2131623980;
+			public const int grocery = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int gate_a = 2131623981;
-			
-			// aapt resource value: 0x7F0E002F
-			public const int goodbye = 2131623983;
+			public const int hat = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int good_luck = 2131623982;
+			public const int hello = 2131623982;
+			
+			// aapt resource value: 0x7F0E002F
+			public const int help = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int green = 2131623984;
+			public const int hospital = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int grocery = 2131623985;
+			public const int house = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int hat = 2131623986;
+			public const int how_are_you = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int hello = 2131623987;
+			public const int how_many_kids = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int help = 2131623988;
+			public const int how_much_is_this = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int his_aunt_old = 2131623989;
+			public const int how_old_are_you = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int his_plane = 2131623990;
+			public const int im_20_yo = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int hospital = 2131623991;
+			public const int is_your_father_here = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int house = 2131623992;
+			public const int jacket = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int how_are_you = 2131623993;
+			public const int just_looking = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int how_many_kids = 2131623994;
+			public const int kettle = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int how_much_is_this = 2131623995;
+			public const int key = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int how_old_are_you = 2131623996;
+			public const int knife = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int im_20_yo = 2131623997;
+			public const int lorraine = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int is_your_father_here = 2131623998;
+			public const int man_person = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int jacket = 2131623999;
+			public const int man_person_possessive = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int just_looking = 2131624000;
+			public const int may_i_help_you = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int kettle = 2131624001;
+			public const int meat = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int key = 2131624002;
+			public const int microwave = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int knife = 2131624003;
+			public const int my_daughter_17 = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int lorraine = 2131624004;
+			public const int my_favourite_color = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int man_person = 2131624005;
+			public const int my_name_is_peter = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int man_person_possessive = 2131624006;
+			public const int neutrum_person = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int may_i_help_you = 2131624007;
+			public const int newspaper = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int meat = 2131624008;
+			public const int opening_time = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int microwave = 2131624009;
+			public const int orange = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int my_daughter_17 = 2131624010;
+			public const int oven = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int my_favourite_color = 2131624011;
+			public const int pantry = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int my_name_is_peter = 2131624012;
+			public const int pants = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int neutrum_person = 2131624013;
+			public const int passport = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int newspaper = 2131624014;
+			public const int pasta = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int opening_time = 2131624015;
+			public const int pink = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int orange = 2131624016;
+			public const int plane = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int oven = 2131624017;
+			public const int police_station = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int pantry = 2131624018;
+			public const int pub = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int pants = 2131624019;
+			public const int reclaim = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int passport = 2131624020;
+			public const int red = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int pasta = 2131624021;
+			public const int restaurant = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int pay_with_card = 2131624022;
+			public const int road = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int pink = 2131624023;
+			public const int room = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int plane = 2131624024;
+			public const int sea = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int police_station = 2131624025;
+			public const int second_person = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int pub = 2131624026;
+			public const int second_person_possessive = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int reclaim = 2131624027;
+			public const int ship = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int red = 2131624028;
+			public const int shirt = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int restaurant = 2131624029;
+			public const int shoes = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int rice_with_chicken = 2131624030;
+			public const int shop = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int road = 2131624031;
+			public const int skirt = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int room = 2131624032;
+			public const int snake = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int sea = 2131624033;
+			public const int socks = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int second_person = 2131624034;
+			public const int soup = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int second_person_possessive = 2131624035;
+			public const int spoon = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int she_will_pick_up = 2131624036;
+			public const int street = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int ship = 2131624037;
+			public const int sugar = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int shirt = 2131624038;
+			public const int sun = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int shoes = 2131624039;
+			public const int sweatshirt = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int shop = 2131624040;
+			public const int swimsuit = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int skirt = 2131624041;
+			public const int tea = 2131624041;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int snake = 2131624042;
+			public const int third_person_pl = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int socks = 2131624043;
+			public const int third_person_pl_possessive = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int soup = 2131624044;
+			public const int time = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int spoon = 2131624045;
+			public const int train = 2131624045;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int street = 2131624046;
+			public const int tree = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int sugar = 2131624047;
+			public const int tshirt = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int sun = 2131624048;
+			public const int vegetables = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int sweatshirt = 2131624049;
+			public const int water = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int swimsuit = 2131624050;
+			public const int white = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int tea = 2131624051;
+			public const int window = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int third_person_pl = 2131624052;
+			public const int woman_person = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int third_person_pl_possessive = 2131624053;
+			public const int woman_person_possessive = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int time = 2131624054;
+			public const int work = 2131624054;
 			
 			// aapt resource value: 0x7F0E0077
-			public const int train = 2131624055;
-			
-			// aapt resource value: 0x7F0E0078
-			public const int tree = 2131624056;
-			
-			// aapt resource value: 0x7F0E0079
-			public const int tshirt = 2131624057;
-			
-			// aapt resource value: 0x7F0E007A
-			public const int vegetables = 2131624058;
-			
-			// aapt resource value: 0x7F0E007B
-			public const int water = 2131624059;
-			
-			// aapt resource value: 0x7F0E007C
-			public const int where_are_you_from = 2131624060;
-			
-			// aapt resource value: 0x7F0E007D
-			public const int white = 2131624061;
-			
-			// aapt resource value: 0x7F0E007E
-			public const int window = 2131624062;
-			
-			// aapt resource value: 0x7F0E007F
-			public const int woman_person = 2131624063;
-			
-			// aapt resource value: 0x7F0E0080
-			public const int woman_person_possessive = 2131624064;
-			
-			// aapt resource value: 0x7F0E0081
-			public const int work = 2131624065;
-			
-			// aapt resource value: 0x7F0E0082
-			public const int would_you_like_a_bag = 2131624066;
-			
-			// aapt resource value: 0x7F0E0083
-			public const int yellow = 2131624067;
+			public const int yellow = 2131624055;
 			
 			static Raw()
 			{
