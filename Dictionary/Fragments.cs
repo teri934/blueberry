@@ -13,23 +13,6 @@ using Android.Media;
 
 namespace Fragments
 {
-	class RecordingsFragment : Fragment
-	{
-		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
-		{
-			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
-			LinearLayout list = view.FindViewById<LinearLayout>(Dictionary.Resource.Id.sounds_list);
-
-			for (int i = 0; i < 5; i++)
-			{
-				list.AddView(new Button(Application.Context));
-			}
-
-			return view;
-		}
-
-	}
-
 	class MainFragment : Fragment
 	{
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
@@ -49,6 +32,33 @@ namespace Fragments
 
 			MediaPlayer player = MediaPlayer.Create(Application.Context, Dictionary.Resource.Raw.banana);
 			player.Start();
+		}
+	}
+
+	class RecordingsFragment : Fragment
+	{
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
+			LinearLayout list = view.FindViewById<LinearLayout>(Dictionary.Resource.Id.sounds_list);
+
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			for (int i = 0; i < 10; i++)
+			{
+				//ft.Add(Dictionary.Resource.Id.sound_placeholder, )
+				//list.AddView(new Button(Application.Context));
+			}
+
+			return view;
+		}
+	}
+
+	class SoundsFragment : Fragment
+	{
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_main, parent, false);
+			return view;
 		}
 	}
 }

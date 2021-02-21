@@ -12,6 +12,7 @@ background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\content_main.xml
 Button;obj\Debug\90\res\layout\nav_header_main.xml
+Button;obj\Debug\90\res\layout\placeholders.xml
 cache-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
@@ -38,6 +39,7 @@ menu;obj\Debug\90\res\menu\menu_main.xml
 paths;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
 RelativeLayout;obj\Debug\90\res\layout\content_recordings.xml
+RelativeLayout;obj\Debug\90\res\layout\placeholders.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\dimens.xml
 resources;obj\Debug\90\res\values\drawables.xml
