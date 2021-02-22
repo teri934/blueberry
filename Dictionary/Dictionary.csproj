@@ -310,9 +310,6 @@
     <AndroidResource Include="Resources\raw\pants.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\passport.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\raw\pasta.mp3" />
   </ItemGroup>
   <ItemGroup>

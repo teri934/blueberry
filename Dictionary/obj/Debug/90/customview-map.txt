@@ -36,6 +36,7 @@ item;obj\Debug\90\res\values-v21\styles.xml
 LinearLayout;obj\Debug\90\res\layout\content_main.xml
 LinearLayout;obj\Debug\90\res\layout\content_recordings.xml
 LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
+LinearLayout;obj\Debug\90\res\layout\sound_button.xml
 menu;obj\Debug\90\res\menu\activity_main_drawer.xml
 menu;obj\Debug\90\res\menu\menu_main.xml
 path;obj\Debug\90\res\drawable\icon.xml
@@ -61,5 +62,7 @@ string;obj\Debug\90\res\values-sk\strings.xml
 style;obj\Debug\90\res\values\styles.xml
 style;obj\Debug\90\res\values-v21\styles.xml
 TextView;obj\Debug\90\res\layout\nav_header_main.xml
+TextView;obj\Debug\90\res\layout\sound_button.xml
 vector;obj\Debug\90\res\drawable\icon.xml
 vector;obj\Debug\90\res\drawable\volume_up.xml
+View;obj\Debug\90\res\layout\sound_button.xml

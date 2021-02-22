@@ -60,8 +60,21 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.sound_button, parent, false);
-			ImageButton b = (ImageButton)((ViewGroup)view).GetChildAt(0);
+
+			ImageButton b = (ImageButton)((ViewGroup)((ViewGroup)view).GetChildAt(0)).GetChildAt(1);
 			b.Click += Sound_Click;
+
+			LinearLayout layout = (LinearLayout)((ViewGroup)((ViewGroup)view).GetChildAt(0)).GetChildAt(0);
+
+			TextView translation = (TextView)layout.GetChildAt(1);
+			translation.Text = English.Dictionary[index].Translation;
+
+			TextView original = (TextView)layout.GetChildAt(0);
+			int id = Resources.GetIdentifier(English.Dictionary[index].Original, null, Context.PackageName);
+			Log.Debug("ba",Context.PackageName);
+			original.Text = Resources.GetString(id);
+
+
 			return view;
 		}   
 
