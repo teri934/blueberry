@@ -1,5 +1,4 @@
 ﻿using System;
-using Android;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
@@ -8,6 +7,7 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Language;
 using Android.Widget;
 using Android.Media;
 
@@ -24,9 +24,6 @@ namespace Dictionary
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            //FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            //fab.Click += FabOnClick;
-
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
             drawer.AddDrawerListener(toggle);
@@ -36,10 +33,12 @@ namespace Dictionary
             navigationView.SetNavigationItemSelectedListener(this);
 
 
-
             FragmentTransaction ft = FragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.place_holder, new Fragments.MainFragment());
             ft.Commit();
+
+            ILanguage en = new English();
+            en.CreateDictionary();
         }
 
         public override void OnBackPressed()

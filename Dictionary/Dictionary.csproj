@@ -74,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\dictionary.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -207,13 +208,10 @@
     <AndroidResource Include="Resources\raw\emergency.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\excuse.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\raw\fire.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\I.mp3" />
+    <AndroidResource Include="Resources\raw\i.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\we.mp3" />
@@ -226,9 +224,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\fish.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\fish_and_chips.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\flour.mp3" />
@@ -244,9 +239,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\garden.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\gate_a.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\good_luck.mp3" />
@@ -276,9 +268,6 @@
     <AndroidResource Include="Resources\raw\house.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\checkin.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\raw\chicken.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -294,9 +283,6 @@
     <AndroidResource Include="Resources\raw\knife.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\lorraine.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\raw\he.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -306,13 +292,10 @@
     <AndroidResource Include="Resources\raw\microwave.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\neutrum_person.mp3" />
+    <AndroidResource Include="Resources\raw\it.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\newspaper.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\opening_time.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\orange.mp3" />
@@ -343,9 +326,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\pub.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\reclaim.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\red.mp3" />

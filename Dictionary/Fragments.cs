@@ -1,16 +1,12 @@
 ﻿using System;
-using Android;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V4.View;
-using Android.Support.V4.Widget;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Android.Media;
 using Android.Util;
+using Language;
 
 namespace Fragments
 {
@@ -38,14 +34,12 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
-			//LinearLayout list = view.FindViewById<LinearLayout>(Dictionary.Resource.Id.sounds_list);
-			//list.AddView(new Button(Application.Context));
 			Log.Debug("f", "recordings");
 
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
-			for (int i = 0; i < 30; i++)
+			for (int i = 0; i < English.Dictionary.Count; i++)
 			{
-				ft.Add(Dictionary.Resource.Id.sounds_list, new SoundsFragment());
+				ft.Add(Dictionary.Resource.Id.sounds_list, new SoundsFragment(i));
 			}
 			ft.Commit();
 
@@ -56,23 +50,26 @@ namespace Fragments
 	class SoundsFragment : Fragment
 	{
 		static MediaPlayer player = new MediaPlayer();
-		string sound;
+		int index;
+
+		public SoundsFragment(int index)
+		{
+			this.index = index;
+		}
+
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.sound_button, parent, false);
 			ImageButton b = (ImageButton)((ViewGroup)view).GetChildAt(0);
-			sound = "banana";
 			b.Click += Sound_Click;
-			Log.Debug("f", "sound");
 			return view;
 		}   
 
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
-			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(sound, "raw", Application.Context.PackageName));
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[index].Filename, "raw", Application.Context.PackageName));
 			player.Start();
-			Log.Debug("f", "buttonpress");
 		}
 	}
 }

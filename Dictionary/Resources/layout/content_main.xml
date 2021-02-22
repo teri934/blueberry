@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:background="@color/colorPrimary"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
+        android:layout_margin="@dimen/button_extra"
+        android:padding="@dimen/button_extra"/>
 
         <Button
         android:id="@+id/recordings_button"
@@ -35,7 +35,7 @@
         android:textColor="#FFFFFF"
         android:background="@color/colorPrimary"
         android:layout_margin="5dp"
-        android:padding="10dp"/>
+        android:padding="@dimen/button_extra"/>
 
     </LinearLayout>
 
