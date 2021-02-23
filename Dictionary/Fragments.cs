@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Media;
 using Android.Util;
+using Android.Text;
 using Language;
 
 namespace Fragments
@@ -33,7 +34,11 @@ namespace Fragments
 	{
 		bool SearchView.IOnQueryTextListener.OnQueryTextChange(string newText)
 		{
-			//RecordingsFragment.arrayAdapter.GetFilter.
+			if (TextUtils.IsEmpty(newText))
+				RecordingsFragment.myList.ClearTextFilter();
+			else
+				RecordingsFragment.myList.SetFilterText(newText);
+
 			return true;
 		}
 
@@ -45,15 +50,28 @@ namespace Fragments
 
 	class RecordingsFragment : Fragment
 	{
-		ListView list;
+		public static ListView myList;
+		SearchView mySearchView;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
 
-			list = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
-			list.Adapter = new LineAdapter(Context, English.Dictionary);
+			mySearchView = (SearchView)view.FindViewById(Dictionary.Resource.Id.searchView);
+			myList = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
+			myList.Adapter = new LineAdapter(Context, English.Dictionary);
+
+			myList.TextFilterEnabled = false;
+			SetUpSearchView();
 
 			return view;
+		}
+
+		void SetUpSearchView()
+		{
+			mySearchView.SetIconifiedByDefault(false);
+			mySearchView.SetOnQueryTextListener(new Listener());
+			mySearchView.SubmitButtonEnabled = true;
+			mySearchView.SetQueryHint("Search here");
 		}
 	}
 
@@ -101,7 +119,7 @@ namespace Fragments
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
-			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[(int)((Button)sender).Tag].Filename, "raw", Application.Context.PackageName));
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[int.Parse(((ImageButton)sender).Tag.ToString())].Filename, "raw", Application.Context.PackageName));
 			player.Start();
 		}
 	}
