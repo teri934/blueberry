@@ -29,59 +29,79 @@ namespace Fragments
 		}
 	}
 
+	class Listener : Java.Lang.Object, SearchView.IOnQueryTextListener
+	{
+		bool SearchView.IOnQueryTextListener.OnQueryTextChange(string newText)
+		{
+			//RecordingsFragment.arrayAdapter.GetFilter.
+			return true;
+		}
+
+		bool SearchView.IOnQueryTextListener.OnQueryTextSubmit(string query)
+		{
+			return false;
+		}
+	}
+
 	class RecordingsFragment : Fragment
 	{
+		ListView list;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
-			Log.Debug("f", "recordings");
 
-			FragmentTransaction ft = FragmentManager.BeginTransaction();
-			for (int i = 0; i < English.Dictionary.Count; i++)
-			{
-				ft.Add(Dictionary.Resource.Id.sounds_list, new SoundsFragment(i));
-			}
-			ft.Commit();
+			list = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
+			list.Adapter = new LineAdapter(Context, English.Dictionary);
 
 			return view;
 		}
 	}
 
-	class SoundsFragment : Fragment
+	class LineAdapter : BaseAdapter
 	{
 		static MediaPlayer player = new MediaPlayer();
-		int index;
-
-		public SoundsFragment(int index)
+		List<Word> data;
+		Android.Content.Context context;
+		private static LayoutInflater inflater;
+		public LineAdapter(Android.Content.Context context, List<Word> data)
 		{
-			this.index = index;
+			this.data = data;
+			this.context = context;
+			inflater = (LayoutInflater)context.GetSystemService(Android.Content.Context.LayoutInflaterService);
 		}
 
-		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+		public override int Count => data.Count;
+		public override long GetItemId(int position) => 0;
+		public override Java.Lang.Object GetItem(int position) => null;
+
+		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
-			View view = inflater.Inflate(Dictionary.Resource.Layout.dict_line, parent, false);
+			View v = convertView;
+			ImageButton b;
+			if (convertView == null)
+			{
+				v = inflater.Inflate(Dictionary.Resource.Layout.dict_line, null);
+				b = (ImageButton)v.FindViewById(Dictionary.Resource.Id.volume);
+				b.Click += Sound_Click;
+			}
 
-			ImageButton b = (ImageButton)((ViewGroup)((ViewGroup)view).GetChildAt(0)).GetChildAt(1);
-			b.Click += Sound_Click;
+			TextView translation = (TextView)v.FindViewById(Dictionary.Resource.Id.translation);
+			translation.Text = data[position].Translation;
 
-			LinearLayout layout = (LinearLayout)((ViewGroup)((ViewGroup)view).GetChildAt(0)).GetChildAt(0);
+			TextView original = (TextView)v.FindViewById(Dictionary.Resource.Id.original);
+			int id = Application.Context.Resources.GetIdentifier(English.Dictionary[position].Original, null, Application.Context.PackageName);
+			original.Text = Application.Context.Resources.GetString(id);
 
-			TextView translation = (TextView)layout.GetChildAt(1);
-			translation.Text = English.Dictionary[index].Translation;
+			b = (ImageButton)v.FindViewById(Dictionary.Resource.Id.volume);
+			b.Tag = position;
 
-			TextView original = (TextView)layout.GetChildAt(0);
-			int id = Resources.GetIdentifier(English.Dictionary[index].Original, null, Context.PackageName);
-			Log.Debug("ba",Context.PackageName);
-			original.Text = Resources.GetString(id);
-
-
-			return view;
-		}   
+			return v;
+		}
 
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
-			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[index].Filename, "raw", Application.Context.PackageName));
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[(int)((Button)sender).Tag].Filename, "raw", Application.Context.PackageName));
 			player.Start();
 		}
 	}

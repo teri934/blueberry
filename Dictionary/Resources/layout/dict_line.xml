@@ -19,12 +19,14 @@
         android:layout_weight="2">
 
         <TextView
+            android:id="@+id/original"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000"/>
 
         <TextView
+            android:id="@+id/translation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -33,6 +35,7 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/volume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_extra"
