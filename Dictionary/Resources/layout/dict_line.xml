@@ -39,13 +39,13 @@
             android:padding="@dimen/button_extra"
             android:layout_centerHorizontal="true" 
             android:src="@drawable/volume_up"
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/ripple"/>
         
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#000000"/>
+        android:background="#E1E1E1"/>
 
 </RelativeLayout>

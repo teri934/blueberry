@@ -25,9 +25,11 @@ FrameLayout;obj\Debug\90\res\layout\app_bar_main.xml
 gradient;obj\Debug\90\res\drawable\side_nav_bar.xml
 group;obj\Debug\90\res\drawable\icon.xml
 group;obj\Debug\90\res\menu\activity_main_drawer.xml
+ImageButton;obj\Debug\90\res\layout\dict_line.xml
 ImageButton;obj\Debug\90\res\layout\sound_button.xml
 ImageView;obj\Debug\90\res\layout\nav_header_main.xml
 include;obj\Debug\90\res\layout\activity_main.xml
+item;obj\Debug\90\res\drawable\ripple.xml
 item;obj\Debug\90\res\menu\activity_main_drawer.xml
 item;obj\Debug\90\res\menu\menu_main.xml
 item;obj\Debug\90\res\values\drawables.xml
@@ -35,6 +37,7 @@ item;obj\Debug\90\res\values\styles.xml
 item;obj\Debug\90\res\values-v21\styles.xml
 LinearLayout;obj\Debug\90\res\layout\content_main.xml
 LinearLayout;obj\Debug\90\res\layout\content_recordings.xml
+LinearLayout;obj\Debug\90\res\layout\dict_line.xml
 LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
 LinearLayout;obj\Debug\90\res\layout\sound_button.xml
 menu;obj\Debug\90\res\menu\activity_main_drawer.xml
@@ -44,6 +47,7 @@ path;obj\Debug\90\res\drawable\volume_up.xml
 paths;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
 RelativeLayout;obj\Debug\90\res\layout\content_recordings.xml
+RelativeLayout;obj\Debug\90\res\layout\dict_line.xml
 RelativeLayout;obj\Debug\90\res\layout\sound_button.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\dimens.xml
@@ -54,15 +58,20 @@ resources;obj\Debug\90\res\values\styles.xml
 resources;obj\Debug\90\res\values-cs\strings.xml
 resources;obj\Debug\90\res\values-sk\strings.xml
 resources;obj\Debug\90\res\values-v21\styles.xml
+ripple;obj\Debug\90\res\drawable\ripple.xml
 ScrollView;obj\Debug\90\res\layout\content_recordings.xml
+shape;obj\Debug\90\res\drawable\ripple.xml
 shape;obj\Debug\90\res\drawable\side_nav_bar.xml
+solid;obj\Debug\90\res\drawable\ripple.xml
 string;obj\Debug\90\res\values\strings.xml
 string;obj\Debug\90\res\values-cs\strings.xml
 string;obj\Debug\90\res\values-sk\strings.xml
 style;obj\Debug\90\res\values\styles.xml
 style;obj\Debug\90\res\values-v21\styles.xml
+TextView;obj\Debug\90\res\layout\dict_line.xml
 TextView;obj\Debug\90\res\layout\nav_header_main.xml
 TextView;obj\Debug\90\res\layout\sound_button.xml
 vector;obj\Debug\90\res\drawable\icon.xml
 vector;obj\Debug\90\res\drawable\volume_up.xml
+View;obj\Debug\90\res\layout\dict_line.xml
 View;obj\Debug\90\res\layout\sound_button.xml

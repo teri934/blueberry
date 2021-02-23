@@ -59,7 +59,7 @@ namespace Fragments
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
-			View view = inflater.Inflate(Dictionary.Resource.Layout.sound_button, parent, false);
+			View view = inflater.Inflate(Dictionary.Resource.Layout.dict_line, parent, false);
 
 			ImageButton b = (ImageButton)((ViewGroup)((ViewGroup)view).GetChildAt(0)).GetChildAt(1);
 			b.Click += Sound_Click;

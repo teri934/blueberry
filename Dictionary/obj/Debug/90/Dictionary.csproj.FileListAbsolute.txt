@@ -150,7 +150,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\whi
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\window.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\work.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\yellow.mp3
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\sound_button.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\uploadflags.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Dictionary.dll
@@ -369,3 +368,5 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\the
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\she.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\her.mp3
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\raw\it.mp3
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\dict_line.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\ripple.xml
