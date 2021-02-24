@@ -5,6 +5,7 @@ using Android.Content.Res;
 using Android.Util;
 using Org.Json;
 using System.Linq;
+using Android.App;
 
 namespace Language
 {
@@ -44,7 +45,7 @@ namespace Language
 		public void CreateDictionary();
 	}
 
-	class Word
+	class Word : Java.Lang.Object
 	{
 		 public string Filename { get; private set; }
 		 public string Translation { get; private set; }
@@ -52,7 +53,8 @@ namespace Language
 
 		public static Word CreateNewWord(JSONObject ob, string lang)
 		{
-			return new Word { Filename = ob.Get("filename").ToString(), Translation = ob.Get(lang).ToString(), Original = ob.Get("original").ToString() };
+			int id = Application.Context.Resources.GetIdentifier(ob.Get("original").ToString(), null, Application.Context.PackageName);
+			return new Word { Filename = ob.Get("filename").ToString(), Translation = ob.Get(lang).ToString(), Original = Application.Context.Resources.GetString(id)};
 		}
 
 		public static List<Word> SortList(List<Word> list)

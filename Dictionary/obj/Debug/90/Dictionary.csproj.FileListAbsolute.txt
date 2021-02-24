@@ -372,3 +372,5 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_Reso
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\LineAdapter.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\Listener.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc641bb0ac15b07ed0f0\Word.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\LineFilter.java

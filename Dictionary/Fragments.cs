@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.Media;
 using Android.Util;
 using Android.Text;
+using Java.Lang;
 using Language;
 
 namespace Fragments
@@ -30,14 +31,73 @@ namespace Fragments
 		}
 	}
 
+	public static class ObjectTypeHelper
+	{
+		public static T Cast<T>(this Java.Lang.Object obj) where T : class
+		{
+			var propertyInfo = obj.GetType().GetProperty("Instance");
+			return propertyInfo == null ? null : propertyInfo.GetValue(obj, null) as T;
+		}
+	}
+
+	class LineFilter : Filter
+	{
+		protected override void PublishResults(ICharSequence constraint, FilterResults results)
+		{
+			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
+			List<Word> filteredList = new List<Word>();
+			for (int i = 0; i < results.Count; i++)
+			{
+				filteredList.Add((Word)((Java.Lang.Object[])results.Values)[i]);
+			}
+			adapter.filteredData = filteredList;
+			adapter.NotifyDataSetChanged();
+		}
+
+		protected override FilterResults PerformFiltering(ICharSequence constraint)
+		{
+			FilterResults results = new FilterResults();
+			List<Word> filteredList = new List<Word>();
+			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
+
+			if (adapter.originalData == null)
+				adapter.originalData = new List<Word>(adapter.filteredData); //????
+
+			if (constraint == null || constraint.Length() == 0)
+			{
+				//originalData are set to results
+				results.Count = adapter.originalData.Count;
+				results.Values = adapter.originalData.ToArray();
+			}
+			else
+			{
+				string input = constraint.ToString().ToLower();
+
+				for (int i = 0; i < adapter.originalData.Count; i++)
+				{
+					string text = adapter.originalData[i].Original;
+					if (text.ToLower().StartsWith(input))
+					{
+						filteredList.Add(adapter.originalData[i]);
+					}
+				}
+
+				//filtered data (filteredList) is set to results
+				results.Count = filteredList.Count;
+				results.Values = filteredList.ToArray();
+			}
+
+			return results;
+		}
+	}
+
 	class Listener : Java.Lang.Object, SearchView.IOnQueryTextListener
 	{
 		bool SearchView.IOnQueryTextListener.OnQueryTextChange(string newText)
 		{
-			if (TextUtils.IsEmpty(newText))
-				RecordingsFragment.myList.ClearTextFilter();
-			else
-				RecordingsFragment.myList.SetFilterText(newText);
+			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
+			LineFilter filter = (LineFilter)adapter.Filter;
+			filter.InvokeFilter(newText);
 
 			return true;
 		}
@@ -75,22 +135,26 @@ namespace Fragments
 		}
 	}
 
-	class LineAdapter : BaseAdapter
+	class LineAdapter : BaseAdapter, IFilterable
 	{
 		static MediaPlayer player = new MediaPlayer();
-		List<Word> data;
+		public List<Word> originalData;
+		public List<Word> filteredData;
 		Android.Content.Context context;
 		private static LayoutInflater inflater;
 		public LineAdapter(Android.Content.Context context, List<Word> data)
 		{
-			this.data = data;
+			originalData = data;
+			filteredData = data;
 			this.context = context;
 			inflater = (LayoutInflater)context.GetSystemService(Android.Content.Context.LayoutInflaterService);
 		}
 
-		public override int Count => data.Count;
-		public override long GetItemId(int position) => 0;
-		public override Java.Lang.Object GetItem(int position) => null;
+		public override int Count => filteredData.Count;
+		public override long GetItemId(int position) => position;
+		public override Java.Lang.Object GetItem(int position) => filteredData[position];
+
+		public Filter Filter => new LineFilter();
 
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
@@ -104,11 +168,10 @@ namespace Fragments
 			}
 
 			TextView translation = (TextView)v.FindViewById(Dictionary.Resource.Id.translation);
-			translation.Text = data[position].Translation;
+			translation.Text = filteredData[position].Translation;
 
 			TextView original = (TextView)v.FindViewById(Dictionary.Resource.Id.original);
-			int id = Application.Context.Resources.GetIdentifier(English.Dictionary[position].Original, null, Application.Context.PackageName);
-			original.Text = Application.Context.Resources.GetString(id);
+			original.Text = filteredData[position].Original;
 
 			b = (ImageButton)v.FindViewById(Dictionary.Resource.Id.volume);
 			b.Tag = position;
@@ -119,7 +182,7 @@ namespace Fragments
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
-			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[int.Parse(((ImageButton)sender).Tag.ToString())].Filename, "raw", Application.Context.PackageName));
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(filteredData[int.Parse(((ImageButton)sender).Tag.ToString())].Filename, "raw", Application.Context.PackageName));
 			player.Start();
 		}
 	}
