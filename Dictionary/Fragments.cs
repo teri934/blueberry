@@ -21,7 +21,6 @@ namespace Fragments
 			recordings.Click += Recordings_Click;
 			return view;
 		}
-
 		void Recordings_Click(object sender, EventArgs e)
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -31,17 +30,14 @@ namespace Fragments
 		}
 	}
 
-	public static class ObjectTypeHelper
-	{
-		public static T Cast<T>(this Java.Lang.Object obj) where T : class
-		{
-			var propertyInfo = obj.GetType().GetProperty("Instance");
-			return propertyInfo == null ? null : propertyInfo.GetValue(obj, null) as T;
-		}
-	}
-
 	class LineFilter : Filter
 	{
+		/// <summary>
+		/// sets the right (filtered data) to list of the custom adapter
+		/// which will be displayed
+		/// </summary>
+		/// <param name="constraint">user text input</param>
+		/// <param name="results">filter results form the method PerformFiltering</param>
 		protected override void PublishResults(ICharSequence constraint, FilterResults results)
 		{
 			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
@@ -54,6 +50,12 @@ namespace Fragments
 			adapter.NotifyDataSetChanged();
 		}
 
+		/// <summary>
+		/// filters the original list of data according to the user input
+		/// (filtering is based on the native language)
+		/// </summary>
+		/// <param name="constraint">user text input<</param>
+		/// <returns>results of the filtering</returns>
 		protected override FilterResults PerformFiltering(ICharSequence constraint)
 		{
 			FilterResults results = new FilterResults();
@@ -61,7 +63,7 @@ namespace Fragments
 			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
 
 			if (adapter.originalData == null)
-				adapter.originalData = new List<Word>(adapter.filteredData); //????
+				adapter.originalData = new List<Word>(adapter.filteredData);
 
 			if (constraint == null || constraint.Length() == 0)
 			{
@@ -75,8 +77,9 @@ namespace Fragments
 
 				for (int i = 0; i < adapter.originalData.Count; i++)
 				{
-					string text = adapter.originalData[i].Original;
-					if (text.ToLower().StartsWith(input))
+					string original = adapter.originalData[i].Original;
+					string translation = adapter.originalData[i].Translation;
+					if (original.ToLower().StartsWith(input) || translation.ToLower().StartsWith(input))
 					{
 						filteredList.Add(adapter.originalData[i]);
 					}
@@ -93,6 +96,12 @@ namespace Fragments
 
 	class Listener : Java.Lang.Object, SearchView.IOnQueryTextListener
 	{
+		/// <summary>
+		/// sets listener to the search window in the dictionary part of the app
+		/// it detects when something changes in the input text field and invokes the filter
+		/// </summary>
+		/// <param name="newText">input from user</param>
+		/// <returns></returns>
 		bool SearchView.IOnQueryTextListener.OnQueryTextChange(string newText)
 		{
 			LineAdapter adapter = (LineAdapter)RecordingsFragment.myList.Adapter;
@@ -116,6 +125,8 @@ namespace Fragments
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
 
+			//finds search window and sets custom adapter to the ListView in which
+			//the search results are displayed
 			mySearchView = (SearchView)view.FindViewById(Dictionary.Resource.Id.searchView);
 			myList = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
 			myList.Adapter = new LineAdapter(Context, English.Dictionary);
@@ -126,12 +137,19 @@ namespace Fragments
 			return view;
 		}
 
+		/// <summary>
+		/// setting the design and functionality of the search window
+		/// in the dictionary part of the app
+		/// </summary>
 		void SetUpSearchView()
 		{
 			mySearchView.SetIconifiedByDefault(false);
 			mySearchView.SetOnQueryTextListener(new Listener());
 			mySearchView.SubmitButtonEnabled = true;
-			mySearchView.SetQueryHint("Search here");
+
+			int id = Application.Context.Resources.GetIdentifier("@string/search_here", null, Application.Context.PackageName);
+			string text = Application.Context.Resources.GetString(id);
+			mySearchView.SetQueryHint(text);
 		}
 	}
 
@@ -156,6 +174,14 @@ namespace Fragments
 
 		public Filter Filter => new LineFilter();
 
+		/// <summary>
+		/// sets the right text and sound data to the TextViews and ImageButton in dict_line
+		/// this is done for every line when it is supposed to be displayed
+		/// </summary>
+		/// <param name="position">index in the filteredData</param>
+		/// <param name="convertView">current view</param>
+		/// <param name="parent"></param>
+		/// <returns>new View</returns>
 		public override View GetView(int position, View convertView, ViewGroup parent)
 		{
 			View v = convertView;

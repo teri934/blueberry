@@ -18,6 +18,7 @@ namespace Dictionary
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            //initialisation of needed components
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
@@ -33,14 +34,20 @@ namespace Dictionary
             navigationView.SetNavigationItemSelectedListener(this);
 
 
+            //main menu is dynamically created
             FragmentTransaction ft = FragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.place_holder, new Fragments.MainFragment());
             ft.Commit();
 
+            //at the start of the app the method CreateDictionary is called
+            //to read the needed data for further usage
             ILanguage en = new English();
             en.CreateDictionary();
         }
 
+        /// <summary>
+        /// behaviour (of main drawer) when back tab is pressed
+        /// </summary>
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -53,30 +60,6 @@ namespace Dictionary
                 base.OnBackPressed();
             }
         }
-
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
-        //private void FabOnClick(object sender, EventArgs eventArgs)
-        //{
-        //    View view = (View) sender;
-        //    Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-        //        .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        //}
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {

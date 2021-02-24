@@ -43,7 +43,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values\
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values-v21\styles.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\side_nav_bar.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\menu\activity_main_drawer.xml
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\menu\menu_main.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\mipmap-hdpi\ic_launcher.png

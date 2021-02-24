@@ -11,7 +11,8 @@
     <string name="app_name">blueberry!</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Settings</string>
+  
+    <string name="search_here">Searching</string>
 
     <string name="airport">airport</string>
     <string name="apple">apple</string>

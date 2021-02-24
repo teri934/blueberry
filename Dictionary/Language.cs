@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Android.Content.Res;
 using Android.Util;
@@ -14,9 +13,10 @@ namespace Language
 		const string language = "english";
 		static List<Word> sortedDictionary;
 		public static List<Word> Dictionary => sortedDictionary;
+
 		public void CreateDictionary()
 		{
-			AssetManager assets = Android.App.Application.Context.Assets;
+			AssetManager assets = Application.Context.Assets;
 			string content = "";
 			try
 			{
@@ -42,6 +42,10 @@ namespace Language
 
 	interface ILanguage
 	{
+		/// <summary>
+		/// reads content from json file, stores it into JSONArray and
+		/// then, by calling functions from the class Word, creates sorted dictionary of Words
+		/// </summary>
 		public void CreateDictionary();
 	}
 
@@ -51,12 +55,23 @@ namespace Language
 		 public string Translation { get; private set; }
 		 public string Original { get; private set; }
 
-		public static Word CreateNewWord(JSONObject ob, string lang)
+		/// <summary>
+		/// creates new object of Word (one line in the app dictionary) from JSONObject
+		/// </summary>
+		/// <param name="ob">current item from JSONArray ar</param>
+		/// <param name="language">language of translation (until further support default english)</param>
+		/// <returns>object of the class Word</returns>
+		public static Word CreateNewWord(JSONObject ob, string language)
 		{
 			int id = Application.Context.Resources.GetIdentifier(ob.Get("original").ToString(), null, Application.Context.PackageName);
-			return new Word { Filename = ob.Get("filename").ToString(), Translation = ob.Get(lang).ToString(), Original = Application.Context.Resources.GetString(id)};
+			return new Word { Filename = ob.Get("filename").ToString(), Translation = ob.Get(language).ToString(), Original = Application.Context.Resources.GetString(id)};
 		}
 
+		/// <summary>
+		/// sorts list according to Original in Word (native language of the environment)
+		/// </summary>
+		/// <param name="list">list of Words generated from json file</param>
+		/// <returns>sorted list</returns>
 		public static List<Word> SortList(List<Word> list)
 		{
 			var sortedQuery = list.OrderBy(x => x.Original);
