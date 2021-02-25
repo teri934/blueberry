@@ -69,7 +69,7 @@ namespace Dictionary
             {
                 // Handle the camera action
             }
-            else if (id == Resource.Id.nav_share)
+            else if (id == Resource.Id.english)
             {
 
             }

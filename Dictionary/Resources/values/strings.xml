@@ -2,6 +2,7 @@
     <string name="username">Tereza Kulichová</string>
     <string name="email">kulichova.t@gmail.com</string>
     <string name="log_out_button">Log out</string>
+    <string name="english">English</string>
   
     <string name="quizes_button">Quizes</string>
     <string name="recordings_button">Dictionary</string>

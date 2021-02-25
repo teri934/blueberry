@@ -15,8 +15,8 @@
       android:title="@string/change_language">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:title="Share" />
+                android:id="@+id/english"
+                android:title="@string/english" />
             <item
                 android:id="@+id/nav_send"
                 android:title="Send" />
