@@ -22,6 +22,7 @@ foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 FrameLayout;obj\Debug\90\res\layout\app_bar_main.xml
 gradient;obj\Debug\90\res\drawable\side_nav_bar.xml
 group;obj\Debug\90\res\drawable\flag.xml
+group;obj\Debug\90\res\drawable\flag_english.xml
 group;obj\Debug\90\res\drawable\icon.xml
 group;obj\Debug\90\res\menu\activity_main_drawer.xml
 ImageButton;obj\Debug\90\res\layout\dict_line.xml
@@ -42,6 +43,7 @@ ListView;obj\Debug\90\res\layout\content_recordings.xml
 menu;obj\Debug\90\res\menu\activity_main_drawer.xml
 menu;obj\Debug\90\res\menu\menu_main.xml
 path;obj\Debug\90\res\drawable\flag.xml
+path;obj\Debug\90\res\drawable\flag_english.xml
 path;obj\Debug\90\res\drawable\icon.xml
 path;obj\Debug\90\res\drawable\volume_up.xml
 paths;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -71,6 +73,7 @@ style;obj\Debug\90\res\values-v21\styles.xml
 TextView;obj\Debug\90\res\layout\dict_line.xml
 TextView;obj\Debug\90\res\layout\nav_header_main.xml
 vector;obj\Debug\90\res\drawable\flag.xml
+vector;obj\Debug\90\res\drawable\flag_english.xml
 vector;obj\Debug\90\res\drawable\icon.xml
 vector;obj\Debug\90\res\drawable\volume_up.xml
 View;obj\Debug\90\res\layout\dict_line.xml

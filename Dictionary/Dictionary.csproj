@@ -138,300 +138,6 @@
     <AndroidResource Include="Resources\layout\content_recordings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\airport.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\apple.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\baggage.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\banana.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\bathroom.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\beach.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\bed.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\beer.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\bike.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\black.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\blender.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\blue.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\book.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\brown.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\bus.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\car.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\city.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\computer.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\dictionary.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\dishwasher.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\door.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\drugstore.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\emergency.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\fire.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\i.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\we.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\our.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\my.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\fish.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\flour.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\forest.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\fork.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\fruit.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\garden.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\good_luck.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\goodbye.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\green.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\grocery.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\hat.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\hello.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\help.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\hospital.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\house.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\chicken.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\jacket.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\kettle.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\key.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\knife.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\he.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\him.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\microwave.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\it.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\newspaper.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\orange.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\oven.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\pantry.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\pants.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\pasta.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\pink.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\plane.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\police_station.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\pub.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\red.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\restaurant.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\road.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\room.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\sea.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\you.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\your.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\ship.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\shirt.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\shoes.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\shop.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\skirt.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\snake.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\socks.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\soup.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\spoon.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\street.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\sugar.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\sun.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\sweatshirt.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\swimsuit.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\tea.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\they.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\their.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\time.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\train.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\tree.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\tshirt.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\vegetables.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\water.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\white.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\window.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\she.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\her.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\work.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\raw\yellow.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\dict_line.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -445,6 +151,106 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\flag_english.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\raw\airport.mp3" />
+    <AndroidResource Include="Resources\raw\apple.mp3" />
+    <AndroidResource Include="Resources\raw\baggage.mp3" />
+    <AndroidResource Include="Resources\raw\banana.mp3" />
+    <AndroidResource Include="Resources\raw\bathroom.mp3" />
+    <AndroidResource Include="Resources\raw\beach.mp3" />
+    <AndroidResource Include="Resources\raw\bed.mp3" />
+    <AndroidResource Include="Resources\raw\beer.mp3" />
+    <AndroidResource Include="Resources\raw\bike.mp3" />
+    <AndroidResource Include="Resources\raw\black.mp3" />
+    <AndroidResource Include="Resources\raw\blender.mp3" />
+    <AndroidResource Include="Resources\raw\blue.mp3" />
+    <AndroidResource Include="Resources\raw\book.mp3" />
+    <AndroidResource Include="Resources\raw\brown.mp3" />
+    <AndroidResource Include="Resources\raw\bus.mp3" />
+    <AndroidResource Include="Resources\raw\car.mp3" />
+    <AndroidResource Include="Resources\raw\chicken.mp3" />
+    <AndroidResource Include="Resources\raw\city.mp3" />
+    <AndroidResource Include="Resources\raw\computer.mp3" />
+    <AndroidResource Include="Resources\raw\dictionary.mp3" />
+    <AndroidResource Include="Resources\raw\dishwasher.mp3" />
+    <AndroidResource Include="Resources\raw\door.mp3" />
+    <AndroidResource Include="Resources\raw\drugstore.mp3" />
+    <AndroidResource Include="Resources\raw\emergency.mp3" />
+    <AndroidResource Include="Resources\raw\fire.mp3" />
+    <AndroidResource Include="Resources\raw\fish.mp3" />
+    <AndroidResource Include="Resources\raw\flour.mp3" />
+    <AndroidResource Include="Resources\raw\forest.mp3" />
+    <AndroidResource Include="Resources\raw\fork.mp3" />
+    <AndroidResource Include="Resources\raw\fruit.mp3" />
+    <AndroidResource Include="Resources\raw\garden.mp3" />
+    <AndroidResource Include="Resources\raw\goodbye.mp3" />
+    <AndroidResource Include="Resources\raw\good_luck.mp3" />
+    <AndroidResource Include="Resources\raw\green.mp3" />
+    <AndroidResource Include="Resources\raw\grocery.mp3" />
+    <AndroidResource Include="Resources\raw\hat.mp3" />
+    <AndroidResource Include="Resources\raw\he.mp3" />
+    <AndroidResource Include="Resources\raw\hello.mp3" />
+    <AndroidResource Include="Resources\raw\help.mp3" />
+    <AndroidResource Include="Resources\raw\her.mp3" />
+    <AndroidResource Include="Resources\raw\him.mp3" />
+    <AndroidResource Include="Resources\raw\hospital.mp3" />
+    <AndroidResource Include="Resources\raw\house.mp3" />
+    <AndroidResource Include="Resources\raw\i.mp3" />
+    <AndroidResource Include="Resources\raw\it.mp3" />
+    <AndroidResource Include="Resources\raw\jacket.mp3" />
+    <AndroidResource Include="Resources\raw\kettle.mp3" />
+    <AndroidResource Include="Resources\raw\key.mp3" />
+    <AndroidResource Include="Resources\raw\knife.mp3" />
+    <AndroidResource Include="Resources\raw\microwave.mp3" />
+    <AndroidResource Include="Resources\raw\my.mp3" />
+    <AndroidResource Include="Resources\raw\newspaper.mp3" />
+    <AndroidResource Include="Resources\raw\orange.mp3" />
+    <AndroidResource Include="Resources\raw\our.mp3" />
+    <AndroidResource Include="Resources\raw\oven.mp3" />
+    <AndroidResource Include="Resources\raw\pantry.mp3" />
+    <AndroidResource Include="Resources\raw\pants.mp3" />
+    <AndroidResource Include="Resources\raw\pasta.mp3" />
+    <AndroidResource Include="Resources\raw\pink.mp3" />
+    <AndroidResource Include="Resources\raw\plane.mp3" />
+    <AndroidResource Include="Resources\raw\police_station.mp3" />
+    <AndroidResource Include="Resources\raw\pub.mp3" />
+    <AndroidResource Include="Resources\raw\red.mp3" />
+    <AndroidResource Include="Resources\raw\restaurant.mp3" />
+    <AndroidResource Include="Resources\raw\road.mp3" />
+    <AndroidResource Include="Resources\raw\room.mp3" />
+    <AndroidResource Include="Resources\raw\sea.mp3" />
+    <AndroidResource Include="Resources\raw\she.mp3" />
+    <AndroidResource Include="Resources\raw\ship.mp3" />
+    <AndroidResource Include="Resources\raw\shirt.mp3" />
+    <AndroidResource Include="Resources\raw\shoes.mp3" />
+    <AndroidResource Include="Resources\raw\shop.mp3" />
+    <AndroidResource Include="Resources\raw\skirt.mp3" />
+    <AndroidResource Include="Resources\raw\snake.mp3" />
+    <AndroidResource Include="Resources\raw\socks.mp3" />
+    <AndroidResource Include="Resources\raw\soup.mp3" />
+    <AndroidResource Include="Resources\raw\spoon.mp3" />
+    <AndroidResource Include="Resources\raw\street.mp3" />
+    <AndroidResource Include="Resources\raw\sugar.mp3" />
+    <AndroidResource Include="Resources\raw\sun.mp3" />
+    <AndroidResource Include="Resources\raw\sweatshirt.mp3" />
+    <AndroidResource Include="Resources\raw\swimsuit.mp3" />
+    <AndroidResource Include="Resources\raw\tea.mp3" />
+    <AndroidResource Include="Resources\raw\their.mp3" />
+    <AndroidResource Include="Resources\raw\they.mp3" />
+    <AndroidResource Include="Resources\raw\time.mp3" />
+    <AndroidResource Include="Resources\raw\train.mp3" />
+    <AndroidResource Include="Resources\raw\tree.mp3" />
+    <AndroidResource Include="Resources\raw\tshirt.mp3" />
+    <AndroidResource Include="Resources\raw\vegetables.mp3" />
+    <AndroidResource Include="Resources\raw\water.mp3" />
+    <AndroidResource Include="Resources\raw\we.mp3" />
+    <AndroidResource Include="Resources\raw\white.mp3" />
+    <AndroidResource Include="Resources\raw\window.mp3" />
+    <AndroidResource Include="Resources\raw\work.mp3" />
+    <AndroidResource Include="Resources\raw\yellow.mp3" />
+    <AndroidResource Include="Resources\raw\you.mp3" />
+    <AndroidResource Include="Resources\raw\your.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
