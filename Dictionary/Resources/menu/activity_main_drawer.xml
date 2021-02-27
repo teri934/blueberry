@@ -16,6 +16,7 @@
         <menu>
             <item
                 android:id="@+id/english"
+                android:icon="@drawable/flag_english"
                 android:title="@string/english" />
             <item
                 android:id="@+id/nav_send"

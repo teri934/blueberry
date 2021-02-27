@@ -31,6 +31,7 @@ namespace Dictionary
             toggle.SyncState();
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
 
