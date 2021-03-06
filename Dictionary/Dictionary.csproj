@@ -65,6 +65,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Overriden.cs" />
     <Compile Include="Fragments.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="MainActivity.cs" />
@@ -251,6 +252,9 @@
     <AndroidResource Include="Resources\raw\yellow.mp3" />
     <AndroidResource Include="Resources\raw\you.mp3" />
     <AndroidResource Include="Resources\raw\your.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\attrs.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,0 +1,2 @@
+dark mode resets app
+sound keeps playing when back pressed or closing app

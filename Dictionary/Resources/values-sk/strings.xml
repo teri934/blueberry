@@ -1,6 +1,7 @@
 <resources>
     <string name="username">Tereza Kulichová</string>
     <string name="email">kulichova.t@gmail.com</string>
+    <string name="darkMode">Nočný režim</string>
     <string name="log_out_button">Odhlásiť sa</string>
     <string name="english">Angličtina</string>
   

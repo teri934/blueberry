@@ -34,7 +34,8 @@
   <FrameLayout
        android:id="@+id/place_holder"
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:background="?attr/colorBackgroundTheme">
   </FrameLayout>
 
     <android.support.design.widget.FloatingActionButton

@@ -1,26 +1,38 @@
 ﻿using System;
 using Android.App;
 using Android.OS;
+using Android.Content;
 using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Xamarin.Essentials;
 using Language;
+using Overriden;
 using Android.Widget;
-using Android.Media;
 
 namespace Dictionary
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        public static MainActivity instance;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            //initialisation of needed components
-            base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            instance = this;
+
+			//Preferences used here to remember if the app was
+            //in a day or night mode before closing
+            if (Preferences.Get("dark", false))
+                SetTheme(Resource.Style.DarkTheme);
+			else
+				SetTheme(Resource.Style.AppTheme);
+
+			//initialisation of needed components
+			base.OnCreate(savedInstanceState);
+            Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -33,6 +45,13 @@ namespace Dictionary
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
+
+            //switch button functinality
+            Switch themeSwitch = (Switch)navigationView.GetHeaderView(0).FindViewById(Resource.Id.modeSwitch);
+            if (Preferences.Get("dark", false))
+                themeSwitch.Checked = true;
+
+            themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
 
 
             //main menu is dynamically created
@@ -85,9 +104,19 @@ namespace Dictionary
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        /// <summary>
+        /// restarting the app after changing the view mode (light or dark)
+        /// </summary>
+        public void RestartApp()
+        {
+            Intent i = new Intent(Application.Context, typeof(MainActivity));
+            StartActivity(i);
+            Finish();
         }
     }
 }
