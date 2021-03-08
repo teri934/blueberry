@@ -3,4 +3,5 @@
 <resources>
   <attr name="colorBackgroundTheme" format="color" />
   <attr name="colorTextTheme" format="color" />
+  <attr name="colorSwitchTheme" format="color" />
 </resources>

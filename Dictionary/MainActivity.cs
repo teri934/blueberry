@@ -15,7 +15,7 @@ using Android.Widget;
 
 namespace Dictionary
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         public static MainActivity instance;
@@ -45,13 +45,6 @@ namespace Dictionary
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
-
-            //switch button functinality
-            Switch themeSwitch = (Switch)navigationView.GetHeaderView(0).FindViewById(Resource.Id.modeSwitch);
-            if (Preferences.Get("dark", false))
-                themeSwitch.Checked = true;
-
-            themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
 
 
             //main menu is dynamically created

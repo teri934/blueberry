@@ -1,5 +1,6 @@
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_main.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_recordings.xml
+@string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_settings.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 android.support.design.widget.AppBarLayout;obj\Debug\90\res\layout\app_bar_main.xml
@@ -12,6 +13,7 @@ attr;obj\Debug\90\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\content_main.xml
+Button;obj\Debug\90\res\layout\content_settings.xml
 cache-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
@@ -36,6 +38,7 @@ item;obj\Debug\90\res\values\styles.xml
 item;obj\Debug\90\res\values-v21\styles.xml
 LinearLayout;obj\Debug\90\res\layout\content_main.xml
 LinearLayout;obj\Debug\90\res\layout\content_recordings.xml
+LinearLayout;obj\Debug\90\res\layout\content_settings.xml
 LinearLayout;obj\Debug\90\res\layout\dict_line.xml
 LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
 ListView;obj\Debug\90\res\layout\content_recordings.xml
@@ -45,6 +48,7 @@ path;obj\Debug\90\res\drawable\icon.xml
 path;obj\Debug\90\res\drawable\volume_up.xml
 paths;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
+RelativeLayout;obj\Debug\90\res\layout\content_settings.xml
 RelativeLayout;obj\Debug\90\res\layout\dict_line.xml
 resources;obj\Debug\90\res\values\attrs.xml
 resources;obj\Debug\90\res\values\colors.xml
@@ -66,7 +70,9 @@ string;obj\Debug\90\res\values-cs\strings.xml
 string;obj\Debug\90\res\values-sk\strings.xml
 style;obj\Debug\90\res\values\styles.xml
 style;obj\Debug\90\res\values-v21\styles.xml
+Switch;obj\Debug\90\res\layout\content_settings.xml
 Switch;obj\Debug\90\res\layout\nav_header_main.xml
+TextView;obj\Debug\90\res\layout\content_settings.xml
 TextView;obj\Debug\90\res\layout\dict_line.xml
 TextView;obj\Debug\90\res\layout\nav_header_main.xml
 vector;obj\Debug\90\res\drawable\flag_english.xml

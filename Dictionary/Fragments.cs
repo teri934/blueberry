@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Media;
 using Java.Lang;
+using Xamarin.Essentials;
 using Language;
 using Overriden;
 
@@ -16,13 +17,18 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_main, parent, false);
+
 			Button recordings = view.FindViewById<Button>(Dictionary.Resource.Id.recordings_button);
 			recordings.Click += Recordings_Click;
+
+			Button settings = view.FindViewById<Button>(Dictionary.Resource.Id.settings_button);
+			settings.Click += Settings_Click;
+
 			return view;
 		}
 
 		/// <summary>
-		/// function for recording buttons in the dictionary part of the app
+		/// function for recording button in the main menu
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
@@ -30,6 +36,19 @@ namespace Fragments
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new RecordingsFragment());
+			ft.AddToBackStack(null);
+			ft.Commit();
+		}
+
+		/// <summary>
+		/// function for settings button in the main menu
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void Settings_Click(object sender, EventArgs e)
+		{
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Replace(Dictionary.Resource.Id.place_holder, new SettingsFragment());
 			ft.AddToBackStack(null);
 			ft.Commit();
 		}
@@ -68,6 +87,23 @@ namespace Fragments
 			int id = Application.Context.Resources.GetIdentifier("@string/search_here", null, Application.Context.PackageName);
 			string text = Application.Context.Resources.GetString(id);
 			mySearchView.SetQueryHint(text);
+		}
+	}
+
+	class SettingsFragment : Fragment
+	{
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
+
+			//switch button functinality
+			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
+			if (Preferences.Get("dark", false))
+				themeSwitch.Checked = true;
+
+			themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
+
+			return view;
 		}
 	}
 
