@@ -28,11 +28,26 @@ namespace Fragments
 		}
 
 		/// <summary>
-		/// function for recording button in the main menu
+		/// function for recording button in the main menu, calls Recordings
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		void Recordings_Click(object sender, EventArgs e)
+		{
+			Recordings();
+		}
+
+		/// <summary>
+		/// function for settings button in the main menu, calls Settings
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void Settings_Click(object sender, EventArgs e)
+		{
+			Settings();
+		}
+
+		public void Recordings()
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new RecordingsFragment());
@@ -40,12 +55,7 @@ namespace Fragments
 			ft.Commit();
 		}
 
-		/// <summary>
-		/// function for settings button in the main menu
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void Settings_Click(object sender, EventArgs e)
+		public void Settings()
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new SettingsFragment());
@@ -96,7 +106,7 @@ namespace Fragments
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
 
-			//switch button functinality
+			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
 			if (Preferences.Get("dark", false))
 				themeSwitch.Checked = true;

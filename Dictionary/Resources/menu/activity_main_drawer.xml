@@ -18,10 +18,27 @@
                 android:id="@+id/english"
                 android:icon="@drawable/flag_english"
                 android:title="@string/english" />
-            <item
-                android:id="@+id/nav_send"
-                android:title="Send" />
         </menu>
+    </item>
+
+    <item
+      android:id="@+id/menu"
+      android:title="Menu">
+      
+      <menu>
+        <item
+            android:id="@+id/quizes_item"
+            android:icon="@drawable/flag_english"
+            android:title="@string/quizes_button" />
+        <item
+            android:id="@+id/recordings_item"
+            android:icon="@drawable/flag_english"
+            android:title="@string/recordings_button" />
+        <item
+            android:id="@+id/settings_item"
+            android:icon="@drawable/flag_english"
+            android:title="@string/settings_button" />
+      </menu>
     </item>
 
 </menu>

@@ -378,3 +378,4 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\Dictionary\MainActivity.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_settings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\SettingsFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\quizes.xml

@@ -8,9 +8,12 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Text.Style;
 using Xamarin.Essentials;
 using Language;
+using Fragments;
 using Overriden;
+using Android.Util;
 using Android.Widget;
 
 namespace Dictionary
@@ -46,10 +49,18 @@ namespace Dictionary
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
+			for (int i = 0; i < navigationView.Menu.Size(); i++)
+			{
+                IMenuItem item = navigationView.Menu.GetItem(i);
+                Android.Text.SpannableString spanString = new Android.Text.SpannableString(navigationView.Menu.GetItem(i).ToString());
+                spanString.SetSpan(new ForegroundColorSpan(Android.Graphics.Color.LawnGreen), 0, spanString.Length(), 0);
+                item.SetTitle(spanString);
+            }
+
 
             //main menu is dynamically created
             FragmentTransaction ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.place_holder, new Fragments.MainFragment());
+            ft.Replace(Resource.Id.place_holder, new MainFragment());
             ft.Commit();
 
             //at the start of the app the method CreateDictionary is called
@@ -84,22 +95,64 @@ namespace Dictionary
             }
             else if (id == Resource.Id.english)
             {
-
+                return true;
             }
-            else if (id == Resource.Id.nav_send)
+            else if(id == Resource.Id.recordings_item)
+			{
+                RemoveFromBackStack();
+
+                MainFragment f = new MainFragment();
+                InitializeMainFragment(f);
+
+                f.Recordings();
+            }
+            else if (id == Resource.Id.settings_item)
             {
+                RemoveFromBackStack();
 
+                MainFragment f = new MainFragment();
+                InitializeMainFragment(f);
+
+                f.Settings();
             }
+
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);
             return true;
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        /// <summary>
+        /// after removing all fragments from stack, the main fragment (the main screen with menu buttons)
+        /// needs to initialized
+        /// </summary>
+        /// <param name="f"></param>
+        void InitializeMainFragment(MainFragment f)
+		{
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            ft.Replace(Resource.Id.place_holder, f);
+            ft.Commit();
+        }
+
+        /// <summary>
+        /// removes from back stack all fragments, so when changing to another window in nav drawer
+        /// the button back returns the user always to the main menu screen
+        /// </summary>
+        void RemoveFromBackStack()
+		{
+            FragmentManager manager = FragmentManager;
+
+            for (int i = 0; i < manager.BackStackEntryCount; i++)
+            {
+                manager.PopBackStack();
+            }
         }
 
         /// <summary>

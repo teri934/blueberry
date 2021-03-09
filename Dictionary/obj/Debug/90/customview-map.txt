@@ -9,15 +9,23 @@ android.support.design.widget.FloatingActionButton;obj\Debug\90\res\layout\app_b
 android.support.design.widget.NavigationView;obj\Debug\90\res\layout\activity_main.xml
 android.support.v4.widget.DrawerLayout;obj\Debug\90\res\layout\activity_main.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\app_bar_main.xml
+Aps;obj\Debug\90\res\drawable\quizes.xml
 attr;obj\Debug\90\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Bezier;obj\Debug\90\res\drawable\quizes.xml
+Brush;obj\Debug\90\res\drawable\quizes.xml
 Button;obj\Debug\90\res\layout\content_main.xml
 Button;obj\Debug\90\res\layout\content_settings.xml
 cache-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+Canvas;obj\Debug\90\res\drawable\quizes.xml
+Clip;obj\Debug\90\res\drawable\quizes.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
+ControlPoint1;obj\Debug\90\res\drawable\quizes.xml
+ControlPoint2;obj\Debug\90\res\drawable\quizes.xml
 dimen;obj\Debug\90\res\values\dimens.xml
+EndPoint;obj\Debug\90\res\drawable\quizes.xml
 external-cache-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
@@ -27,6 +35,7 @@ gradient;obj\Debug\90\res\drawable\side_nav_bar.xml
 group;obj\Debug\90\res\drawable\flag_english.xml
 group;obj\Debug\90\res\drawable\icon.xml
 group;obj\Debug\90\res\menu\activity_main_drawer.xml
+Group;obj\Debug\90\res\drawable\quizes.xml
 ImageButton;obj\Debug\90\res\layout\dict_line.xml
 ImageView;obj\Debug\90\res\layout\app_bar_main.xml
 ImageView;obj\Debug\90\res\layout\nav_header_main.xml
@@ -43,10 +52,16 @@ LinearLayout;obj\Debug\90\res\layout\dict_line.xml
 LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
 ListView;obj\Debug\90\res\layout\content_recordings.xml
 menu;obj\Debug\90\res\menu\activity_main_drawer.xml
+Page;obj\Debug\90\res\drawable\quizes.xml
 path;obj\Debug\90\res\drawable\flag_english.xml
 path;obj\Debug\90\res\drawable\icon.xml
 path;obj\Debug\90\res\drawable\volume_up.xml
+Path;obj\Debug\90\res\drawable\quizes.xml
+PathFigure;obj\Debug\90\res\drawable\quizes.xml
 paths;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+Pen;obj\Debug\90\res\drawable\quizes.xml
+Point;obj\Debug\90\res\drawable\quizes.xml
+PolyLine;obj\Debug\90\res\drawable\quizes.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
 RelativeLayout;obj\Debug\90\res\layout\content_settings.xml
 RelativeLayout;obj\Debug\90\res\layout\dict_line.xml
@@ -65,6 +80,8 @@ SearchView;obj\Debug\90\res\layout\content_recordings.xml
 shape;obj\Debug\90\res\drawable\ripple.xml
 shape;obj\Debug\90\res\drawable\side_nav_bar.xml
 solid;obj\Debug\90\res\drawable\ripple.xml
+SolidBrush;obj\Debug\90\res\drawable\quizes.xml
+StartPoint;obj\Debug\90\res\drawable\quizes.xml
 string;obj\Debug\90\res\values\strings.xml
 string;obj\Debug\90\res\values-cs\strings.xml
 string;obj\Debug\90\res\values-sk\strings.xml
