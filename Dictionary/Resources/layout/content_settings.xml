@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="60dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
@@ -12,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:layout_marginTop="75dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
         android:orientation="horizontal">
         
     <TextView
@@ -20,7 +23,7 @@
      android:layout_height="wrap_content"
      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
      android:text="@string/darkMode"
-     android:layout_marginLeft="10dp"
+     android:layout_marginLeft="@dimen/button_extra"
      android:textColor="?attr/colorTextTheme">
     </TextView>
 
@@ -35,4 +38,42 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/border"
+    android:background="#E1E1E1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+         android:text="@string/log_out_button"
+         android:layout_marginLeft="@dimen/button_extra"
+         android:layout_weight="2"
+         android:textColor="?attr/colorTextTheme">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_extra"
+            android:padding="@dimen/button_extra"
+            android:layout_centerHorizontal="true" 
+            android:src="@drawable/logout"
+            android:background="@drawable/ripple"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border"
+        android:background="#E1E1E1"/>
+
+</LinearLayout>

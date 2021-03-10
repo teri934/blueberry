@@ -1,4 +1,5 @@
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_main.xml
+@string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_quizes.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_recordings.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_settings.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
@@ -36,6 +37,7 @@ group;obj\Debug\90\res\drawable\flag_english.xml
 group;obj\Debug\90\res\drawable\icon.xml
 group;obj\Debug\90\res\menu\activity_main_drawer.xml
 Group;obj\Debug\90\res\drawable\quizes.xml
+ImageButton;obj\Debug\90\res\layout\content_settings.xml
 ImageButton;obj\Debug\90\res\layout\dict_line.xml
 ImageView;obj\Debug\90\res\layout\app_bar_main.xml
 ImageView;obj\Debug\90\res\layout\nav_header_main.xml
@@ -53,8 +55,12 @@ LinearLayout;obj\Debug\90\res\layout\nav_header_main.xml
 ListView;obj\Debug\90\res\layout\content_recordings.xml
 menu;obj\Debug\90\res\menu\activity_main_drawer.xml
 Page;obj\Debug\90\res\drawable\quizes.xml
+path;obj\Debug\90\res\drawable\dictionary.xml
 path;obj\Debug\90\res\drawable\flag_english.xml
 path;obj\Debug\90\res\drawable\icon.xml
+path;obj\Debug\90\res\drawable\logout.xml
+path;obj\Debug\90\res\drawable\quizes.xml
+path;obj\Debug\90\res\drawable\settings.xml
 path;obj\Debug\90\res\drawable\volume_up.xml
 Path;obj\Debug\90\res\drawable\quizes.xml
 PathFigure;obj\Debug\90\res\drawable\quizes.xml
@@ -63,6 +69,7 @@ Pen;obj\Debug\90\res\drawable\quizes.xml
 Point;obj\Debug\90\res\drawable\quizes.xml
 PolyLine;obj\Debug\90\res\drawable\quizes.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
+RelativeLayout;obj\Debug\90\res\layout\content_quizes.xml
 RelativeLayout;obj\Debug\90\res\layout\content_settings.xml
 RelativeLayout;obj\Debug\90\res\layout\dict_line.xml
 resources;obj\Debug\90\res\values\attrs.xml
@@ -92,7 +99,12 @@ Switch;obj\Debug\90\res\layout\nav_header_main.xml
 TextView;obj\Debug\90\res\layout\content_settings.xml
 TextView;obj\Debug\90\res\layout\dict_line.xml
 TextView;obj\Debug\90\res\layout\nav_header_main.xml
+vector;obj\Debug\90\res\drawable\dictionary.xml
 vector;obj\Debug\90\res\drawable\flag_english.xml
 vector;obj\Debug\90\res\drawable\icon.xml
+vector;obj\Debug\90\res\drawable\logout.xml
+vector;obj\Debug\90\res\drawable\quizes.xml
+vector;obj\Debug\90\res\drawable\settings.xml
 vector;obj\Debug\90\res\drawable\volume_up.xml
+View;obj\Debug\90\res\layout\content_settings.xml
 View;obj\Debug\90\res\layout\dict_line.xml

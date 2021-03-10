@@ -8,6 +8,7 @@ using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+using Android.Graphics;
 using Android.Text.Style;
 using Xamarin.Essentials;
 using Language;
@@ -22,13 +23,15 @@ namespace Dictionary
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         public static MainActivity instance;
+        Languages language;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             instance = this;
+            bool dark;
 
 			//Preferences used here to remember if the app was
             //in a day or night mode before closing
-            if (Preferences.Get("dark", false))
+            if (dark = Preferences.Get("dark", false))
                 SetTheme(Resource.Style.DarkTheme);
 			else
 				SetTheme(Resource.Style.AppTheme);
@@ -49,14 +52,10 @@ namespace Dictionary
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
-			for (int i = 0; i < navigationView.Menu.Size(); i++)
-			{
-                IMenuItem item = navigationView.Menu.GetItem(i);
-                Android.Text.SpannableString spanString = new Android.Text.SpannableString(navigationView.Menu.GetItem(i).ToString());
-                spanString.SetSpan(new ForegroundColorSpan(Android.Graphics.Color.LawnGreen), 0, spanString.Length(), 0);
-                item.SetTitle(spanString);
-            }
-
+            if(dark)
+            CustomizeNavigationMenu(navigationView, Color.LawnGreen, "#FFFFFF");
+            else
+                CustomizeNavigationMenu(navigationView, Color.DarkGreen, "#000000");
 
             //main menu is dynamically created
             FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -66,7 +65,39 @@ namespace Dictionary
             //at the start of the app the method CreateDictionary is called
             //to read the needed data for further usage
             ILanguage en = new English();
+            language = en.language;
             en.CreateDictionary();
+        }
+
+        /// <summary>
+        /// sets different colors for menu items according to the current theme
+        /// </summary>
+        /// <param name="navigationView"></param>
+        /// <param name="color"></param>
+        void CustomizeNavigationMenu(NavigationView navigationView, Color colorText, string colorItem)
+		{
+            for (int i = 0; i < navigationView.Menu.Size(); i++)
+            {
+                IMenuItem item = navigationView.Menu.GetItem(i);
+                Android.Text.SpannableString spanString = new Android.Text.SpannableString(navigationView.Menu.GetItem(i).ToString());
+                spanString.SetSpan(new ForegroundColorSpan(colorText), 0, spanString.Length(), 0);
+                item.SetTitle(spanString);
+
+                LoopSubmenu(item, colorItem);
+            }
+        }
+
+        void LoopSubmenu(IMenuItem item, string colorItem)
+		{
+            if (item.ToString() == "Menu")
+            {
+                IMenuItem icon;
+                for (int i = 0; i < item.SubMenu.Size(); i++)
+                {
+                    icon = item.SubMenu.GetItem(i);
+                    icon.Icon.SetTint(Color.ParseColor(colorItem));
+                }
+            }
         }
 
         /// <summary>
@@ -89,33 +120,30 @@ namespace Dictionary
         {
             int id = item.ItemId;
 
-            if (id == Resource.Id.nav_camera)
+            if (id == Resource.Id.english)
             {
-                // Handle the camera action
+                if(language == Languages.english)
+				{
+                    int language_id = Application.Context.Resources.GetIdentifier("@string/language_toast", null, Application.Context.PackageName);
+                    string text = Application.Context.Resources.GetString(language_id);
+                    Toast.MakeText(Application.Context, text, ToastLength.Short).Show();
+                    return true;
+                }
             }
-            else if (id == Resource.Id.english)
-            {
-                return true;
-            }
-            else if(id == Resource.Id.recordings_item)
+            else
 			{
                 RemoveFromBackStack();
 
                 MainFragment f = new MainFragment();
                 InitializeMainFragment(f);
 
-                f.Recordings();
+                if (id == Resource.Id.recordings_item)
+                    f.Recordings();
+                else if (id == Resource.Id.settings_item)
+                    f.Settings();
+                else if (id == Resource.Id.quizes_item)
+                    f.Quizes();
             }
-            else if (id == Resource.Id.settings_item)
-            {
-                RemoveFromBackStack();
-
-                MainFragment f = new MainFragment();
-                InitializeMainFragment(f);
-
-                f.Settings();
-            }
-
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             drawer.CloseDrawer(GravityCompat.Start);

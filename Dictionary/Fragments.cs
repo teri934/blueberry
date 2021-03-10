@@ -24,6 +24,9 @@ namespace Fragments
 			Button settings = view.FindViewById<Button>(Dictionary.Resource.Id.settings_button);
 			settings.Click += Settings_Click;
 
+			Button quizes = view.FindViewById<Button>(Dictionary.Resource.Id.quizes_button);
+			quizes.Click += Quizes_Click;
+
 			return view;
 		}
 
@@ -47,6 +50,16 @@ namespace Fragments
 			Settings();
 		}
 
+		/// <summary>
+		/// function for settings button in the main menu, calls Quizes
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void Quizes_Click(object sender, EventArgs e)
+		{
+			Quizes();
+		}
+
 		public void Recordings()
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -59,6 +72,14 @@ namespace Fragments
 		{
 			FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new SettingsFragment());
+			ft.AddToBackStack(null);
+			ft.Commit();
+		}
+
+		public void Quizes()
+		{
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Replace(Dictionary.Resource.Id.place_holder, new QuizesFragment());
 			ft.AddToBackStack(null);
 			ft.Commit();
 		}
@@ -112,6 +133,17 @@ namespace Fragments
 				themeSwitch.Checked = true;
 
 			themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
+
+			return view;
+		}
+	}
+
+	class QuizesFragment : Fragment
+	{
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_quizes, container, false);
+
 
 			return view;
 		}

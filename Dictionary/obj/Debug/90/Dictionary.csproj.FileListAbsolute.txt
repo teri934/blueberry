@@ -379,3 +379,8 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_settings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\SettingsFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\quizes.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\dictionary.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\settings.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\logout.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_quizes.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\QuizesFragment.java

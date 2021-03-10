@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:title="Import" />
-            <!--android:icon="@drawable/ic_menu_camera"-->
-    </group>
-
     <item 
       android:id="@+id/choose_language"
       android:title="@string/change_language">
@@ -28,15 +21,15 @@
       <menu>
         <item
             android:id="@+id/quizes_item"
-            android:icon="@drawable/flag_english"
+            android:icon="@drawable/quizes"
             android:title="@string/quizes_button" />
         <item
             android:id="@+id/recordings_item"
-            android:icon="@drawable/flag_english"
+            android:icon="@drawable/dictionary"
             android:title="@string/recordings_button" />
         <item
             android:id="@+id/settings_item"
-            android:icon="@drawable/flag_english"
+            android:icon="@drawable/settings"
             android:title="@string/settings_button" />
       </menu>
     </item>

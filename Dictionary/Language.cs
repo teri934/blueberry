@@ -10,7 +10,8 @@ namespace Language
 {
 	class English : ILanguage
 	{
-		const string language = "english";
+		public Languages language => Languages.english;
+		const string lang = "english";
 		static List<Word> sortedDictionary;
 		public static List<Word> Dictionary => sortedDictionary;
 
@@ -32,12 +33,17 @@ namespace Language
 
 			for (int i = 0; i < ar.Length(); i++)
 			{
-				Word word = Word.CreateNewWord((JSONObject)ar.Get(i), language);
+				Word word = Word.CreateNewWord((JSONObject)ar.Get(i), lang);
 				dictionary.Add(word);
 			}
 
 			sortedDictionary = Word.SortList(dictionary);
 		}
+	}
+
+	enum Languages
+	{
+		english
 	}
 
 	interface ILanguage
@@ -47,6 +53,7 @@ namespace Language
 		/// then, by calling functions from the class Word, creates sorted dictionary of Words
 		/// </summary>
 		public void CreateDictionary();
+		public Languages language { get; }
 	}
 
 	class Word : Java.Lang.Object

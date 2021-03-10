@@ -4,6 +4,7 @@
     <string name="darkMode">Dark mode</string>
     <string name="log_out_button">Log out</string>
     <string name="english">English</string>
+    <string name="language_toast">This language is already set</string>
   
     <string name="quizes_button">Quizes</string>
     <string name="recordings_button">Dictionary</string>

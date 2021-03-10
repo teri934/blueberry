@@ -4,6 +4,7 @@
     <string name="darkMode">Nočný režim</string>
     <string name="log_out_button">Odhlásiť sa</string>
     <string name="english">Angličtina</string>
+    <string name="language_toast">Tento jazyk práve používate</string>
   
     <string name="quizes_button">Kvízy</string>
     <string name="recordings_button">Slovník</string>
