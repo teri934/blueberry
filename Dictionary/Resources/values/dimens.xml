@@ -9,4 +9,5 @@
     <dimen name="button_width">120dp</dimen>
     <dimen name="button_extra">10dp</dimen>
     <dimen name="border">2dp</dimen>
+    <dimen name="shift">60dp</dimen>
 </resources>

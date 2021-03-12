@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@android:color/white"
         android:background="@drawable/ripple"
         android:layout_margin="@dimen/button_extra"
         android:padding="@dimen/button_extra"/>
@@ -33,7 +33,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@android:color/white"
         android:background="@drawable/ripple"
         android:layout_margin="5dp"
         android:padding="@dimen/button_extra"/>
@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
+        android:textColor="@android:color/white"
         android:background="@drawable/ripple"
         android:layout_margin="10dp"
         android:padding="@dimen/button_extra"/>

@@ -63,7 +63,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\mipmap-
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values-sk\strings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\values-cs\strings.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_recordings.xml
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\dict_line.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\volume_up.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\icon.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\ripple.xml
@@ -384,3 +383,8 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawabl
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\drawable\logout.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_quizes.xml
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\QuizesFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_scores.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\ScoresFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\dictionary_line.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res\layout\content_game.xml
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\GameFragment.java

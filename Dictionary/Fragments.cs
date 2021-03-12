@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Android.Media;
+using Android.Graphics;
 using Java.Lang;
 using Xamarin.Essentials;
 using Language;
@@ -144,8 +145,88 @@ namespace Fragments
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_quizes, container, false);
 
+			Button scores = (Button)view.FindViewById(Dictionary.Resource.Id.scores_button);
+			scores.Click += Scores_Click;
+
+			Button start = (Button)view.FindViewById(Dictionary.Resource.Id.start_button);
+			start.Click += Start_Click;
 
 			return view;
+		}
+
+		void Start_Click(object sender, EventArgs e)
+		{
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
+			ft.AddToBackStack(null);
+			ft.Commit();
+		}
+
+		void Scores_Click(object sender, EventArgs e)
+		{
+			FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Replace(Dictionary.Resource.Id.place_holder, new ScoresFragment());
+			ft.AddToBackStack(null);
+			ft.Commit();
+		}
+	}
+
+	class ScoresFragment : Fragment
+	{
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_scores, container, false);
+
+			return view;
+		}
+	}
+
+	class GameFragment : Fragment
+	{
+		MediaPlayer player = new MediaPlayer();
+		EditText input;
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			View view = inflater.Inflate(Dictionary.Resource.Layout.content_game, container, false);
+
+			input = (EditText)view.FindViewById(Dictionary.Resource.Id.input_game);
+
+			ImageButton recording = (ImageButton)view.FindViewById(Dictionary.Resource.Id.volume);
+			recording.Click += Sound_Click;
+
+			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.submit_button);
+			submit.Click += Submit_Click;
+
+			return view;
+		}
+
+		void Sound_Click(object sender, EventArgs e)
+		{
+			player.Release();
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(English.Dictionary[0].Filename, "raw", Application.Context.PackageName));
+			player.Start();
+		}
+
+		void Submit_Click(object sender, EventArgs e)
+		{
+			if (input.Text.ToLower() == English.Dictionary[0].Translation)
+			{
+				if(Preferences.Get("dark", false))
+					input.Background.Mutate().SetTint(Color.LawnGreen);
+				else
+					input.Background.Mutate().SetTint(Color.DarkGreen);
+
+				int language_id = Application.Context.Resources.GetIdentifier("@string/toast_correct", null, Application.Context.PackageName);
+				string text = Application.Context.Resources.GetString(language_id);
+				Toast.MakeText(Application.Context, text, ToastLength.Short).Show();
+			}
+			else
+			{
+				input.Background.Mutate().SetTint(Color.Red);
+				int language_id = Application.Context.Resources.GetIdentifier("@string/toast_incorrect", null, Application.Context.PackageName);
+				string text = Application.Context.Resources.GetString(language_id);
+				Toast.MakeText(Application.Context, text, ToastLength.Short).Show();
+			}
 		}
 	}
 

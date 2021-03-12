@@ -139,7 +139,7 @@
     <AndroidResource Include="Resources\layout\content_recordings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\dict_line.xml" />
+    <AndroidResource Include="Resources\layout\dictionary_line.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\volume_up.xml" />
@@ -273,6 +273,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\content_quizes.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\content_scores.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\content_game.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -4,11 +4,19 @@
     <string name="darkMode">Noční režim</string>
     <string name="log_out_button">Odhlásit se</string>
     <string name="english">Angličtina</string>
-    <string name="language_toast">Tento jazyk již používáte</string>
+    <string name="toast_language">Tento jazyk již používáš</string>
   
     <string name="quizes_button">Kvízy</string>
     <string name="recordings_button">Slovník</string>
     <string name="settings_button">Nastavení</string>
+
+    <string name="start_button">Start</string>
+    <string name="scores_button">Moje skóre</string>
+
+    <string name="game_command">Napiš cizí slovo z nahrávky</string>
+    <string name="submit_button">Pošli</string>
+    <string name="toast_correct">Gratulujeme, tvá odpověď je správná!</string>
+    <string name="toast_incorrect">Bohužel, tvá odpověď je nesprávná.</string>
 
     <string name="change_language">Změň jazyk</string>
 

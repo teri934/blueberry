@@ -4,11 +4,19 @@
     <string name="darkMode">Dark mode</string>
     <string name="log_out_button">Log out</string>
     <string name="english">English</string>
-    <string name="language_toast">This language is already set</string>
+    <string name="toast_language">This language is already set</string>
   
     <string name="quizes_button">Quizes</string>
     <string name="recordings_button">Dictionary</string>
     <string name="settings_button">Settings</string>
+
+    <string name="start_button">Start</string>
+    <string name="scores_button">My scores</string>
+  
+    <string name="game_command">Write the foreign word from the audio</string>
+    <string name="submit_button">Submit</string>
+    <string name="toast_correct">Congrats, your answer is correct!</string>
+    <string name="toast_incorrect">Sorry, your answer is incorrect.</string>
   
     <string name="change_language">Change language</string>
  

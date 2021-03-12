@@ -72,7 +72,7 @@ namespace Overriden
 			ImageButton b;
 			if (convertView == null)
 			{
-				v = inflater.Inflate(Dictionary.Resource.Layout.dict_line, null);
+				v = inflater.Inflate(Dictionary.Resource.Layout.dictionary_line, null);
 				b = (ImageButton)v.FindViewById(Dictionary.Resource.Id.volume);
 				b.Click += Sound_Click;
 			}

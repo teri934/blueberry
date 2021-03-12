@@ -24,6 +24,8 @@ namespace Dictionary
     {
         public static MainActivity instance;
         Languages language;
+        const string white = "#FFFFFF";
+        const string black = "#000000";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             instance = this;
@@ -53,9 +55,9 @@ namespace Dictionary
             navigationView.SetNavigationItemSelectedListener(this);
 
             if(dark)
-            CustomizeNavigationMenu(navigationView, Color.LawnGreen, "#FFFFFF");
+            CustomizeNavigationMenu(navigationView, Color.LawnGreen, white);
             else
-                CustomizeNavigationMenu(navigationView, Color.DarkGreen, "#000000");
+                CustomizeNavigationMenu(navigationView, Color.DarkGreen, black);
 
             //main menu is dynamically created
             FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -124,7 +126,7 @@ namespace Dictionary
             {
                 if(language == Languages.english)
 				{
-                    int language_id = Application.Context.Resources.GetIdentifier("@string/language_toast", null, Application.Context.PackageName);
+                    int language_id = Application.Context.Resources.GetIdentifier("@string/toast_language", null, Application.Context.PackageName);
                     string text = Application.Context.Resources.GetString(language_id);
                     Toast.MakeText(Application.Context, text, ToastLength.Short).Show();
                     return true;
