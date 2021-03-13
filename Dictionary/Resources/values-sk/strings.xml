@@ -14,9 +14,12 @@
     <string name="scores_button">Moje skóre</string>
     <string name="toast_correct">Gratulujeme, tvoja odpoveď je správna!</string>
     <string name="toast_incorrect">Žiaľ, tvoja odpoveď je nesprávna.</string>
+    <string name="question">Otázka</string>
+    <string name="correct_answer">Správna odpoveď:</string>
 
     <string name="game_command">Napíš cudzie slovo z nahrávky</string>
     <string name="submit_button">Pošli</string>
+    <string name="next_button">Ďalej</string>
 
     <string name="change_language">Zmeň jazyk</string>
 

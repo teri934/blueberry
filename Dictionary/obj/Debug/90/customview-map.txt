@@ -2,6 +2,7 @@
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_main.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_quizes.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_recordings.xml
+@string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_results.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_scores.xml
 @string/appbar_scrolling_view_behavior;obj\Debug\90\res\layout\content_settings.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
@@ -22,6 +23,9 @@ Button;obj\Debug\90\res\layout\content_game.xml
 Button;obj\Debug\90\res\layout\content_main.xml
 Button;obj\Debug\90\res\layout\content_quizes.xml
 Button;obj\Debug\90\res\layout\content_settings.xml
+Button;obj\Debug\90\res\layout\next_button.xml
+Button;obj\Debug\90\res\layout\submit_button.xml
+Button;obj\Debug\90\res\layout\xmlfile1.xml
 cache-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\35\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 Canvas;obj\Debug\90\res\drawable\quizes.xml
 Clip;obj\Debug\90\res\drawable\quizes.xml
@@ -37,6 +41,7 @@ external-path;C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 FrameLayout;obj\Debug\90\res\layout\app_bar_main.xml
+FrameLayout;obj\Debug\90\res\layout\content_game.xml
 gradient;obj\Debug\90\res\drawable\side_nav_bar.xml
 group;obj\Debug\90\res\drawable\flag_english.xml
 group;obj\Debug\90\res\drawable\icon.xml
@@ -81,10 +86,14 @@ PolyLine;obj\Debug\90\res\drawable\quizes.xml
 RelativeLayout;obj\Debug\90\res\layout\content_game.xml
 RelativeLayout;obj\Debug\90\res\layout\content_main.xml
 RelativeLayout;obj\Debug\90\res\layout\content_quizes.xml
+RelativeLayout;obj\Debug\90\res\layout\content_results.xml
 RelativeLayout;obj\Debug\90\res\layout\content_scores.xml
 RelativeLayout;obj\Debug\90\res\layout\content_settings.xml
 RelativeLayout;obj\Debug\90\res\layout\dict_line.xml
 RelativeLayout;obj\Debug\90\res\layout\dictionary_line.xml
+RelativeLayout;obj\Debug\90\res\layout\next_button.xml
+RelativeLayout;obj\Debug\90\res\layout\submit_button.xml
+RelativeLayout;obj\Debug\90\res\layout\xmlfile1.xml
 resources;obj\Debug\90\res\values\attrs.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\dimens.xml
@@ -110,6 +119,7 @@ style;obj\Debug\90\res\values-v21\styles.xml
 Switch;obj\Debug\90\res\layout\content_settings.xml
 Switch;obj\Debug\90\res\layout\nav_header_main.xml
 TextView;obj\Debug\90\res\layout\content_game.xml
+TextView;obj\Debug\90\res\layout\content_results.xml
 TextView;obj\Debug\90\res\layout\content_settings.xml
 TextView;obj\Debug\90\res\layout\dict_line.xml
 TextView;obj\Debug\90\res\layout\dictionary_line.xml

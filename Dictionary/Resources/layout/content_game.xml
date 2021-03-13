@@ -14,6 +14,14 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_centerInParent="true" >
+
+       <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/shift"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary" />
         
         <TextView
             android:layout_width="wrap_content"
@@ -48,17 +56,20 @@
             
         </LinearLayout>
 
-    <Button
-    android:id="@+id/submit_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/shift"
-    android:text="@string/submit_button"
-    android:textColor="@android:color/white"
-    android:padding="@dimen/button_extra"
-    android:layout_centerHorizontal="true"
-    android:background="@drawable/ripple"/>
+
+    <TextView
+        android:id="@+id/current_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/shift"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+
+    <FrameLayout
+       android:id="@+id/button_holder"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
 
     </LinearLayout>
-        
+
 </RelativeLayout>

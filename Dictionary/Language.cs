@@ -10,10 +10,15 @@ namespace Language
 {
 	class English : ILanguage
 	{
-		public Languages language => Languages.english;
+		public static Languages language => Languages.english;
 		const string lang = "english";
 		static List<Word> sortedDictionary;
 		public static List<Word> Dictionary => sortedDictionary;
+
+		public static void CallCreateDictionary(English english)
+		{
+			english.CreateDictionary();
+		}
 
 		public void CreateDictionary()
 		{
@@ -53,10 +58,10 @@ namespace Language
 		/// then, by calling functions from the class Word, creates sorted dictionary of Words
 		/// </summary>
 		public void CreateDictionary();
-		public Languages language { get; }
+		public static Languages language { get; }
 	}
 
-	class Word : Java.Lang.Object
+	public class Word : Java.Lang.Object
 	{
 		 public string Filename { get; private set; }
 		 public string Translation { get; private set; }

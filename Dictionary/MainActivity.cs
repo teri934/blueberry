@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Content;
@@ -26,6 +27,7 @@ namespace Dictionary
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
+        public List<Word> Dictionary { get; private set;}
         protected override void OnCreate(Bundle savedInstanceState)
         {
             instance = this;
@@ -60,15 +62,15 @@ namespace Dictionary
                 CustomizeNavigationMenu(navigationView, Color.DarkGreen, black);
 
             //main menu is dynamically created
-            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            Android.Support.V4.App.FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.place_holder, new MainFragment());
             ft.Commit();
 
             //at the start of the app the method CreateDictionary is called
             //to read the needed data for further usage
-            ILanguage en = new English();
-            language = en.language;
-            en.CreateDictionary();
+            language = English.language;
+            English.CallCreateDictionary(new English());
+            Dictionary = English.Dictionary;
         }
 
         /// <summary>
@@ -166,7 +168,7 @@ namespace Dictionary
         /// <param name="f"></param>
         void InitializeMainFragment(MainFragment f)
 		{
-            FragmentTransaction ft = FragmentManager.BeginTransaction();
+            Android.Support.V4.App.FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.place_holder, f);
             ft.Commit();
         }
@@ -177,7 +179,7 @@ namespace Dictionary
         /// </summary>
         void RemoveFromBackStack()
 		{
-            FragmentManager manager = FragmentManager;
+            Android.Support.V4.App.FragmentManager manager = SupportFragmentManager;
 
             for (int i = 0; i < manager.BackStackEntryCount; i++)
             {
