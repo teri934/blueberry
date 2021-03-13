@@ -1,0 +1,37 @@
+Purpose and target audience
+
+The mobile application blueberry! should be a mean to help people when learning foreign
+language. Its primary target are beginners who need some assistence with basic words
+and pronunciation.
+
+
+Overall description
+
+The main features of the application are:
+1.  vocabulary of words with their translations and pronounciations
+2.  quizes where the user can check his/her understanding and knowledge
+3.  quizes results that the user can later check because he/she is signed in when using
+	the app
+4.	the ability to switch between night and day mode
+
+
+Functionality
+
+As already mentioned above these features will dominate in the application.
+Particularly the list with the vocabulary will be filterable so the user can find the
+he/she is looking for (both in original and translation). 
+The default language is English but there will be support Slovak or Czech according to 
+the language settings in the phone.
+The results from the quizes will be stored and the user can access them when connected to 
+the Internet.
+There will be a little side menu too (in navigation drawer) so the user can change to
+three main parts (Quizes, Dictionary, Settings) wherever in the application.
+The changing of the mode will be possible in the Settings.
+Except of that the application will be provided with reasonable GUI and design.
+
+
+Target platform
+
+The application will be written in Xamarin using C# for programming part and XML files
+will contain the GUI and design part. The result of this endeavour will be available
+for Android users targeting the version Pie 9.0 and above. Further support for iOS is possible in the future.
