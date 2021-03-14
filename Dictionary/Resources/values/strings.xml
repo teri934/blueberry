@@ -16,6 +16,7 @@
     <string name="toast_incorrect">Sorry, your answer is incorrect.</string>
     <string name="question">Question</string>
     <string name="correct_answer">Correct answer:</string>
+    <string name="overall_score">Your overall score:</string>
   
     <string name="game_command">Write the foreign word from the audio</string>
     <string name="submit_button">Submit</string>

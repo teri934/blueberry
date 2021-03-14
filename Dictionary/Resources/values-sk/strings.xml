@@ -16,6 +16,7 @@
     <string name="toast_incorrect">Žiaľ, tvoja odpoveď je nesprávna.</string>
     <string name="question">Otázka</string>
     <string name="correct_answer">Správna odpoveď:</string>
+    <string name="overall_score">Tvoje celkové skóre:</string>
 
     <string name="game_command">Napíš cudzie slovo z nahrávky</string>
     <string name="submit_button">Pošli</string>

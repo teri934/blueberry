@@ -63,6 +63,7 @@ LinearLayout;obj\Debug\90\res\layout\content_game.xml
 LinearLayout;obj\Debug\90\res\layout\content_main.xml
 LinearLayout;obj\Debug\90\res\layout\content_quizes.xml
 LinearLayout;obj\Debug\90\res\layout\content_recordings.xml
+LinearLayout;obj\Debug\90\res\layout\content_results.xml
 LinearLayout;obj\Debug\90\res\layout\content_settings.xml
 LinearLayout;obj\Debug\90\res\layout\dict_line.xml
 LinearLayout;obj\Debug\90\res\layout\dictionary_line.xml

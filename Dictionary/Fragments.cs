@@ -162,6 +162,7 @@ namespace Fragments
 		/// <param name="e"></param>
 		void Start_Click(object sender, EventArgs e)
 		{
+			Game.round++;
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
 			ft.AddToBackStack("game");
@@ -206,9 +207,7 @@ namespace Fragments
 				color = Color.RoyalBlue;
 
 			TextView question = (TextView)view.FindViewById(Dictionary.Resource.Id.question);
-			int question_id = Application.Context.Resources.GetIdentifier("@string/question", null, Application.Context.PackageName);
-			string text = Application.Context.Resources.GetString(question_id);
-			question.Text = $"{text}  {Game.round}/{Game.numberRounds}";
+			question.Text = $"{MainActivity.GetLocalString("@string/question")}  {Game.round}/{Game.numberRounds}";
 			question.SetTextColor(color);
 
 			EditText input = (EditText)view.FindViewById(Dictionary.Resource.Id.input_game);
@@ -229,11 +228,6 @@ namespace Fragments
 			return view;
 		}
 
-		/// <summary>
-		/// function for playing the audion during the game
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
@@ -245,9 +239,10 @@ namespace Fragments
 
 	struct Game
 	{
-		public static int round = 1;
+		public static int round = 0;
 		public const int numberRounds = 15;
 		public static int indexAudio = 0;
+		public static int overallScore = 0;
 	}
 
 	class NextButtonFragment : Android.Support.V4.App.Fragment
@@ -279,7 +274,6 @@ namespace Fragments
 			}
 			else
 			{
-				Game.round = 1;
 				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
 				ft.Replace(Dictionary.Resource.Id.place_holder, new ResultsFragment());
 				//ft.AddToBackStack(null);
@@ -327,21 +321,15 @@ namespace Fragments
 
 				input.Background.Mutate().SetTint(color);
 
-				int language_id = Application.Context.Resources.GetIdentifier("@string/toast_correct", null, Application.Context.PackageName);
-				string text = Application.Context.Resources.GetString(language_id);
-				currentResult.Text = text;
+				currentResult.Text = MainActivity.GetLocalString("@string/toast_correct");
 				currentResult.SetTextColor(color);
+				Game.overallScore++;
 			}
 			else
 			{
 				input.Background.Mutate().SetTint(Color.Red);
-				int language_id = Application.Context.Resources.GetIdentifier("@string/toast_incorrect", null, Application.Context.PackageName);
-				string text = Application.Context.Resources.GetString(language_id);
 
-				language_id = Application.Context.Resources.GetIdentifier("@string/correct_answer", null, Application.Context.PackageName);
-				string correctAnswer = Application.Context.Resources.GetString(language_id);
-
-				currentResult.Text = $"{text}\n {correctAnswer} {MainActivity.instance.Dictionary[Game.indexAudio].Translation}";
+				currentResult.Text = $"{MainActivity.GetLocalString("@string/toast_incorrect")}\n {MainActivity.GetLocalString("@string/correct_answer")} {MainActivity.instance.Dictionary[Game.indexAudio].Translation}";
 				currentResult.SetTextColor(Color.Red);
 			}
 
@@ -359,9 +347,19 @@ namespace Fragments
 
 	class ResultsFragment : Android.Support.V4.App.Fragment
 	{
+		public static ResultsFragment results { get; private set; }
+		public static bool resultsShowing { get; private set; } = false;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_results, container, false);
+
+			Game.round = 0;
+			results = this;
+			resultsShowing = true;
+
+			TextView overall = (TextView)view.FindViewById(Dictionary.Resource.Id.overall_score);
+			overall.Text = $"{MainActivity.GetLocalString("@string/overall_score")} {Game.overallScore}/{Game.numberRounds}";
+			Game.overallScore = 0;
 
 			return view;
 		}

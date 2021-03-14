@@ -110,9 +110,16 @@ namespace Dictionary
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            if(drawer.IsDrawerOpen(GravityCompat.Start))
+            if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
                 drawer.CloseDrawer(GravityCompat.Start);
+            }
+            else if (ResultsFragment.resultsShowing)
+			{
+                Android.Support.V4.App.FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+                ft.Remove(ResultsFragment.results);
+                ft.Commit();
+                base.OnBackPressed();
             }
             else
             {
@@ -195,6 +202,12 @@ namespace Dictionary
             Intent i = new Intent(Application.Context, typeof(MainActivity));
             StartActivity(i);
             Finish();
+        }
+
+        public static string GetLocalString(string strId)
+		{
+            int id = Application.Context.Resources.GetIdentifier(strId, null, Application.Context.PackageName);
+            return Application.Context.Resources.GetString(id);
         }
     }
 }
