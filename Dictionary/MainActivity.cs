@@ -56,8 +56,8 @@ namespace Dictionary
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
-            if(dark)
-            CustomizeNavigationMenu(navigationView, Color.LawnGreen, white);
+            if (dark)
+                CustomizeNavigationMenu(navigationView, Color.LawnGreen, white);
             else
                 CustomizeNavigationMenu(navigationView, Color.DarkGreen, black);
 
@@ -135,9 +135,7 @@ namespace Dictionary
             {
                 if(language == Languages.english)
 				{
-                    int language_id = Application.Context.Resources.GetIdentifier("@string/toast_language", null, Application.Context.PackageName);
-                    string text = Application.Context.Resources.GetString(language_id);
-                    Toast.MakeText(Application.Context, text, ToastLength.Short).Show();
+                    Toast.MakeText(Application.Context, GetLocalString("@string/toast_language"), ToastLength.Short).Show();
                     return true;
                 }
             }
