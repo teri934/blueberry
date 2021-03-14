@@ -21,8 +21,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="@string/overall_score"
-            android:textColor="?attr/colorTextTheme" />
+            android:text="@string/overall_score" />
 
 
     </LinearLayout>

@@ -196,6 +196,9 @@ namespace Fragments
 	class GameFragment : Android.Support.V4.App.Fragment
 	{
 		MediaPlayer player = new MediaPlayer();
+		EditText input;
+		TextView currentResult;
+		Button button;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_game, container, false);
@@ -210,7 +213,7 @@ namespace Fragments
 			question.Text = $"{MainActivity.GetLocalString("@string/question")}  {Game.round}/{Game.numberRounds}";
 			question.SetTextColor(color);
 
-			EditText input = (EditText)view.FindViewById(Dictionary.Resource.Id.input_game);
+			input = (EditText)view.FindViewById(Dictionary.Resource.Id.input_game);
 
 			//generating random question from the dictionary
 			Random rnd = new Random();
@@ -218,12 +221,12 @@ namespace Fragments
 			ImageButton recording = (ImageButton)view.FindViewById(Dictionary.Resource.Id.volume);
 			recording.Click += Sound_Click;
 
-			TextView currentResult = (TextView)view.FindViewById(Dictionary.Resource.Id.current_result);
+			currentResult = (TextView)view.FindViewById(Dictionary.Resource.Id.current_result);
 
 			//submit button is initiated
-			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-			ft.Replace(Dictionary.Resource.Id.button_holder, new SubmitButtonFragment(currentResult, input));
-			ft.Commit();
+			button = (Button)view.FindViewById(Dictionary.Resource.Id.change_button);
+			button.Text = MainActivity.GetLocalString("@string/submit_button");
+			button.Click += Submit_Click;
 
 			return view;
 		}
@@ -233,72 +236,6 @@ namespace Fragments
 			player.Release();
 			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(MainActivity.instance.Dictionary[Game.indexAudio].Filename, "raw", Application.Context.PackageName));
 			player.Start();
-		}
-
-	}
-
-	struct Game
-	{
-		public static int round = 0;
-		public const int numberRounds = 15;
-		public static int indexAudio = 0;
-		public static int overallScore = 0;
-	}
-
-	class NextButtonFragment : Android.Support.V4.App.Fragment
-	{
-		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			View view = inflater.Inflate(Dictionary.Resource.Layout.next_button, container, false);
-
-			Button next = (Button)view.FindViewById(Dictionary.Resource.Id.next_button);
-			next.Click += Next_Click;
-
-			return view;
-		}
-
-		/// <summary>
-		/// continues to the next game question or overall results
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void Next_Click(object sender, EventArgs e)
-		{
-			if (Game.round < Game.numberRounds)
-			{
-				Game.round++;
-				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-				ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
-				//ft.AddToBackStack(null);
-				ft.Commit();
-			}
-			else
-			{
-				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-				ft.Replace(Dictionary.Resource.Id.place_holder, new ResultsFragment());
-				//ft.AddToBackStack(null);
-				ft.Commit();
-			}
-		}
-	}
-
-	class SubmitButtonFragment : Android.Support.V4.App.Fragment
-	{
-		TextView currentResult;
-		EditText input;
-		public SubmitButtonFragment(TextView currentResult, EditText input)
-		{
-			this.currentResult = currentResult;
-			this.input = input;
-		}
-		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-		{
-			View view = inflater.Inflate(Dictionary.Resource.Layout.submit_button, container, false);
-
-			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.submit_button);
-			submit.Click += Submit_Click;
-
-			return view;
 		}
 
 		/// <summary>
@@ -338,10 +275,42 @@ namespace Fragments
 			input.Focusable = false;
 
 			//replaces submit button with next button
-			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-			ft.Add(Dictionary.Resource.Id.button_holder, new NextButtonFragment());
-			ft.Commit();
+			button.Text = MainActivity.GetLocalString("@string/next_button");
+			button.Click -= Submit_Click;
+			button.Click += Next_Click;
 		}
+
+		/// <summary>
+		/// continues to the next game question or overall results
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void Next_Click(object sender, EventArgs e)
+		{
+			if (Game.round < Game.numberRounds)
+			{
+				Game.round++;
+				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
+				ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
+				//ft.AddToBackStack(null);
+				ft.Commit();
+			}
+			else
+			{
+				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
+				ft.Replace(Dictionary.Resource.Id.place_holder, new ResultsFragment());
+				//ft.AddToBackStack(null);
+				ft.Commit();
+			}
+		}
+	}
+
+	struct Game
+	{
+		internal static int round = 0;
+		internal const int numberRounds = 15;
+		internal static int indexAudio = 0;
+		internal static int overallScore = 0;
 	}
 
 
@@ -357,8 +326,15 @@ namespace Fragments
 			results = this;
 			resultsShowing = true;
 
+			Color color;
+			if (Preferences.Get("dark", false))
+				color = Color.LightSkyBlue;
+			else
+				color = Color.RoyalBlue;
+
 			TextView overall = (TextView)view.FindViewById(Dictionary.Resource.Id.overall_score);
 			overall.Text = $"{MainActivity.GetLocalString("@string/overall_score")} {Game.overallScore}/{Game.numberRounds}";
+			overall.SetTextColor(color);
 			Game.overallScore = 0;
 
 			return view;

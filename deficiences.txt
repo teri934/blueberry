@@ -1,3 +1,2 @@
 the back stack with quizes does not function properly == improvement
-maybe update again submit and next button without fragments, just delegates
 sound keeps playing when back pressed or closing app

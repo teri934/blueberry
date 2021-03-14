@@ -91,6 +91,11 @@ namespace Dictionary
             }
         }
 
+        /// <summary>
+        /// sets different colors for menu icons (black or white) according to the current theme
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="colorItem"></param>
         void LoopSubmenu(IMenuItem item, string colorItem)
 		{
             if (item.ToString() == "Menu")
