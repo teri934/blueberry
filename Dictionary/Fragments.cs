@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Plugin.CurrentActivity;
 using Android.App;
 using Android.OS;
 using Android.Views;
@@ -94,12 +95,13 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_recordings, parent, false);
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
 
 			//finds search window and sets custom adapter to the ListView in which
 			//the search results are displayed
 			mySearchView = (SearchView)view.FindViewById(Dictionary.Resource.Id.searchView);
 			myList = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
-			myList.Adapter = new LineAdapter(Context, MainActivity.instance.Dictionary);
+			myList.Adapter = new LineAdapter(Context, activity.Dictionary);
 
 			myList.TextFilterEnabled = false;
 			SetUpSearchView();
@@ -199,9 +201,11 @@ namespace Fragments
 		EditText input;
 		TextView currentResult;
 		Button button;
+		MainActivity activity;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_game, container, false);
+			activity = (MainActivity)CrossCurrentActivity.Current.Activity;
 
 			Color color;
 			if (Preferences.Get("dark", false))
@@ -217,7 +221,7 @@ namespace Fragments
 
 			//generating random question from the dictionary
 			Random rnd = new Random();
-			Game.indexAudio = rnd.Next(0, MainActivity.instance.Dictionary.Count - 1);
+			Game.indexAudio = rnd.Next(0, activity.Dictionary.Count - 1);
 			ImageButton recording = (ImageButton)view.FindViewById(Dictionary.Resource.Id.volume);
 			recording.Click += Sound_Click;
 
@@ -234,7 +238,7 @@ namespace Fragments
 		void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
-			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(MainActivity.instance.Dictionary[Game.indexAudio].Filename, "raw", Application.Context.PackageName));
+			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(activity.Dictionary[Game.indexAudio].Filename, "raw", Application.Context.PackageName));
 			player.Start();
 		}
 
@@ -248,7 +252,7 @@ namespace Fragments
 		void Submit_Click(object sender, EventArgs e)
 		{
 			//color and text changes
-			if (input.Text.ToLower() == MainActivity.instance.Dictionary[Game.indexAudio].Translation)
+			if (input.Text.ToLower() == activity.Dictionary[Game.indexAudio].Translation)
 			{
 				Color color;
 				if (Preferences.Get("dark", false))
@@ -266,7 +270,7 @@ namespace Fragments
 			{
 				input.Background.Mutate().SetTint(Color.Red);
 
-				currentResult.Text = $"{MainActivity.GetLocalString("@string/toast_incorrect")}\n {MainActivity.GetLocalString("@string/correct_answer")} {MainActivity.instance.Dictionary[Game.indexAudio].Translation}";
+				currentResult.Text = $"{MainActivity.GetLocalString("@string/toast_incorrect")}\n {MainActivity.GetLocalString("@string/correct_answer")} {activity.Dictionary[Game.indexAudio].Translation}";
 				currentResult.SetTextColor(Color.Red);
 			}
 
@@ -342,4 +346,34 @@ namespace Fragments
 
 	}
 
+
+	class GameDialog : Android.Support.V4.App.DialogFragment
+	{
+		public override Dialog OnCreateDialog(Bundle savedInstanceState)
+		{
+			AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
+
+			LayoutInflater inflater = RequireActivity().LayoutInflater;
+			View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_game, null);
+			builder.SetView(view);
+
+			Button yes = (Button)view.FindViewById(Dictionary.Resource.Id.yes_button);
+			Button no = (Button)view.FindViewById(Dictionary.Resource.Id.no_button);
+
+			yes.Click += Yes_Click;
+			no.Click += No_Click;
+
+			return builder.Create();
+		}
+
+		void Yes_Click(object sender, EventArgs e)
+		{
+			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_language"), ToastLength.Short).Show();
+		}
+
+		void No_Click(object sender, EventArgs e)
+		{
+			Dismiss();
+		}
+	}
 }

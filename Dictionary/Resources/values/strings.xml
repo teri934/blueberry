@@ -21,6 +21,9 @@
     <string name="game_command">Write the foreign word from the audio</string>
     <string name="submit_button">Submit</string>
     <string name="next_button">Next</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="leave_game">Do you really want to leave the game?</string>
 
   
     <string name="change_language">Change language</string>

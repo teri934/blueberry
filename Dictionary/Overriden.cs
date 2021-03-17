@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
+using Plugin.CurrentActivity;
 using Android.Support.V7.App;
 using Android.OS;
 using Android.Views;
@@ -176,7 +177,7 @@ namespace Overriden
 			else
 				Preferences.Set("dark", false);
 
-			MainActivity.instance.RestartApp();
+			((MainActivity)CrossCurrentActivity.Current.Activity).RestartApp();
 		}
 
 	}

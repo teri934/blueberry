@@ -1,0 +1,45 @@
+﻿<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:text="@string/leave_game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorTextTheme"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/yes_button"
+        android:text="@string/yes_button"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@drawable/ripple"
+        android:layout_margin="@dimen/button_extra"
+        android:padding="@dimen/button_extra"/>
+
+    <Button
+        android:id="@+id/no_button"
+        android:text="@string/no_button"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:background="@drawable/ripple"
+        android:layout_margin="@dimen/button_extra"
+        android:padding="@dimen/button_extra"/>
+        
+    </LinearLayout>
+    
+</LinearLayout>

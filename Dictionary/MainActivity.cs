@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
+using Plugin.CurrentActivity;
 using Android.OS;
 using Android.Content;
 using Android.Runtime;
@@ -23,14 +24,13 @@ namespace Dictionary
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        public static MainActivity instance;
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
         public List<Word> Dictionary { get; private set;}
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            instance = this;
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             bool dark;
 
 			//Preferences used here to remember if the app was
@@ -126,6 +126,11 @@ namespace Dictionary
                 ft.Commit();
                 base.OnBackPressed();
             }
+            else if(Game.round >= 1 && Game.round <= Game.numberRounds)
+			{
+                GameDialog dialog = new GameDialog();
+                dialog.Show(SupportFragmentManager, null);
+			}
             else
             {
                 base.OnBackPressed();
