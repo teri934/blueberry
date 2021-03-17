@@ -368,7 +368,16 @@ namespace Fragments
 
 		void Yes_Click(object sender, EventArgs e)
 		{
-			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_language"), ToastLength.Short).Show();
+			//Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_language"), ToastLength.Short).Show();
+			Dismiss();
+			Game.round = 0;
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+
+			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
+			ft.Remove(FragmentManager.FindFragmentById(Dictionary.Resource.Id.place_holder));
+			ft.Commit();
+
+			activity.CallInitializeMainFragment();
 		}
 
 		void No_Click(object sender, EventArgs e)

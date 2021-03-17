@@ -1,2 +1,2 @@
-the back stack with quizes does not function properly == improvement
+static variable in Results Fragment
 sound keeps playing when back pressed or closing app

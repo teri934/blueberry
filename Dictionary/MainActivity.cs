@@ -217,6 +217,11 @@ namespace Dictionary
             int id = Application.Context.Resources.GetIdentifier(strId, null, Application.Context.PackageName);
             return Application.Context.Resources.GetString(id);
         }
+
+        public void CallInitializeMainFragment()
+		{
+            InitializeMainFragment(new MainFragment());
+		}
     }
 }
 
