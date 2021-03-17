@@ -299,7 +299,7 @@ namespace Fragments
 			else
 			{
 				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-				ft.Replace(Dictionary.Resource.Id.place_holder, new ResultsFragment());
+				ft.Replace(Dictionary.Resource.Id.place_holder, new ResultsFragment(), "ResultsFragment");
 				//ft.AddToBackStack(null);
 				ft.Commit();
 			}
@@ -317,15 +317,11 @@ namespace Fragments
 
 	class ResultsFragment : Android.Support.V4.App.Fragment
 	{
-		public static ResultsFragment results { get; private set; }
-		public static bool resultsShowing { get; private set; } = false;
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_results, container, false);
 
 			Game.round = 0;
-			results = this;
-			resultsShowing = true;
 
 			Color color;
 			if (Preferences.Get("dark", false))

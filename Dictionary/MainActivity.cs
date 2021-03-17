@@ -112,14 +112,16 @@ namespace Dictionary
         public override void OnBackPressed()
         {
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            ResultsFragment fragment = (ResultsFragment)SupportFragmentManager.FindFragmentByTag("ResultsFragment");
+
             if (drawer.IsDrawerOpen(GravityCompat.Start))
             {
                 drawer.CloseDrawer(GravityCompat.Start);
             }
-            else if (ResultsFragment.resultsShowing)
+            else if (fragment != null)
 			{
                 Android.Support.V4.App.FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
-                ft.Remove(ResultsFragment.results);
+                ft.Remove(fragment);
                 ft.Commit();
                 base.OnBackPressed();
             }
