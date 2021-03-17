@@ -23,7 +23,7 @@
     <string name="next_button">Next</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
-    <string name="leave_game">Do you really want to leave the game?</string>
+    <string name="leave_game">Do you really want to leave the game? Your progress will be lost.</string>
 
   
     <string name="change_language">Change language</string>

@@ -21,6 +21,9 @@
     <string name="game_command">Napiš cizí slovo z nahrávky</string>
     <string name="submit_button">Pošli</string>
     <string name="next_button">Dále</string>
+    <string name="yes_button">Ano</string>
+    <string name="no_button">Ne</string>
+    <string name="leave_game">Chceš vážně opustit hru? Tvůj pokrok bude stracen.</string>
 
     <string name="change_language">Změň jazyk</string>
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Plugin.CurrentActivity;
 using Android.App;
 using Android.OS;
@@ -7,9 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Media;
 using Android.Graphics;
-using Java.Lang;
 using Xamarin.Essentials;
-using Language;
 using Overriden;
 using Dictionary;
 

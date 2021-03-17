@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
 using Android.OS;
@@ -15,8 +14,6 @@ using Android.Text.Style;
 using Xamarin.Essentials;
 using Language;
 using Fragments;
-using Overriden;
-using Android.Util;
 using Android.Widget;
 
 namespace Dictionary

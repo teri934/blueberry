@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
-using Android.Support.V7.App;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Android.Media;
