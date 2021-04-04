@@ -69,6 +69,21 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
+
+            ///change text according to sign in or not at the beginning
+            View headerView = navigationView.GetHeaderView(0);
+            TextView username = (TextView)headerView.FindViewById(Resource.Id.username);
+			TextView email = (TextView)headerView.FindViewById(Resource.Id.email);
+			if (Preferences.Get("user", false))
+			{
+				username.Text = GetLocalString("@string/username");
+				email.Text = GetLocalString("@string/email");
+			}
+			else
+			{
+				username.Text = GetLocalString("@string/no_username");
+				email.Text = GetLocalString("@string/no_email");
+			}
         }
 
         /// <summary>

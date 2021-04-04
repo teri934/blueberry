@@ -1,8 +1,10 @@
 <resources>
     <string name="username">Tereza Kulichová</string>
+    <string name="no_username">Nejsi přihlášený</string>
     <string name="email">kulichova.t@gmail.com</string>
     <string name="darkMode">Noční režim</string>
     <string name="log_out_button">Odhlásit se</string>
+    <string name="sign_in_button">Přihlásit se</string>
     <string name="english">Angličtina</string>
     <string name="toast_language">Tento jazyk již používáš</string>
   

@@ -127,6 +127,12 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
+			TextView text = (TextView)view.FindViewById(Dictionary.Resource.Id.log_out);
+
+			if (Preferences.Get("user", false))
+				text.Text = MainActivity.GetLocalString("@string/log_out_button");
+			else
+				text.Text = MainActivity.GetLocalString("@string/sign_in_button");
 
 			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);

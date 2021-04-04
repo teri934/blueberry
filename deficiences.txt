@@ -1,3 +1,2 @@
 app logo
-fragments when quizes
 sound keeps playing when back pressed or closing app
