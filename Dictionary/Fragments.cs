@@ -163,7 +163,7 @@ namespace Fragments
 		{
 			Game.round++;
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-			ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
+			ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment(), "GameFragment");
 			ft.AddToBackStack("game");
 			ft.Commit();
 		}
@@ -292,7 +292,7 @@ namespace Fragments
 			{
 				Game.round++;
 				Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-				ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment());
+				ft.Replace(Dictionary.Resource.Id.place_holder, new GameFragment(), "GameFragment");
 				//ft.AddToBackStack(null);
 				ft.Commit();
 			}
@@ -359,18 +359,25 @@ namespace Fragments
 			return builder.Create();
 		}
 
+		/// <summary>
+		/// removes the current fragment and changes dialog key in Preferences in order when calling OnBackPressed()
+		/// the activity reacts correctly
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		void Yes_Click(object sender, EventArgs e)
 		{
-			//Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_language"), ToastLength.Short).Show();
 			Dismiss();
-			Game.round = 0;
 			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+			GameFragment fragment = (GameFragment)FragmentManager.FindFragmentByTag("GameFragment");
+			Preferences.Set("dialog", true);
 
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
-			ft.Remove(FragmentManager.FindFragmentById(Dictionary.Resource.Id.place_holder));
+			ft.Remove(fragment);
 			ft.Commit();
 
-			activity.CallInitializeMainFragment();
+			activity.OnBackPressed();
+			Game.round = 0;
 		}
 
 		void No_Click(object sender, EventArgs e)

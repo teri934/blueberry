@@ -29,6 +29,7 @@ namespace Dictionary
         {
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             bool dark;
+            Preferences.Set("dialog", false);
 
 			//Preferences used here to remember if the app was
             //in a day or night mode before closing
@@ -125,6 +126,11 @@ namespace Dictionary
                 ft.Commit();
                 base.OnBackPressed();
             }
+            else if(Preferences.Get("dialog", false))
+			{
+                Preferences.Set("dialog", false);
+                base.OnBackPressed();
+			}
             else if(Game.round >= 1 && Game.round <= Game.numberRounds)
 			{
                 GameDialog dialog = new GameDialog();
