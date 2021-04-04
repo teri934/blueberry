@@ -1,2 +1,3 @@
-app logo
+networking
+actions when signing in/up or log out
 sound keeps playing when back pressed or closing app
