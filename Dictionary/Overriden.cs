@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content;
 using Plugin.CurrentActivity;
 using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using Android.Media;
 using Android.Accounts;
@@ -14,6 +15,7 @@ using Fragments;
 using Language;
 using Dictionary;
 using Android.OS;
+using Android.Runtime;
 
 namespace Overriden
 {
@@ -182,6 +184,27 @@ namespace Overriden
 			((MainActivity)CrossCurrentActivity.Current.Activity).RestartApp();
 		}
 
+	}
+
+	class TextViewListener : Java.Lang.Object, TextView.IOnEditorActionListener
+	{
+		public bool OnEditorAction(TextView v, [GeneratedEnum] ImeAction actionId, KeyEvent e)
+		{
+			//EditorInfo editor = new EditorInfo();
+
+			//if ((int)actionId == Dictionary.Resource.Id.something || actionId == 0)  //not sure EditorInfo.IME_NULL
+			//{
+			//	AttemptLogin();
+			//	return true;
+			//}
+
+			return false;
+		}
+
+		void AttemptLogin()
+		{
+
+		}
 	}
 
 }
