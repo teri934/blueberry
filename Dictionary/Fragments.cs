@@ -391,4 +391,24 @@ namespace Fragments
 			Dismiss();
 		}
 	}
+
+	class LoginDialog : Android.Support.V4.App.DialogFragment
+	{
+		public override Dialog OnCreateDialog(Bundle savedInstanceState)
+		{
+			AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
+
+			LayoutInflater inflater = RequireActivity().LayoutInflater;
+			View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_login, null);
+			builder.SetView(view);
+
+			EditText username = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_username);
+			EditText email = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_email);
+			EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
+			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
+
+
+			return builder.Create();
+		}
+	}
 }

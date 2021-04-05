@@ -5,6 +5,11 @@
     <string name="darkMode">Noční režim</string>
     <string name="log_out_button">Odhlásit se</string>
     <string name="sign_in_button">Přihlásit/Zaregistrovat se</string>
+    <string name="remember_me">Zapamatuj si mě</string>
+    <string name="prompt_username">Používatelské jméno</string>
+    <string name="prompt_email">Emailová adresa</string>
+    <string name="prompt_password">Heslo</string>
+  
     <string name="english">Angličtina</string>
     <string name="toast_language">Tento jazyk již používáš</string>
   
