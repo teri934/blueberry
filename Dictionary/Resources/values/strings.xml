@@ -5,7 +5,7 @@
     <string name="no_email"></string>
     <string name="darkMode">Dark mode</string>
     <string name="log_out_button">Log out</string>
-    <string name="sign_in_button">Sign in</string>
+    <string name="sign_in_button">Sign in/Sign up</string>
     <string name="english">English</string>
     <string name="toast_language">This language is already set</string>
   

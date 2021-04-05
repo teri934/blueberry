@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
+using Android.Content;
 using Plugin.CurrentActivity;
 using Android.Views;
 using Android.Widget;
 using Android.Media;
+using Android.Accounts;
+using Android.Text;
 using Xamarin.Essentials;
 using Java.Lang;
 using Fragments;
 using Language;
 using Dictionary;
+using Android.OS;
 
 namespace Overriden
 {

@@ -69,6 +69,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginActivity.cs" />
+    <Compile Include="NotSure.cs" />
     <Compile Include="Overriden.cs" />
     <Compile Include="Fragments.cs" />
     <Compile Include="Language.cs" />

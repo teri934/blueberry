@@ -51,6 +51,7 @@ namespace Dictionary
             toggle.SyncState();
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            UpdateUserInfo(navigationView.GetHeaderView(0));
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
@@ -69,21 +70,6 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
-
-            ///change text according to sign in or not at the beginning
-            View headerView = navigationView.GetHeaderView(0);
-            TextView username = (TextView)headerView.FindViewById(Resource.Id.username);
-			TextView email = (TextView)headerView.FindViewById(Resource.Id.email);
-			if (Preferences.Get("user", false))
-			{
-				username.Text = GetLocalString("@string/username");
-				email.Text = GetLocalString("@string/email");
-			}
-			else
-			{
-				username.Text = GetLocalString("@string/no_username");
-				email.Text = GetLocalString("@string/no_email");
-			}
         }
 
         /// <summary>
@@ -134,19 +120,19 @@ namespace Dictionary
             {
                 drawer.CloseDrawer(GravityCompat.Start);
             }
-            else if (fragment != null)
+            else if (fragment != null)  //the user ended the quiz
 			{
                 Android.Support.V4.App.FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
                 ft.Remove(fragment);
                 ft.Commit();
                 base.OnBackPressed();
             }
-            else if(Preferences.Get("dialog", false))
+            else if(Preferences.Get("dialog", false))  //dialog window is already open
 			{
                 Preferences.Set("dialog", false);
                 base.OnBackPressed();
 			}
-            else if(Game.round >= 1 && Game.round <= Game.numberRounds)
+            else if(Game.round >= 1 && Game.round <= Game.numberRounds)  //quiz is in the process
 			{
                 GameDialog dialog = new GameDialog();
                 dialog.Show(SupportFragmentManager, null);
@@ -242,6 +228,26 @@ namespace Dictionary
 		{
             InitializeMainFragment(new MainFragment());
 		}
+
+        /// <summary>
+        /// updates user info in the header of the drawer
+        /// </summary>
+        /// <param name="headerView"></param>
+        void UpdateUserInfo(View headerView)
+		{
+            TextView username = (TextView)headerView.FindViewById(Resource.Id.username);
+            TextView email = (TextView)headerView.FindViewById(Resource.Id.email);
+            if (Preferences.Get("user", false))
+            {
+                username.Text = GetLocalString("@string/username");
+                email.Text = GetLocalString("@string/email");
+            }
+            else
+            {
+                username.Text = GetLocalString("@string/no_username");
+                email.Text = GetLocalString("@string/no_email");
+            }
+        }
     }
 }
 
