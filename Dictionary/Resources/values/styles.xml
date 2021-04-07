@@ -9,6 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorBackgroundTheme">@color/colorBackgroundDay</item>
         <item name="colorTextTheme">@android:color/black</item>
+        <item name="colorHint">#898B8E</item>
         <item name="colorSwitchTheme">#106406</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -24,6 +25,7 @@
       <item name="colorAccent">@color/colorAccent</item>
       <item name="colorBackgroundTheme">@color/colorBackgroundNight</item>
       <item name="colorTextTheme">@android:color/white</item>
+      <item name="colorHint">#727376</item>
       <item name="colorSwitchTheme">#17CD00</item>
       <item name="windowActionBar">false</item>
       <item name="windowNoTitle">true</item>

@@ -382,3 +382,4 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_Conv
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache
