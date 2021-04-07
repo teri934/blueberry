@@ -28,6 +28,7 @@
         android:textColor="@android:color/white"
         android:background="@drawable/ripple"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
         android:padding="@dimen/button_extra"/>
 
     <Button

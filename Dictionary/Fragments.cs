@@ -128,11 +128,18 @@ namespace Fragments
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
 			TextView text = (TextView)view.FindViewById(Dictionary.Resource.Id.log_out);
+			ImageButton button = (ImageButton)view.FindViewById(Dictionary.Resource.Id.log_out_button);
 
-			if (Preferences.Get("user", false))
+			if (Preferences.Get("user", false))  //user signed in
+			{
 				text.Text = MainActivity.GetLocalString("@string/log_out_button");
+				button.Click += User_Signed_Click;
+			}
 			else
+			{
 				text.Text = MainActivity.GetLocalString("@string/sign_in_button");
+				button.Click += User_Not_Signed_Click;
+			}
 
 			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
@@ -142,6 +149,18 @@ namespace Fragments
 			themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
 
 			return view;
+		}
+
+		private void User_Signed_Click(object sender, EventArgs e)
+		{
+			Preferences.Set("user", false);
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+			activity.RestartApp();
+		}
+		private void User_Not_Signed_Click(object sender, EventArgs e)
+		{
+			LoginDialog dialog = new LoginDialog();
+			dialog.Show(FragmentManager, null);
 		}
 	}
 
@@ -376,7 +395,7 @@ namespace Fragments
 			Dismiss();
 			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
 			GameFragment fragment = (GameFragment)FragmentManager.FindFragmentByTag("GameFragment");
-			Preferences.Set("dialog", true);
+			Preferences.Set("dialog", "game");  //important
 
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Remove(fragment);
@@ -406,9 +425,25 @@ namespace Fragments
 			EditText email = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_email);
 			EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
 			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
+			Button back = (Button)view.FindViewById(Dictionary.Resource.Id.back_button);
 
+			submit.Click += Submit_Click;
+			back.Click += Back_Click;
 
 			return builder.Create();
+		}
+
+		private void Back_Click(object sender, EventArgs e)
+		{
+			Dismiss();
+		}
+
+		private void Submit_Click(object sender, EventArgs e)
+		{
+			Preferences.Set("user", true);
+			Dismiss();
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+			activity.RestartApp();
 		}
 	}
 }

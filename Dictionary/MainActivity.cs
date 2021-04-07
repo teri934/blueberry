@@ -29,7 +29,7 @@ namespace Dictionary
         {
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             bool dark;
-            Preferences.Set("dialog", false);
+            Preferences.Set("dialog", "nothing");
 
 			//Preferences used here to remember if the app was
             //in a day or night mode before closing
@@ -127,9 +127,9 @@ namespace Dictionary
                 ft.Commit();
                 base.OnBackPressed();
             }
-            else if(Preferences.Get("dialog", false))  //dialog window is already open
+            else if(Preferences.Get("dialog", "nothing") == "game" || Preferences.Get("dialog", "nothing") == "login")  //dialog window is already open
 			{
-                Preferences.Set("dialog", false);
+                Preferences.Set("dialog", "nothing");
                 base.OnBackPressed();
 			}
             else if(Game.round >= 1 && Game.round <= Game.numberRounds)  //quiz is in the process

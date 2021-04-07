@@ -10,6 +10,7 @@
     <string name="prompt_username">Username</string>
     <string name="prompt_email">Email adress</string>
     <string name="prompt_password">Password</string>
+    <string name="back">Back</string>
   
     <string name="english">English</string>
     <string name="toast_language">This language is already set</string>

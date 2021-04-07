@@ -41,6 +41,8 @@
                 android:id="@+id/input_game"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
                 android:textColor="?attr/colorTextTheme"
                 android:layout_weight="2"/>
             
