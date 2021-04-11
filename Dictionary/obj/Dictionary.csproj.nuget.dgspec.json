@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[2.1.0.4, )"
             },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.3, )"
