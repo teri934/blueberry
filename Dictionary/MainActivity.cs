@@ -71,23 +71,6 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
-
-            //register broadcast receiver
-            //CrossCurrentActivity.Current.AppContext.RegisterReceiver(receiver, new IntentFilter(Receiver.action));
-            //CrossCurrentActivity.Current.AppContext.SendBroadcast(new Intent());
-        }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
-            RegisterReceiver(receiver, new IntentFilter(Receiver.action));
-            SendBroadcast(new Intent());
-        }
-
-        protected override void OnPause()
-        {
-            UnregisterReceiver(receiver);
-            base.OnPause();
         }
 
         /// <summary>
