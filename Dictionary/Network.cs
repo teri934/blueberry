@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.Net;
+using Android.Provider;
 using Plugin.Connectivity;
 using Android.OS;
 using Android.Runtime;
@@ -10,14 +11,19 @@ using Xamarin.Essentials;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Android.Util;
 using System.Text;
 
 namespace Dictionary
 {
+	[BroadcastReceiver(Enabled = true)]
+	[IntentFilter(new[] { "com.companyname.dictionary.Receiver.android.net.conn.CONNECTIVITY_CHANGE" })]
 	public class Receiver : BroadcastReceiver
 	{
+		public const string action = "com.companyname.dictionary.Receiver.android.net.conn.CONNECTIVITY_CHANGE";
 		public override void OnReceive(Context context, Intent intent)
 		{
+			Log.Debug("ONRECEIVE", "");
 			string status = NetworkUtil.GetConnectivityStatusString(context);
 			if (status == null || status.Length == 0)  //empty string, probably in Java IsEmpty()
 			{
@@ -33,23 +39,21 @@ namespace Dictionary
 		{
 			string status = null;
 			ConnectivityManager cm = (ConnectivityManager)context.GetSystemService(Context.ConnectivityService);
-			Network[] info = cm.GetAllNetworks();  //active in java
-			if (info != null)
+			Network network = cm.ActiveNetwork;
+			if (network != null && !IsAirplaneModeOn(context))  //on my phone still wifi, airpane mode
 			{
-				for (int i = 0; i < info.Length; i++)
+				NetworkCapabilities nc = cm.GetNetworkCapabilities(network);
+				if(nc.HasTransport(TransportType.Wifi))
 				{
-					NetworkCapabilities nc = cm.GetNetworkCapabilities(info[i]);
-					if(nc.HasTransport(TransportType.Wifi))
-					{
-						status = "Wifi enabled";
-						return status;
-					}
-					else if (nc.HasTransport(TransportType.Wifi))  //different mobile data
-					{
-						status = "Mobile data enabled";
-						return status;
-					}
+					status = "Wifi enabled";
+					return status;
 				}
+				else if (nc.HasTransport(TransportType.Cellular))
+				{
+					status = "Mobile data enabled";
+					return status;
+				}
+
 			}
 			else
 			{
@@ -58,6 +62,11 @@ namespace Dictionary
 			}
 
 			return status;
+		}
+
+		static bool IsAirplaneModeOn(Context context)
+		{
+			return Settings.Global.GetInt(context.ContentResolver,Settings.Global.AirplaneModeOn, 0) != 0;
 		}
 
 	}

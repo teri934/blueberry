@@ -8,11 +8,6 @@
     android:icon="@drawable/icon" 
     android:supportsRtl="true" 
     android:theme="@style/AppTheme">
-    <receiver android:name=".Receiver" >
-      <intent-filter>
-        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-      </intent-filter>
-    </receiver>
   </application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

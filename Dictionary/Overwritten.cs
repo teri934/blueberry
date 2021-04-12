@@ -17,7 +17,7 @@ using Dictionary;
 using Android.OS;
 using Android.Runtime;
 
-namespace Overriden
+namespace Overwritten
 {
 	class SearchViewListener : Java.Lang.Object, SearchView.IOnQueryTextListener
 	{

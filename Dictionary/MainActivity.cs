@@ -21,6 +21,7 @@ namespace Dictionary
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        BroadcastReceiver receiver = new Receiver();
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
@@ -70,6 +71,23 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
+
+            //register broadcast receiver
+            //CrossCurrentActivity.Current.AppContext.RegisterReceiver(receiver, new IntentFilter(Receiver.action));
+            //CrossCurrentActivity.Current.AppContext.SendBroadcast(new Intent());
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            RegisterReceiver(receiver, new IntentFilter(Receiver.action));
+            SendBroadcast(new Intent());
+        }
+
+        protected override void OnPause()
+        {
+            UnregisterReceiver(receiver);
+            base.OnPause();
         }
 
         /// <summary>
