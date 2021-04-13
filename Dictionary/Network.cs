@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Net;
 using Android.Provider;
-using Plugin.Connectivity;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
