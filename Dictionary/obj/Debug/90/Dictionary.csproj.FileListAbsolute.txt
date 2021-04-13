@@ -14,14 +14,9 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\_VerifyXama
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res.flag
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\13\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\14\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\18\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\20\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\30\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\31\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\32\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\33\jl\files.cache
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\37\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.txt
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\R.cs.flag
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csproj.CoreCompileInputs.cache
@@ -190,10 +185,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\ass
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Mono.Security.pdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\mscorlib.pdb
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Plugin.Connectivity.Abstractions.dll
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Plugin.Connectivity.Abstractions.pdb
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Plugin.Connectivity.dll
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Plugin.Connectivity.dll.mdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Plugin.CurrentActivity.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
@@ -214,8 +205,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\ass
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.Runtime.Serialization.pdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.ServiceModel.Internals.pdb
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.Threading.dll
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.Threading.Tasks.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.Xml.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\System.Xml.pdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Common.dll
@@ -308,7 +297,6 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64cea48322b3427ae9\ConnectivityChangeBroadcastReceiver.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\GameDialog.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\GameFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\LoginDialog.java
@@ -390,3 +378,8 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_Conv
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\12\jl\files.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\17\jl\files.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\19\jl\files.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\29\jl\files.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\36\jl\files.cache
