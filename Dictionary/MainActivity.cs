@@ -21,7 +21,6 @@ namespace Dictionary
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        BroadcastReceiver receiver = new Receiver();
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
