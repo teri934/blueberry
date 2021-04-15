@@ -9,7 +9,7 @@ using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary;
 
-namespace Fragments.Quizes
+namespace Fragments
 {
 	class ScoresFragment : Android.Support.V4.App.Fragment
 	{

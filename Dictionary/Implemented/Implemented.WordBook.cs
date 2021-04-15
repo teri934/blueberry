@@ -1,23 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.App;
-using Android.Content;
-using Plugin.CurrentActivity;
 using Android.Views;
-using Android.Views.InputMethods;
 using Android.Widget;
 using Android.Media;
-using Android.Accounts;
-using Android.Text;
-using Xamarin.Essentials;
 using Java.Lang;
 using Language;
-using Dictionary;
-using Android.OS;
-using Android.Runtime;
-using Fragments.MainMenu;
+using Fragments;
 
-namespace Overwritten
+namespace Implemented
 {
 	class SearchViewListener : Java.Lang.Object, SearchView.IOnQueryTextListener
 	{
@@ -165,46 +156,4 @@ namespace Overwritten
 			return results;
 		}
 	}
-
-	class CompoundListener : Java.Lang.Object, CompoundButton.IOnCheckedChangeListener
-	{
-		/// <summary>
-		/// sets in the dictionary of preferences true or false according to the
-		/// state of switch button for dark/light mode
-		/// </summary>
-		/// <param name="buttonView"></param>
-		/// <param name="isChecked"></param>
-		public void OnCheckedChanged(CompoundButton buttonView, bool isChecked)
-		{
-			if (isChecked)
-				Preferences.Set("dark", true);
-			else
-				Preferences.Set("dark", false);
-
-			((MainActivity)CrossCurrentActivity.Current.Activity).RestartApp();
-		}
-
-	}
-
-	class TextViewListener : Java.Lang.Object, TextView.IOnEditorActionListener
-	{
-		public bool OnEditorAction(TextView v, [GeneratedEnum] ImeAction actionId, KeyEvent e)
-		{
-			//EditorInfo editor = new EditorInfo();
-
-			//if ((int)actionId == Dictionary.Resource.Id.something || actionId == 0)  //not sure EditorInfo.IME_NULL
-			//{
-			//	AttemptLogin();
-			//	return true;
-			//}
-
-			return false;
-		}
-
-		void AttemptLogin()
-		{
-
-		}
-	}
-
 }

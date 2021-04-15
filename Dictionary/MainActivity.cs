@@ -14,9 +14,7 @@ using Android.Text.Style;
 using Xamarin.Essentials;
 using Android.Widget;
 using Language;
-using Fragments.MainMenu;
-using Fragments.Quizes;
-using Fragments.Dialogs;
+using Fragments;
 
 namespace Dictionary
 {

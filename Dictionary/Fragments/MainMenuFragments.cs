@@ -5,12 +5,10 @@ using Android.Widget;
 using System;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
-using Fragments.Quizes;
-using Fragments.Dialogs;
-using Overwritten;
+using Implemented;
 using Dictionary;
 
-namespace Fragments.MainMenu
+namespace Fragments
 {
 	class MainFragment : Android.Support.V4.App.Fragment
 	{

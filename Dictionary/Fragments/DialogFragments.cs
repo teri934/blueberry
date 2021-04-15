@@ -6,9 +6,8 @@ using System;
 using Plugin.CurrentActivity;
 using Xamarin.Essentials;
 using Dictionary;
-using Fragments.Quizes;
 
-namespace Fragments.Dialogs
+namespace Fragments
 {
 	class GameDialog : Android.Support.V4.App.DialogFragment
 	{

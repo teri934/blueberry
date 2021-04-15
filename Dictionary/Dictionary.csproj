@@ -72,7 +72,8 @@
     <Compile Include="Fragments\QuizFragments.cs" />
     <Compile Include="Fragments\MainMenuFragments.cs" />
     <Compile Include="Fragments\DialogFragments.cs" />
-    <Compile Include="Overwritten.cs" />
+    <Compile Include="Implemented\Implemented.Switch.cs" />
+    <Compile Include="Implemented\Implemented.WordBook.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs">

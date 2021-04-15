@@ -392,3 +392,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\GameFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\ResultsFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\ScoresFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644048918cad6cbc75\CompoundListener.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644048918cad6cbc75\LineAdapter.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644048918cad6cbc75\LineFilter.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644048918cad6cbc75\SearchViewListener.java
