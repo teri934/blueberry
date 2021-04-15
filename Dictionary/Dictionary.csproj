@@ -69,6 +69,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fragments\Class1.cs" />
     <Compile Include="Overwritten.cs" />
     <Compile Include="Fragments.cs" />
     <Compile Include="Language.cs" />
