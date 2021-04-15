@@ -383,3 +383,12 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\17\jl\fi
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\19\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\29\jl\files.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\lp\36\jl\files.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc640dd3c4c0195a6a38\MainFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc640dd3c4c0195a6a38\QuizesFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc640dd3c4c0195a6a38\RecordingsFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc640dd3c4c0195a6a38\SettingsFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc641fe19b61fdbbfbc0\GameDialog.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc641fe19b61fdbbfbc0\LoginDialog.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\GameFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\ResultsFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc644ded8a8139ab2c9e\ScoresFragment.java

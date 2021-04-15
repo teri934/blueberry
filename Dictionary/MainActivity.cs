@@ -12,9 +12,11 @@ using Android.Views;
 using Android.Graphics;
 using Android.Text.Style;
 using Xamarin.Essentials;
-using Language;
-using Fragments;
 using Android.Widget;
+using Language;
+using Fragments.MainMenu;
+using Fragments.Quizes;
+using Fragments.Dialogs;
 
 namespace Dictionary
 {
