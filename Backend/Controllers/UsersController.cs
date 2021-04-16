@@ -19,6 +19,30 @@ namespace Backend.Controllers
 			context.Database.EnsureCreated(); //TODO: call it somewhere, where it is more appropiate to create all tables and mock data
 		}
 
+		[HttpGet]
+		[Route("users/getAll")]
+		public async Task<List<User>> GetUsers()
+		{
+			var users = await context.User.ToListAsync();
+			return users;
+
+		}
+
+		[HttpPost]
+		[Route("users/add")]
+		public async Task<ActionResult<User>> AddUser([FromBody] User user)
+		{
+			if (user.Name == string.Empty || user.Surname == string.Empty)
+			{
+				return new BadRequestResult();
+			}
+
+			await context.User.AddAsync(user);
+			await context.SaveChangesAsync();
+			return new CreatedAtRouteResult(null, user);
+			//return new CreatedAtActionResult(nameof(AddUser), nameof(UsersController), null, user);
+		}
+
 		/*[HttpDelete]*/
 		[Route("users/delete/{id}")]
 		public async Task RemoveUser(Guid id)
