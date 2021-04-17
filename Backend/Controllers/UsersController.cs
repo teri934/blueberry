@@ -28,15 +28,61 @@ namespace Backend.Controllers
 
 		}
 
+		/// <summary>
+		/// checks the pairing of username and password
+		/// </summary>
+		/// <param name="username"></param>
+		/// <param name="password"></param>
+		/// <returns>true if user with the provided password is in the database</returns>
+		[HttpGet]
+		[Route("users/checkExisting/{username}/{password}")]
+		public async Task<ActionResult<bool>> CheckExistingUser(string username, string password)
+		{
+			///same username is not allowed
+			var foundEntity = await context.User.FirstOrDefaultAsync(user => user.Username == username);
+
+			if (foundEntity == null)
+				return false;
+
+			if (!Hash.VerifyPassword(foundEntity.Password, password))
+				return false;
+
+			return true;
+		}
+
+		/// <summary>
+		/// checks if the username exists in the database
+		/// </summary>
+		/// <param name="username"></param>
+		/// <returns>true if the username doesn't exist in the database</returns>
+		[HttpGet]
+		[Route("users/checkPotential/{username}")]
+		public async Task<ActionResult<bool>> CheckPotentialUser(string username)
+		{
+			///same username is not allowed
+			var foundEntity = await context.User.FirstOrDefaultAsync(user => user.Username == username);
+
+			if (foundEntity == null)
+				return true;
+
+			return false;
+		}
+
 		[HttpPost]
 		[Route("users/add")]
 		public async Task<ActionResult<User>> AddUser([FromBody] User user)
 		{
-			if (user.Name == string.Empty || user.Surname == string.Empty)
+			if (user.Name == string.Empty || user.Surname == string.Empty || user.Username == string.Empty || user.Password == string.Empty)
 			{
 				return new BadRequestResult();
 			}
 
+			//string username = user.Username;
+			//var foundEntity = await context.User.FirstOrDefaultAsync(u => u.Username == username);
+			//if(foundEntity != null)
+			//	return new BadRequestResult();
+
+			user.Password = Hash.HashPassword(user.Password);
 			await context.User.AddAsync(user);
 			await context.SaveChangesAsync();
 			return new CreatedAtRouteResult(null, user);

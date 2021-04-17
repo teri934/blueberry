@@ -7,6 +7,9 @@ namespace Backend.Entities
 	public class User
 	{
         [Required]
+        public string Username { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         [Required]
