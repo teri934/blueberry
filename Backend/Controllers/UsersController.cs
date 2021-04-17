@@ -33,21 +33,18 @@ namespace Backend.Controllers
 		/// </summary>
 		/// <param name="username"></param>
 		/// <param name="password"></param>
-		/// <returns>true if user with the provided password is in the database</returns>
+		/// <returns>null if thu user with the provided username and password doesn't exist</returns>
 		[HttpGet]
-		[Route("users/checkExisting/{username}/{password}")]
-		public async Task<ActionResult<bool>> CheckExistingUser(string username, string password)
+		[Route("users/getExisting/{username}/{password}")]
+		public async Task<ActionResult<User>> GetExistingUser(string username, string password)
 		{
 			///same username is not allowed
 			var foundEntity = await context.User.FirstOrDefaultAsync(user => user.Username == username);
 
-			if (foundEntity == null)
-				return false;
+			if (foundEntity == null || !Hash.VerifyPassword(foundEntity.Password, password))
+				return null;
 
-			if (!Hash.VerifyPassword(foundEntity.Password, password))
-				return false;
-
-			return true;
+			return foundEntity;
 		}
 
 		/// <summary>
