@@ -1,0 +1,136 @@
+﻿<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:background="?attr/colorBackgroundTheme"
+              android:padding="@dimen/activity_horizontal_margin"
+              tools:context="com.samplesharedpreferences.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="?attr/colorHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/prompt_username"
+                android:textColor="?attr/colorTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="?attr/colorHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/prompt_name"
+                android:textColor="?attr/colorTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_name"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="?attr/colorHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/prompt_surname"
+                android:textColor="?attr/colorTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_surname"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="?attr/colorHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/prompt_password"
+                android:textColor="?attr/colorTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/prompt_username"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_me"
+            android:textColor="?attr/colorTextTheme"
+            android:id="@+id/checkBoxRememberMe"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/back_button"
+                android:text="@string/back"
+                android:layout_centerVertical="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@drawable/ripple"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:padding="@dimen/button_extra"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:text="@string/submit_button"
+                android:layout_centerVertical="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@drawable/ripple"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="25dp"
+                android:padding="@dimen/button_extra"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

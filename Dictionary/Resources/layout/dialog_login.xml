@@ -46,23 +46,6 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/prompt_email"
-                    android:textColor="?attr/colorTextTheme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:textColorHint="?attr/colorHint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
                     android:id="@+id/prompt_password"
                     android:textColor="?attr/colorTextTheme"
                     android:layout_width="match_parent"

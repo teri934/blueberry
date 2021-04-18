@@ -4,7 +4,8 @@
     <string name="email">kulichova.t@gmail.com</string>
     <string name="darkMode">Nočný režim</string>
     <string name="log_out_button">Odhlásiť sa</string>
-    <string name="sign_in_button">Prihlásiť/Zaregistrovať sa</string>
+    <string name="sign_in_button">Prihlásiť sa</string>
+    <string name="sign_up_button">Zaregistrovať sa</string>
     <string name="remember_me">Zapamätaj si ma</string>
     <string name="prompt_username">Používateľské meno</string>
     <string name="prompt_email">Emailová adresa</string>

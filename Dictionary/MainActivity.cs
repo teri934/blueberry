@@ -235,17 +235,17 @@ namespace Dictionary
         /// <param name="headerView"></param>
         void UpdateUserInfo(View headerView)
 		{
-            TextView username = (TextView)headerView.FindViewById(Resource.Id.username);
-            TextView email = (TextView)headerView.FindViewById(Resource.Id.email);
+            TextView name = (TextView)headerView.FindViewById(Resource.Id.name);
+            TextView surname = (TextView)headerView.FindViewById(Resource.Id.surname);
             if (Preferences.Get("user", false))
             {
-                username.Text = GetLocalString("@string/username");
-                email.Text = GetLocalString("@string/email");
+                name.Text = GetLocalString("@string/name");
+                surname.Text = GetLocalString("@string/surname");
             }
             else
             {
-                username.Text = GetLocalString("@string/no_username");
-                email.Text = GetLocalString("@string/no_email");
+                name.Text = GetLocalString("@string/no_username");
+                surname.Text = GetLocalString("@string/empty");
             }
         }
     }
