@@ -9,6 +9,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\bin\Debug\com.companynam
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\build.props
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\adb.props
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\Dictionary.csprojAssemblyReference.cache
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\res.flag
@@ -306,6 +307,7 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\MainFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\QuizesFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\RecordingsFragment.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\RegisterDialog.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\ResultsFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\ScoresFragment.java
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\SettingsFragment.java
@@ -381,4 +383,5 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_Conv
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64e439222e0c2ecd12\RegisterDialog.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\IntermediateActivity.java
+C:\Users\Teri\Desktop\4. semester\Dictionary\Dictionary\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorIntermediateActivity.java
