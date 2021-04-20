@@ -34,10 +34,13 @@ namespace Backend.Controllers
 		/// <param name="username"></param>
 		/// <param name="password"></param>
 		/// <returns>null if thu user with the provided username and password doesn't exist</returns>
-		[HttpGet]
-		[Route("users/getExisting/{username}/{password}")]
-		public async Task<ActionResult<User>> GetExistingUser(string username, string password)
+		[HttpPost]
+		[Route("users/getExisting")]
+		public async Task<ActionResult<User>> GetExistingUser([FromBody] SignIn user)
 		{
+			string username = user.Username;
+			string password = user.Password;
+
 			///same username is not allowed
 			var foundEntity = await context.User.FirstOrDefaultAsync(user => user.Username == username);
 
@@ -52,10 +55,12 @@ namespace Backend.Controllers
 		/// </summary>
 		/// <param name="username"></param>
 		/// <returns>true if the username doesn't exist in the database</returns>
-		[HttpGet]
-		[Route("users/checkPotential/{username}")]
-		public async Task<ActionResult<bool>> CheckPotentialUser(string username)
+		[HttpPost]
+		[Route("users/checkPotential")]
+		public async Task<ActionResult<bool>> CheckPotentialUser([FromBody] SignUp user)
 		{
+			string username = user.Username;
+
 			///same username is not allowed
 			var foundEntity = await context.User.FirstOrDefaultAsync(user => user.Username == username);
 
