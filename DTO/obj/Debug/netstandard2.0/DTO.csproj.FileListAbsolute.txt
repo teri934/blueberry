@@ -1,0 +1,9 @@
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\bin\Debug\netstandard2.0\DTO.deps.json
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\bin\Debug\netstandard2.0\DTO.dll
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\bin\Debug\netstandard2.0\DTO.pdb
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.csprojAssemblyReference.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfoInputs.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.AssemblyInfo.cs
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.dll
+C:\Users\Teri\Desktop\4. semester\Dictionary\DTO\obj\Debug\netstandard2.0\DTO.pdb
