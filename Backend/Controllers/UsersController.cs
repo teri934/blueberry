@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Backend.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using DTO;
 
 namespace Backend.Controllers
 {
@@ -21,10 +22,17 @@ namespace Backend.Controllers
 
 		[HttpGet]
 		[Route("users/getAll")]
-		public async Task<List<User>> GetUsers()
+		public async Task<List<DTOUser>> GetUsers()
 		{
+			List<DTOUser> dtoUsers = new List<DTOUser>();
 			var users = await context.User.ToListAsync();
-			return users;
+
+			for (int i = 0; i < users.Count; i++)
+			{
+				dtoUsers.Add(new DTOUser { Username = users[i].Username, Name = users[i].Name, Surname = users[i].Surname, Password = users[i].Password });
+			}
+
+			return dtoUsers;
 
 		}
 
@@ -36,7 +44,7 @@ namespace Backend.Controllers
 		/// <returns>null if thu user with the provided username and password doesn't exist</returns>
 		[HttpPost]
 		[Route("users/getExisting")]
-		public async Task<ActionResult<Data>> GetExistingUser([FromBody] SignIn user)
+		public async Task<ActionResult<DTORelevantData>> GetExistingUser([FromBody] DTOSignIn user)
 		{
 			string username = user.Username;
 			string password = user.Password;
@@ -47,7 +55,7 @@ namespace Backend.Controllers
 			if (foundEntity == null || !Hash.VerifyPassword(foundEntity.Password, password))
 				return null;
 
-			return new Data {Name = foundEntity.Name, Surname = foundEntity.Surname, Username = foundEntity.Username };
+			return new DTORelevantData {Name = foundEntity.Name, Surname = foundEntity.Surname, Username = foundEntity.Username };
 		}
 
 		/// <summary>
@@ -57,7 +65,7 @@ namespace Backend.Controllers
 		/// <returns>true if the username doesn't exist in the database</returns>
 		[HttpPost]
 		[Route("users/checkPotential")]
-		public async Task<ActionResult<bool>> CheckPotentialUser([FromBody] SignUp user)
+		public async Task<ActionResult<bool>> CheckPotentialUser([FromBody] DTOSignUp user)
 		{
 			string username = user.Username;
 
@@ -72,7 +80,7 @@ namespace Backend.Controllers
 
 		[HttpPost]
 		[Route("users/add")]
-		public async Task<ActionResult<Data>> AddUser([FromBody] User user)
+		public async Task<ActionResult<DTORelevantData>> AddUser([FromBody] User user)
 		{
 			if (user.Name == string.Empty || user.Surname == string.Empty || user.Username == string.Empty || user.Password == string.Empty)
 			{
@@ -87,9 +95,11 @@ namespace Backend.Controllers
 			user.Password = Hash.HashPassword(user.Password);
 			await context.User.AddAsync(user);
 			await context.SaveChangesAsync();
-			return new CreatedAtRouteResult(null, new Data { Name = user.Name, Surname = user.Surname, Username = user.Username });
+			return new CreatedAtRouteResult(null, new DTORelevantData { Name = user.Name, Surname = user.Surname, Username = user.Username });
 			//return new CreatedAtActionResult(nameof(AddUser), nameof(UsersController), null, user);
 		}
+
+
 
 		/*[HttpDelete]*/
 		[Route("users/delete/{id}")]

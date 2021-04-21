@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Backend.Entities;
+using DTO;
 
 namespace Frontend
 {
@@ -12,28 +12,28 @@ namespace Frontend
 	{
 		static HttpClient client = new HttpClient();
 
-        public static async Task<List<User>> GetAllUsersAsync()
+        public static async Task<List<DTOUser>> GetAllUsersAsync()
         {
-            List<User> users = null;
+            List<DTOUser> users = null;
             HttpResponseMessage response = await client.GetAsync(GetUri("users/getAll"));
             if (response.IsSuccessStatusCode)
             {
-                users = await response.Content.ReadAsAsync<List<User>>();
+                users = await response.Content.ReadAsAsync<List<DTOUser>>();
             }
             return users;
         }
 
-        public static async Task<Data> GetExistingUserAsync(SignIn signin)
+        public static async Task<DTORelevantData> GetExistingUserAsync(DTOSignIn signin)
         {
-            Data data = null;
+            DTORelevantData data = null;
             HttpResponseMessage response = await client.PostAsJsonAsync(GetUri("users/getExisting"), signin);
             response.EnsureSuccessStatusCode();
 
-            data = await response.Content.ReadAsAsync<Data>();
+            data = await response.Content.ReadAsAsync<DTORelevantData>();
             return data;
         }
 
-        public static async Task<bool> CheckPotentialUserAsync(SignUp signup)
+        public static async Task<bool> CheckPotentialUserAsync(DTOSignUp signup)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(GetUri("users/checkPotential"), signup);
             response.EnsureSuccessStatusCode();
@@ -42,12 +42,12 @@ namespace Frontend
             return value;
         }
 
-        public static async Task<Data> AddUserAsync(User user)
+        public static async Task<DTORelevantData> AddUserAsync(DTOUser user)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(GetUri("users/add"), user);
             response.EnsureSuccessStatusCode();
 
-            Data data = await response.Content.ReadAsAsync<Data>();
+            DTORelevantData data = await response.Content.ReadAsAsync<DTORelevantData>();
             return data;
         }
 

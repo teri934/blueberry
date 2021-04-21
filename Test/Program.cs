@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Frontend;
-using Backend.Entities;
+using DTO;
 
 namespace Test
 {
@@ -18,7 +18,7 @@ namespace Test
             RunAsync().GetAwaiter().GetResult();
         }
 
-        static void ShowUser(Data user)
+        static void ShowUser(DTORelevantData user)
 		{
             if (user != null)
                 Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
@@ -26,7 +26,7 @@ namespace Test
                 Console.WriteLine("No user");
 		}
 
-        static void ShowUser(User user)
+        static void ShowUser(DTOUser user)
         {
             if (user != null)
                 Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
@@ -44,27 +44,27 @@ namespace Test
 
             try
             {
-                //Get all users
-                List<User> users = await Client.GetAllUsersAsync();
+				//Get all users
+				List<DTOUser> users = await Client.GetAllUsersAsync();
 
-				foreach (User u in users)
+				foreach (DTOUser u in users)
 					ShowUser(u);
 
 				Console.WriteLine();
 
                 //Get existing user
-                Data user = await Client.GetExistingUserAsync(new SignIn {Username = "george3", Password = "123" });
+                DTORelevantData user = await Client.GetExistingUserAsync(new DTOSignIn {Username = "george3", Password = "123" });
                 ShowUser(user);
 
                 //check potential user
                 //bool value = await Client.CheckPotentialUserAsync(new SignUp { Username = "emma"});
-                bool value = await Client.CheckPotentialUserAsync(new SignUp { Username = "rose"});
+                bool value = await Client.CheckPotentialUserAsync(new DTOSignUp { Username = "rose"});
                 Console.WriteLine(value);
 
                 user = null;
                 if(value)
 				{
-                    user = await Client.AddUserAsync(new User {Username = "rose", Name = "Emily", Surname = "Black", Password = "123"});
+                    user = await Client.AddUserAsync(new DTOUser {Username = "rose", Name = "Emily", Surname = "Black", Password = "123"});
 				}
                 ShowUser(user);
 

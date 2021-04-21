@@ -48,3 +48,5 @@ C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\obj\Debug\net5.0\Backend.dl
 C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\obj\Debug\net5.0\ref\Backend.dll
 C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\obj\Debug\net5.0\Backend.pdb
 C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\obj\Debug\net5.0\Backend.genruntimeconfig.cache
+C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\bin\Debug\net5.0\DTO.dll
+C:\Users\Teri\Desktop\4. semester\Dictionary\Backend\bin\Debug\net5.0\DTO.pdb
