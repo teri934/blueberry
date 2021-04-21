@@ -36,7 +36,7 @@ namespace Backend.Controllers
 		/// <returns>null if thu user with the provided username and password doesn't exist</returns>
 		[HttpPost]
 		[Route("users/getExisting")]
-		public async Task<ActionResult<User>> GetExistingUser([FromBody] SignIn user)
+		public async Task<ActionResult<Data>> GetExistingUser([FromBody] SignIn user)
 		{
 			string username = user.Username;
 			string password = user.Password;
@@ -47,7 +47,7 @@ namespace Backend.Controllers
 			if (foundEntity == null || !Hash.VerifyPassword(foundEntity.Password, password))
 				return null;
 
-			return foundEntity;
+			return new Data {Name = foundEntity.Name, Surname = foundEntity.Surname, Username = foundEntity.Username };
 		}
 
 		/// <summary>
@@ -72,7 +72,7 @@ namespace Backend.Controllers
 
 		[HttpPost]
 		[Route("users/add")]
-		public async Task<ActionResult<User>> AddUser([FromBody] User user)
+		public async Task<ActionResult<Data>> AddUser([FromBody] User user)
 		{
 			if (user.Name == string.Empty || user.Surname == string.Empty || user.Username == string.Empty || user.Password == string.Empty)
 			{
@@ -87,7 +87,7 @@ namespace Backend.Controllers
 			user.Password = Hash.HashPassword(user.Password);
 			await context.User.AddAsync(user);
 			await context.SaveChangesAsync();
-			return new CreatedAtRouteResult(null, user);
+			return new CreatedAtRouteResult(null, new Data { Name = user.Name, Surname = user.Surname, Username = user.Username });
 			//return new CreatedAtActionResult(nameof(AddUser), nameof(UsersController), null, user);
 		}
 
