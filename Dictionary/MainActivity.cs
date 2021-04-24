@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
 using Android.OS;
@@ -15,12 +16,17 @@ using Xamarin.Essentials;
 using Android.Widget;
 using Language;
 using Fragments;
+using DTO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace Dictionary
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        static HttpClient client = new HttpClient();
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
@@ -70,6 +76,8 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
+
+            RunAsync().GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -247,6 +255,68 @@ namespace Dictionary
                 name.Text = GetLocalString("@string/no_username");
                 surname.Text = GetLocalString("@string/empty");
             }
+        }
+
+
+
+        //SKUSKA
+        static async Task RunAsync()
+        {
+            // Update port # in the following line.
+            //client.BaseAddress = new Uri("https://localhost:5001/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            try
+            {
+                //Get all users
+                List<DTOUser> users = await Frontend.GetAllUsersAsync();
+
+                foreach (DTOUser u in users)
+                    ShowUser(u);
+
+                Console.WriteLine();
+
+                //Get existing user
+                DTORelevantData user = await Frontend.GetExistingUserAsync(new DTOSignIn { Username = "george3", Password = "123" });
+                ShowUser(user);
+
+                //check potential user
+                //bool value = await Client.CheckPotentialUserAsync(new SignUp { Username = "emma"});
+                bool value = await Frontend.CheckPotentialUserAsync(new DTOSignUp { Username = "rose" });
+                Console.WriteLine(value);
+
+                user = null;
+                if (value)
+                {
+                    user = await Frontend.AddUserAsync(new DTOUser { Username = "rose", Name = "Emily", Surname = "Black", Password = "123" });
+                }
+                ShowUser(user);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.ReadLine();
+        }
+
+        static void ShowUser(DTORelevantData user)
+        {
+            if (user != null)
+                Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
+            else
+                Console.WriteLine("No user");
+        }
+
+        static void ShowUser(DTOUser user)
+        {
+            if (user != null)
+                Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
+            else
+                Console.WriteLine("No user");
         }
     }
 }
