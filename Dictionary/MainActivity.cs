@@ -16,11 +16,7 @@ using Xamarin.Essentials;
 using Android.Widget;
 using Language;
 using Fragments;
-using DTO;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using Android.Util;
 
 namespace Dictionary
 {
