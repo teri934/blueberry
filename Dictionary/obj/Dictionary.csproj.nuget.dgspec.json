@@ -40,14 +40,6 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
             "Plugin.CurrentActivity": {
               "target": "Package",
               "version": "[2.1.0.4, )"
