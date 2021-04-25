@@ -1,3 +1,1 @@
-remove later test,frontend projects and authenticatio.cs in BE
-networking
-sound keeps playing when back pressed or closing app
+add local database 
