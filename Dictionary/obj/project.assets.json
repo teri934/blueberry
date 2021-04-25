@@ -2310,16 +2310,6 @@
         "build": {
           "buildTransitive/monoandroid50/Xamarin.Google.Guava.ListenableFuture.targets": {}
         }
-      },
-      "DTO/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/DTO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DTO.dll": {}
-        }
       }
     }
   },
@@ -6866,16 +6856,10 @@
         "xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",
         "xamarin.google.guava.listenablefuture.nuspec"
       ]
-    },
-    "DTO/1.0.0": {
-      "type": "project",
-      "path": "../DTO/DTO.csproj",
-      "msbuildProject": "../DTO/DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
-      "DTO >= 1.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Newtonsoft.Json >= 13.0.1",
       "Plugin.CurrentActivity >= 2.1.0.4",
@@ -6923,11 +6907,7 @@
       },
       "frameworks": {
         "monoandroid11.0": {
-          "projectReferences": {
-            "C:\\Users\\Teri\\Desktop\\4. semester\\Dictionary\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\Teri\\Desktop\\4. semester\\Dictionary\\DTO\\DTO.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       }
     },

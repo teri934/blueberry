@@ -605,16 +605,6 @@
             "rid": "win"
           }
         }
-      },
-      "DTO/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/DTO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DTO.dll": {}
-        }
       }
     }
   },
@@ -1844,16 +1834,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "DTO/1.0.0": {
-      "type": "project",
-      "path": "../DTO/DTO.csproj",
-      "msbuildProject": "../DTO/DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "DTO >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
       "MySql.EntityFrameworkCore >= 5.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -1893,11 +1877,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\Teri\\Desktop\\4. semester\\Dictionary\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\Teri\\Desktop\\4. semester\\Dictionary\\DTO\\DTO.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
