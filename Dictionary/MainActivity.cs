@@ -16,14 +16,12 @@ using Xamarin.Essentials;
 using Android.Widget;
 using Language;
 using Fragments;
-using System.Net.Http;
 
 namespace Dictionary
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        public static HttpClient client = new HttpClient();
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";

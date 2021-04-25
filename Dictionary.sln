@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "Backend\Backend.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend", "Frontend\Frontend.csproj", "{E34C279A-807C-4DE3-9C8D-4C4EA120F6E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{92A77541-FB7A-4625-99EF-776F72289ED0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{E34C279A-807C-4DE3-9C8D-4C4EA120F6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E34C279A-807C-4DE3-9C8D-4C4EA120F6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E34C279A-807C-4DE3-9C8D-4C4EA120F6E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92A77541-FB7A-4625-99EF-776F72289ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92A77541-FB7A-4625-99EF-776F72289ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92A77541-FB7A-4625-99EF-776F72289ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92A77541-FB7A-4625-99EF-776F72289ED0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
