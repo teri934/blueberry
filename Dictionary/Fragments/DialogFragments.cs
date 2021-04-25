@@ -55,75 +55,75 @@ namespace Fragments
 		}
 	}
 
-	class LoginDialog : Android.Support.V4.App.DialogFragment
-	{
-		public override Dialog OnCreateDialog(Bundle savedInstanceState)
-		{
-			AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
+	//class LoginDialog : Android.Support.V4.App.DialogFragment
+	//{
+	//	public override Dialog OnCreateDialog(Bundle savedInstanceState)
+	//	{
+	//		AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
 
-			LayoutInflater inflater = RequireActivity().LayoutInflater;
-			View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_login, null);
-			builder.SetView(view);
+	//		LayoutInflater inflater = RequireActivity().LayoutInflater;
+	//		View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_login, null);
+	//		builder.SetView(view);
 
-			EditText username = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_username);
-			EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
-			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
-			Button back = (Button)view.FindViewById(Dictionary.Resource.Id.back_button);
+	//		EditText username = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_username);
+	//		EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
+	//		Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
+	//		Button back = (Button)view.FindViewById(Dictionary.Resource.Id.back_button);
 
-			submit.Click += Submit_Click;
-			back.Click += Back_Click;
+	//		submit.Click += Submit_Click;
+	//		back.Click += Back_Click;
 
-			return builder.Create();
-		}
+	//		return builder.Create();
+	//	}
 
-		private void Back_Click(object sender, EventArgs e)
-		{
-			Dismiss();
-		}
+	//	private void Back_Click(object sender, EventArgs e)
+	//	{
+	//		Dismiss();
+	//	}
 
-		private void Submit_Click(object sender, EventArgs e)
-		{
-			Preferences.Set("user", true);
-			Dismiss();
-			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
-			activity.RestartApp();
-		}
-	}
+	//	private void Submit_Click(object sender, EventArgs e)
+	//	{
+	//		Preferences.Set("user", true);
+	//		Dismiss();
+	//		MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+	//		activity.RestartApp();
+	//	}
+	//}
 
-	class RegisterDialog : Android.Support.V4.App.DialogFragment
-	{
-		public override Dialog OnCreateDialog(Bundle savedInstanceState)
-		{
-			AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
+	//class RegisterDialog : Android.Support.V4.App.DialogFragment
+	//{
+	//	public override Dialog OnCreateDialog(Bundle savedInstanceState)
+	//	{
+	//		AlertDialog.Builder builder = new AlertDialog.Builder(CrossCurrentActivity.Current.Activity);
 
-			LayoutInflater inflater = RequireActivity().LayoutInflater;
-			View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_signup, null);
-			builder.SetView(view);
+	//		LayoutInflater inflater = RequireActivity().LayoutInflater;
+	//		View view = inflater.Inflate(Dictionary.Resource.Layout.dialog_signup, null);
+	//		builder.SetView(view);
 
-			EditText username = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_username);
-			EditText name = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_name);
-			EditText surname = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_surname);
-			EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
-			Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
-			Button back = (Button)view.FindViewById(Dictionary.Resource.Id.back_button);
+	//		EditText username = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_username);
+	//		EditText name = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_name);
+	//		EditText surname = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_surname);
+	//		EditText password = (EditText)view.FindViewById(Dictionary.Resource.Id.prompt_password);
+	//		Button submit = (Button)view.FindViewById(Dictionary.Resource.Id.login_button);
+	//		Button back = (Button)view.FindViewById(Dictionary.Resource.Id.back_button);
 
-			submit.Click += Submit_Click;
-			back.Click += Back_Click;
+	//		submit.Click += Submit_Click;
+	//		back.Click += Back_Click;
 
-			return builder.Create();
-		}
+	//		return builder.Create();
+	//	}
 
-		private void Back_Click(object sender, EventArgs e)
-		{
-			Dismiss();
-		}
+	//	private void Back_Click(object sender, EventArgs e)
+	//	{
+	//		Dismiss();
+	//	}
 
-		private void Submit_Click(object sender, EventArgs e)
-		{
-			Preferences.Set("user", true);
-			Dismiss();
-			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
-			activity.RestartApp();
-		}
-	}
+	//	private void Submit_Click(object sender, EventArgs e)
+	//	{
+	//		Preferences.Set("user", true);
+	//		Dismiss();
+	//		MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+	//		activity.RestartApp();
+	//	}
+	//}
 }

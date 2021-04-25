@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[5.2.7, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Plugin.CurrentActivity": {
               "target": "Package",
               "version": "[2.1.0.4, )"
@@ -79,6 +83,10 @@
             "Xamarin.Google.Android.Material": {
               "target": "Package",
               "version": "[1.3.0.1, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.0-beta, )"
             }
           }
         }

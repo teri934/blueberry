@@ -125,23 +125,23 @@ namespace Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
-			TextView text_log = (TextView)view.FindViewById(Dictionary.Resource.Id.log_out);
+			//TextView text_log = (TextView)view.FindViewById(Dictionary.Resource.Id.log_out);
 
-			ImageButton button_signup = (ImageButton)view.FindViewById(Dictionary.Resource.Id.sign_up_button);
-			button_signup.Click += Register_Click;
+			//ImageButton button_signup = (ImageButton)view.FindViewById(Dictionary.Resource.Id.sign_up_button);
+			//button_signup.Click += Register_Click;
 
-			ImageButton button_log = (ImageButton)view.FindViewById(Dictionary.Resource.Id.log_out_button);
+			//ImageButton button_log = (ImageButton)view.FindViewById(Dictionary.Resource.Id.log_out_button);
 
-			if (Preferences.Get("user", false))  //user signed in
-			{
-				text_log.Text = MainActivity.GetLocalString("@string/log_out_button");
-				button_log.Click += User_Signed_Click;
-			}
-			else
-			{
-				text_log.Text = MainActivity.GetLocalString("@string/sign_in_button");
-				button_log.Click += User_Not_Signed_Click;
-			}
+			//if (Preferences.Get("user", false))  //user signed in
+			//{
+			//	text_log.Text = MainActivity.GetLocalString("@string/log_out_button");
+			//	button_log.Click += User_Signed_Click;
+			//}
+			//else
+			//{
+			//	text_log.Text = MainActivity.GetLocalString("@string/sign_in_button");
+			//	button_log.Click += User_Not_Signed_Click;
+			//}
 
 			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
@@ -153,22 +153,22 @@ namespace Fragments
 			return view;
 		}
 
-		private void User_Signed_Click(object sender, EventArgs e)
-		{
-			Preferences.Set("user", false);
-			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
-			activity.RestartApp();
-		}
-		private void User_Not_Signed_Click(object sender, EventArgs e)
-		{
-			LoginDialog dialog = new LoginDialog();
-			dialog.Show(FragmentManager, null);
-		}
-		private void Register_Click(object sender, EventArgs e)
-		{
-			RegisterDialog dialog = new RegisterDialog();
-			dialog.Show(FragmentManager, null);
-		}
+		//private void User_Signed_Click(object sender, EventArgs e)
+		//{
+		//	Preferences.Set("user", false);
+		//	MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+		//	activity.RestartApp();
+		//}
+		//private void User_Not_Signed_Click(object sender, EventArgs e)
+		//{
+		//	LoginDialog dialog = new LoginDialog();
+		//	dialog.Show(FragmentManager, null);
+		//}
+		//private void Register_Click(object sender, EventArgs e)
+		//{
+		//	RegisterDialog dialog = new RegisterDialog();
+		//	dialog.Show(FragmentManager, null);
+		//}
 
 	}
 

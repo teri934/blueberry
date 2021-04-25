@@ -20,13 +20,14 @@ using DTO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Android.Util;
 
 namespace Dictionary
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        static HttpClient client = new HttpClient();
+        public static HttpClient client = new HttpClient();
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
@@ -57,7 +58,7 @@ namespace Dictionary
             toggle.SyncState();
 
             NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            UpdateUserInfo(navigationView.GetHeaderView(0));
+            //UpdateUserInfo(navigationView.GetHeaderView(0));
             navigationView.ItemIconTintList = null;
             navigationView.SetNavigationItemSelectedListener(this);
 
@@ -76,8 +77,6 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
-
-            RunAsync().GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -241,83 +240,21 @@ namespace Dictionary
         /// updates user info in the header of the drawer
         /// </summary>
         /// <param name="headerView"></param>
-        void UpdateUserInfo(View headerView)
-		{
-            TextView name = (TextView)headerView.FindViewById(Resource.Id.name);
-            TextView surname = (TextView)headerView.FindViewById(Resource.Id.surname);
-            if (Preferences.Get("user", false))
-            {
-                name.Text = GetLocalString("@string/name");
-                surname.Text = GetLocalString("@string/surname");
-            }
-            else
-            {
-                name.Text = GetLocalString("@string/no_username");
-                surname.Text = GetLocalString("@string/empty");
-            }
-        }
-
-
-
-        //SKUSKA
-        static async Task RunAsync()
-        {
-            // Update port # in the following line.
-            //client.BaseAddress = new Uri("https://localhost:5001/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            try
-            {
-                //Get all users
-                List<DTOUser> users = await Frontend.GetAllUsersAsync();
-
-                foreach (DTOUser u in users)
-                    ShowUser(u);
-
-                Console.WriteLine();
-
-                //Get existing user
-                DTORelevantData user = await Frontend.GetExistingUserAsync(new DTOSignIn { Username = "george3", Password = "123" });
-                ShowUser(user);
-
-                //check potential user
-                //bool value = await Client.CheckPotentialUserAsync(new SignUp { Username = "emma"});
-                bool value = await Frontend.CheckPotentialUserAsync(new DTOSignUp { Username = "rose" });
-                Console.WriteLine(value);
-
-                user = null;
-                if (value)
-                {
-                    user = await Frontend.AddUserAsync(new DTOUser { Username = "rose", Name = "Emily", Surname = "Black", Password = "123" });
-                }
-                ShowUser(user);
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            Console.ReadLine();
-        }
-
-        static void ShowUser(DTORelevantData user)
-        {
-            if (user != null)
-                Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
-            else
-                Console.WriteLine("No user");
-        }
-
-        static void ShowUser(DTOUser user)
-        {
-            if (user != null)
-                Console.WriteLine($"{user.Username} {user.Name} {user.Surname}");
-            else
-                Console.WriteLine("No user");
-        }
+  //      void UpdateUserInfo(View headerView)
+		//{
+  //          TextView name = (TextView)headerView.FindViewById(Resource.Id.name);
+  //          TextView surname = (TextView)headerView.FindViewById(Resource.Id.surname);
+  //          if (Preferences.Get("user", false))
+  //          {
+  //              name.Text = GetLocalString("@string/name");
+  //              surname.Text = GetLocalString("@string/surname");
+  //          }
+  //          else
+  //          {
+  //              name.Text = GetLocalString("@string/no_username");
+  //              surname.Text = GetLocalString("@string/empty");
+  //          }
+  //      }
     }
 }
 
