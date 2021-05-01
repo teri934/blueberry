@@ -16,6 +16,7 @@ using Xamarin.Essentials;
 using Android.Widget;
 using Language;
 using Fragments;
+using Dictionary.Database;
 
 namespace Dictionary
 {
@@ -71,6 +72,9 @@ namespace Dictionary
             language = English.language;
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
+
+            //ResultsDatabase.CreateDatabase();
+
         }
 
         /// <summary>
