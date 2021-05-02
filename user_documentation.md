@@ -16,7 +16,7 @@
 
 * Quizes contain results of previous taken quizes (can be seen when connected to the Internet) and the user has the possibility to start a new quiz.
 * Dictionary contains some words in the foreign language, their translations and recordings of them.
-* Settings provide the possibility to sign up, sign in, log out or change the theme (light/dark mode).
+* Settings provide the possibility to generate xml file with stored quiz results or change the theme (light/dark mode).
 
 <img src="./pictures/menu.png" width="200" height="375">
 
@@ -38,6 +38,9 @@ How it looks like when the user is taking a quiz.
 
 <img src="./pictures/quiz.png" width="200" height="375">
 
+## Access old data on new phone
+
+The generated file database.xml (see Settings) is stored in Downloads folder. You need to transfer the file to your new phone. Then when it is in Downloads folder the old data can be accessed and seen in My Scores.
 
 ## Common problems  
 
