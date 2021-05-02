@@ -14,7 +14,6 @@
 bin/
 gen/
 out/
-.vs/
 Dictionary/bin/
 Dictionary/obj/
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
@@ -89,3 +88,4 @@ lint/tmp/
 /Dictionary/obj
 obj
 obj
+/.vs
