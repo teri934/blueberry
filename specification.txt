@@ -8,12 +8,10 @@ and pronunciation.
 Overall description
 
 The main features of the application are:
-1.  vocabulary of words with their translations and pronounciations (just English at the
-	moment
-2.  quizes where the user can check his/her understanding and knowledge
-3.  quizes' results that the user can later check because he/she is signed in when using
-	the app
-4.	the ability to switch between night and day mode
+1.  vocabulary of words with their translations and pronounciations (just English at the moment
+    quizes where the user can check his/her understanding and knowledge
+2.  quizes' results that the user can later check and can be transfered to another phone
+3.  the ability to switch between night and day mode
 
 
 Functionality
@@ -23,8 +21,8 @@ Particularly the list with the vocabulary will be filterable so the user can fin
 word he/she is looking for (both in original and translation). 
 The default language is English but there will be support Slovak or Czech according to 
 the language settings in the phone.
-The results from the quizes will be stored and the user can access them when connected to 
-the Internet.
+The results from the quizes will be stored and the user can access them any time and
+they can even be copied and stored to a new device.
 There will be a small side menu too (in navigation drawer) so the user can change to
 three main parts (Quizes, Dictionary, Settings) wherever in the application.
 The changing of the mode day/night mode will be possible in the Settings.
