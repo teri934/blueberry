@@ -16,7 +16,7 @@
 
 * Quizes contain results of previous taken quizes (can be seen when connected to the Internet) and the user has the possibility to start a new quiz.
 * Dictionary contains some words in the foreign language, their translations and recordings of them.
-* Settings provide the possibility to generate xml file with stored quiz results or change the theme (light/dark mode).
+* Settings provide the possibility to generate XML file with stored quiz results or change the theme (light/dark mode).
 
 <img src="./pictures/menu.png" width="200" height="375">
 
