@@ -14,7 +14,7 @@
 bin/
 gen/
 out/
-Dictionary/bin/Debug/
+Dictionary/bin/
 Dictionary/obj/
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
 # release/
@@ -85,3 +85,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/Dictionary/obj
+obj
+obj
