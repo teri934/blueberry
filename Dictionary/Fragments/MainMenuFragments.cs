@@ -5,10 +5,9 @@ using Android.Widget;
 using System;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
-using Implemented;
-using Dictionary;
+using Dictionary.Implemented;
 
-namespace Fragments
+namespace Dictionary.Fragments
 {
 	class MainFragment : Android.Support.V4.App.Fragment
 	{

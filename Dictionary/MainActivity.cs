@@ -16,8 +16,8 @@ using Android.Text.Style;
 using Xamarin.Essentials;
 using Android.Widget;
 using Language;
-using Fragments;
-using Database;
+using Dictionary.Fragments;
+using Dictionary.Database;
 
 namespace Dictionary
 {

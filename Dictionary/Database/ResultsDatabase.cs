@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Runtime.CompilerServices;
 
-namespace Database
+namespace Dictionary.Database
 {
     class ResultsDatabase
     {

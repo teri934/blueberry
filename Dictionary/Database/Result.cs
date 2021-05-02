@@ -1,7 +1,7 @@
 ﻿using SQLite;
 using System;
 
-namespace Database
+namespace Dictionary.Database
 {
 	class Result
 	{

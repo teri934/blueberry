@@ -10,9 +10,9 @@ using Android.Graphics;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary;
-using Database;
+using Dictionary.Database;
 
-namespace Fragments
+namespace Dictionary.Fragments
 {
 	class ScoresFragment : Android.Support.V4.App.Fragment
 	{

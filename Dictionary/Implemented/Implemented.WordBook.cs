@@ -6,9 +6,9 @@ using Android.Widget;
 using Android.Media;
 using Java.Lang;
 using Language;
-using Fragments;
+using Dictionary.Fragments;
 
-namespace Implemented
+namespace Dictionary.Implemented
 {
 	class SearchViewListener : Java.Lang.Object, SearchView.IOnQueryTextListener
 	{

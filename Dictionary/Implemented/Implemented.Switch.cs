@@ -3,7 +3,7 @@ using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary;
 
-namespace Implemented
+namespace Dictionary.Implemented
 {
 	class CompoundListener : Java.Lang.Object, CompoundButton.IOnCheckedChangeListener
 	{
