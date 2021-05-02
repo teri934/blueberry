@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Android.App;
+﻿using System.Collections.Generic;
 using Android.Views;
 using Android.Widget;
-using Android.Media;
-using Java.Lang;
-using Language;
 using DD = Dictionary.Database;
 
 namespace Dictionary.Implemented

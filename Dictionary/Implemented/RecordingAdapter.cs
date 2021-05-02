@@ -27,10 +27,7 @@ namespace Dictionary.Implemented
 			return true;
 		}
 
-		bool SearchView.IOnQueryTextListener.OnQueryTextSubmit(string query)
-		{
-			return false;
-		}
+		bool SearchView.IOnQueryTextListener.OnQueryTextSubmit(string query) => false;
 	}
 
 	class RecordingAdapter : BaseAdapter, IFilterable

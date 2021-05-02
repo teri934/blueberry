@@ -1,18 +1,8 @@
 <resources>
-    <string name="name">Tereza</string>
-    <string name="surname">Kulichová</string>
-    <string name="no_username">You are not signed in</string>
-    <string name="email">kulichova.t@gmail.com</string>
+    <string name="welcome">Welcome back!</string>
     <string name="empty"></string>
     <string name="darkMode">Dark mode</string>
-    <string name="log_out_button">Log out</string>
-    <string name="sign_in_button">Sign in</string>
-    <string name="sign_up_button">Sign up</string>
-    <string name="remember_me">Remember Me</string>
-    <string name="prompt_username">Username</string>
-    <string name="prompt_name">Name</string>
-    <string name="prompt_surname">Surname</string>
-    <string name="prompt_password">Password</string>
+    <string name="generate_file">Generate and download results</string>
     <string name="back">Back</string>
   
     <string name="english">English</string>

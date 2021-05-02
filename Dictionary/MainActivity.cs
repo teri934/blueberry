@@ -235,26 +235,6 @@ namespace Dictionary
 		{
             InitializeMainFragment(new MainFragment());
 		}
-
-        /// <summary>
-        /// updates user info in the header of the drawer
-        /// </summary>
-        /// <param name="headerView"></param>
-  //      void UpdateUserInfo(View headerView)
-		//{
-  //          TextView name = (TextView)headerView.FindViewById(Resource.Id.name);
-  //          TextView surname = (TextView)headerView.FindViewById(Resource.Id.surname);
-  //          if (Preferences.Get("user", false))
-  //          {
-  //              name.Text = GetLocalString("@string/name");
-  //              surname.Text = GetLocalString("@string/surname");
-  //          }
-  //          else
-  //          {
-  //              name.Text = GetLocalString("@string/no_username");
-  //              surname.Text = GetLocalString("@string/empty");
-  //          }
-  //      }
     }
 }
 
