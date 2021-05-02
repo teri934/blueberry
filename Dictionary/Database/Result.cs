@@ -1,7 +1,7 @@
 ﻿using SQLite;
 using System;
 
-namespace Dictionary.Database
+namespace Database
 {
 	class Result
 	{
@@ -9,5 +9,6 @@ namespace Dictionary.Database
 		public int ID { get; set; }
 		public DateTime date { get; set; }
 		public int Score { get; set; }
+		public int Rounds { get; set; }
 	}
 }

@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace Dictionary.Database
+namespace Database
 {
 	class Constants
 	{

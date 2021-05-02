@@ -3,11 +3,14 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Android.Media;
 using Android.Graphics;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary;
+using Database;
 
 namespace Fragments
 {
@@ -138,7 +141,7 @@ namespace Fragments
 	struct Game
 	{
 		internal static int round = 0;
-		internal const int numberRounds = 15;
+		internal const int numberRounds = 2;
 		internal static int indexAudio = 0;
 		internal static int overallScore = 0;
 	}
@@ -162,6 +165,13 @@ namespace Fragments
 			overall.Text = $"{MainActivity.GetLocalString("@string/overall_score")} {Game.overallScore}/{Game.numberRounds}";
 			overall.SetTextColor(color);
 			Game.overallScore = 0;
+
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+			ResultsDatabase database = (ResultsDatabase)activity.GetType().GetField("database", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(activity);
+
+			var result = new Database.Result() {Score = Game.overallScore, Rounds = Game.numberRounds, date = DateTime.Now};
+			Task.Run(() => database.SaveResultAsync(result)).GetAwaiter();
+			//var list = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
 
 			return view;
 		}

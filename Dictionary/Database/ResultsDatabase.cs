@@ -13,23 +13,17 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Runtime.CompilerServices;
 
-namespace Dictionary.Database
+namespace Database
 {
     class ResultsDatabase
     {
         public static SQLiteAsyncConnection Database;
 
-        public static readonly AsyncLazy<ResultsDatabase> Instance = new AsyncLazy<ResultsDatabase>(async () =>
-        {
+        public async static Task<ResultsDatabase> CreateDatabase()
+		{
             var instance = new ResultsDatabase();
             CreateTableResult result = await Database.CreateTableAsync<Result>();
             return instance;
-        });
-
-        public async static void CreateDatabase()
-		{
-            Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-            CreateTableResult result = await Database.CreateTableAsync<Result>();
         }
 
         public ResultsDatabase()
@@ -37,51 +31,31 @@ namespace Dictionary.Database
             Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
         }
 
-        public Task<List<Result>> GetResultsAsync()
+        public async Task<List<Result>> GetResultsAsync()
         {
-            return Database.Table<Result>().ToListAsync();
+            return await Database.Table<Result>().ToListAsync();
         }
 
-        public Task<Result> GetResultAsync(int id)
+        public async Task<Result> GetResultAsync(int id)
         {
-            return Database.Table<Result>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return await Database.Table<Result>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveResultAsync(Result item)
+        public async Task<int> SaveResultAsync(Result item)
         {
             if (item.ID != 0)
             {
-                return Database.UpdateAsync(item);
+                return await Database.UpdateAsync(item);
             }
             else
             {
-                return Database.InsertAsync(item);
+                return await Database.InsertAsync(item);
             }
         }
 
-        public Task<int> DeleteItemAsync(Result item)
+        public async Task<int> DeleteItemAsync(Result item)
         {
-            return Database.DeleteAsync(item);
-        }
-    }
-
-    public class AsyncLazy<T> : Lazy<Task<T>>
-    {
-        readonly Lazy<Task<T>> instance;
-
-        public AsyncLazy(Func<T> factory)
-        {
-            instance = new Lazy<Task<T>>(() => Task.Run(factory));
-        }
-
-        public AsyncLazy(Func<Task<T>> factory)
-        {
-            instance = new Lazy<Task<T>>(() => Task.Run(factory));
-        }
-
-        public TaskAwaiter<T> GetAwaiter()
-        {
-            return instance.Value.GetAwaiter();
+            return await Database .DeleteAsync(item);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
@@ -16,7 +17,7 @@ using Xamarin.Essentials;
 using Android.Widget;
 using Language;
 using Fragments;
-using Dictionary.Database;
+using Database;
 
 namespace Dictionary
 {
@@ -26,6 +27,7 @@ namespace Dictionary
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
+        ResultsDatabase database;
         public List<Word> Dictionary { get; private set;}
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -73,9 +75,9 @@ namespace Dictionary
             English.CallCreateDictionary(new English());
             Dictionary = English.Dictionary;
 
-            //ResultsDatabase.CreateDatabase();
-
+            database = Task.Run(() => ResultsDatabase.CreateDatabase()).GetAwaiter().GetResult();
         }
+
 
         /// <summary>
         /// sets different colors for menu items according to the current theme
