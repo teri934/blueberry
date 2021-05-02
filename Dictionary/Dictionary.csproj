@@ -75,8 +75,9 @@
     <Compile Include="Fragments\QuizFragments.cs" />
     <Compile Include="Fragments\MainMenuFragments.cs" />
     <Compile Include="Fragments\DialogFragments.cs" />
-    <Compile Include="Implemented\Implemented.Switch.cs" />
-    <Compile Include="Implemented\Implemented.WordBook.cs" />
+    <Compile Include="Implemented\ResultAdapter.cs" />
+    <Compile Include="Implemented\Switch.cs" />
+    <Compile Include="Implemented\RecordingAdapter.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs">
@@ -319,6 +320,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\dialog_signup.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\result_line.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

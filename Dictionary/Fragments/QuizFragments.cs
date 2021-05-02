@@ -9,7 +9,7 @@ using Android.Media;
 using Android.Graphics;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
-using Dictionary;
+using Dictionary.Implemented;
 using Dictionary.Database;
 
 namespace Dictionary.Fragments
@@ -19,6 +19,13 @@ namespace Dictionary.Fragments
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_scores, container, false);
+
+			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
+			ResultsDatabase database = (ResultsDatabase)activity.GetType().GetField("database", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(activity);
+			var results = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
+
+			ListView myList = (ListView)view.FindViewById(Dictionary.Resource.Id.scores_list);
+			myList.Adapter = new ResultAdapter(results);
 
 			return view;
 		}

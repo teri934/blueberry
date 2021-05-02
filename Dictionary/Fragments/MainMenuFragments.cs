@@ -95,7 +95,7 @@ namespace Dictionary.Fragments
 			//the search results are displayed
 			mySearchView = (SearchView)view.FindViewById(Dictionary.Resource.Id.searchView);
 			myList = (ListView)view.FindViewById(Dictionary.Resource.Id.sounds_list);
-			myList.Adapter = new LineAdapter(Context, activity.Dictionary);
+			myList.Adapter = new RecordingAdapter(Context, activity.Dictionary);
 
 			myList.TextFilterEnabled = false;
 			SetUpSearchView();

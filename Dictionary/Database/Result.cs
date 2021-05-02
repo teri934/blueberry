@@ -3,7 +3,7 @@ using System;
 
 namespace Dictionary.Database
 {
-	class Result
+	class Result : Java.Lang.Object
 	{
 		[PrimaryKey, AutoIncrement]
 		public int ID { get; set; }
