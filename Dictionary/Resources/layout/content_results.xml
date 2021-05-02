@@ -23,7 +23,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:text="@string/overall_score" />
 
-
     </LinearLayout>
 
 </RelativeLayout>

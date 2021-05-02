@@ -37,6 +37,9 @@
     <string name="no_button">No</string>
     <string name="leave_game">Do you really want to leave the game? Your progress will be lost.</string>
 
+    <string name="score_name">Score</string>
+    <string name="rounds_name">Rounds</string>
+
   
     <string name="change_language">Change language</string>
  

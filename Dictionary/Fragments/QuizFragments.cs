@@ -25,7 +25,7 @@ namespace Dictionary.Fragments
 			var results = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
 
 			ListView myList = (ListView)view.FindViewById(Dictionary.Resource.Id.scores_list);
-			myList.Adapter = new ResultAdapter(results);
+			myList.Adapter = new ResultAdapter(Context, results);
 
 			return view;
 		}
@@ -156,6 +156,14 @@ namespace Dictionary.Fragments
 
 	class ResultsFragment : Android.Support.V4.App.Fragment
 	{
+		/// <summary>
+		/// sets color according to theme
+		/// saves the result of the quiz to database
+		/// </summary>
+		/// <param name="inflater"></param>
+		/// <param name="container"></param>
+		/// <param name="savedInstanceState"></param>
+		/// <returns></returns>
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_results, container, false);
@@ -178,7 +186,6 @@ namespace Dictionary.Fragments
 
 			var result = new Database.Result() {Score = Game.overallScore, Rounds = Game.numberRounds, date = DateTime.Now};
 			Task.Run(() => database.SaveResultAsync(result)).GetAwaiter();
-			//var list = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
 
 			return view;
 		}

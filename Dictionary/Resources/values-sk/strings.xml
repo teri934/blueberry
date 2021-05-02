@@ -32,6 +32,9 @@
     <string name="no_button">Nie</string>
     <string name="leave_game">Chceš vážne opustiť hru? Tvoj pokrok bude stratený.</string>
 
+    <string name="score_name">Skóre</string>
+    <string name="rounds_name">Kolá</string>
+
     <string name="change_language">Zmeň jazyk</string>
 
     <string name="search_here">Hľadanie</string>
