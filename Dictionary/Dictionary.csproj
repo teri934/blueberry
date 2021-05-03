@@ -69,6 +69,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseFileManager.cs" />
     <Compile Include="Database\ResultsDatabase.cs" />
     <Compile Include="Database\Result.cs" />
     <Compile Include="Database\Constants.cs" />
@@ -134,6 +135,9 @@
   <ItemGroup>
     <PackageReference Include="Plugin.CurrentActivity">
       <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>6.0.1</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.0-beta</Version>
@@ -317,6 +321,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\result_line.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\download.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

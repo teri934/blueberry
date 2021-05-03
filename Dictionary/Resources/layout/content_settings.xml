@@ -57,7 +57,7 @@
             android:orientation="horizontal">
 
             <TextView
-             android:id="@+id/log_out"
+             android:id="@+id/generate_file"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -68,13 +68,13 @@
             </TextView>
 
             <ImageButton
-                android:id="@+id/log_out_button"
+                android:id="@+id/generate_file_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_extra"
                 android:padding="@dimen/button_extra"
                 android:layout_centerHorizontal="true" 
-                android:src="@drawable/logout"
+                android:src="@drawable/download"
                 android:background="@drawable/ripple"/>
 
         </LinearLayout>

@@ -33,7 +33,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Yes_Click(object sender, EventArgs e)
+		private void Yes_Click(object sender, EventArgs e)
 		{
 			Dismiss();
 			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
@@ -48,7 +48,7 @@ namespace Dictionary.Fragments
 			Game.round = 0;
 		}
 
-		void No_Click(object sender, EventArgs e)
+		private void No_Click(object sender, EventArgs e)
 		{
 			Dismiss();
 		}

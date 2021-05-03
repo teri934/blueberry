@@ -82,7 +82,7 @@ namespace Dictionary.Implemented
 			return v;
 		}
 
-		void Sound_Click(object sender, EventArgs e)
+		private void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
 			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(filteredData[int.Parse(((ImageButton)sender).Tag.ToString())].Filename, "raw", Application.Context.PackageName));

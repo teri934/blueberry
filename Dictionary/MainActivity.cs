@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
+using Plugin.Permissions;
 using Android.OS;
 using Android.Content;
 using Android.Runtime;
@@ -32,6 +33,8 @@ namespace Dictionary
         protected override void OnCreate(Bundle savedInstanceState)
         {
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            Platform.Init(this, savedInstanceState);
+
             bool dark;
             Preferences.Set("dialog", "nothing");
 
@@ -184,8 +187,7 @@ namespace Dictionary
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 

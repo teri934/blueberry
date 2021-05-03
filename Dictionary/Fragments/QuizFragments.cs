@@ -71,7 +71,7 @@ namespace Dictionary.Fragments
 			return view;
 		}
 
-		void Sound_Click(object sender, EventArgs e)
+		private void Sound_Click(object sender, EventArgs e)
 		{
 			player.Release();
 			player = MediaPlayer.Create(Application.Context, Application.Context.Resources.GetIdentifier(activity.Dictionary[Game.indexAudio].Filename, "raw", Application.Context.PackageName));
@@ -85,7 +85,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Submit_Click(object sender, EventArgs e)
+		private void Submit_Click(object sender, EventArgs e)
 		{
 			//color and text changes
 			if (input.Text.ToLower() == activity.Dictionary[Game.indexAudio].Translation)
@@ -125,7 +125,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Next_Click(object sender, EventArgs e)
+		private void Next_Click(object sender, EventArgs e)
 		{
 			if (Game.round < Game.numberRounds)
 			{

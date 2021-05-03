@@ -25,6 +25,228 @@ namespace Dictionary
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Permissions.Resource.Attribute.alpha = global::Dictionary.Resource.Attribute.alpha;
+			global::Plugin.Permissions.Resource.Attribute.coordinatorLayoutStyle = global::Dictionary.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Permissions.Resource.Attribute.font = global::Dictionary.Resource.Attribute.font;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderAuthority = global::Dictionary.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderCerts = global::Dictionary.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchStrategy = global::Dictionary.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderFetchTimeout = global::Dictionary.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderPackage = global::Dictionary.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Permissions.Resource.Attribute.fontProviderQuery = global::Dictionary.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Permissions.Resource.Attribute.fontStyle = global::Dictionary.Resource.Attribute.fontStyle;
+			global::Plugin.Permissions.Resource.Attribute.fontVariationSettings = global::Dictionary.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Permissions.Resource.Attribute.fontWeight = global::Dictionary.Resource.Attribute.fontWeight;
+			global::Plugin.Permissions.Resource.Attribute.keylines = global::Dictionary.Resource.Attribute.keylines;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchor = global::Dictionary.Resource.Attribute.layout_anchor;
+			global::Plugin.Permissions.Resource.Attribute.layout_anchorGravity = global::Dictionary.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Attribute.layout_behavior = global::Dictionary.Resource.Attribute.layout_behavior;
+			global::Plugin.Permissions.Resource.Attribute.layout_dodgeInsetEdges = global::Dictionary.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Attribute.layout_insetEdge = global::Dictionary.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Permissions.Resource.Attribute.layout_keyline = global::Dictionary.Resource.Attribute.layout_keyline;
+			global::Plugin.Permissions.Resource.Attribute.statusBarBackground = global::Dictionary.Resource.Attribute.statusBarBackground;
+			global::Plugin.Permissions.Resource.Attribute.ttcIndex = global::Dictionary.Resource.Attribute.ttcIndex;
+			global::Plugin.Permissions.Resource.Color.browser_actions_bg_grey = global::Dictionary.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Permissions.Resource.Color.browser_actions_divider_color = global::Dictionary.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_text_color = global::Dictionary.Resource.Color.browser_actions_text_color;
+			global::Plugin.Permissions.Resource.Color.browser_actions_title_color = global::Dictionary.Resource.Color.browser_actions_title_color;
+			global::Plugin.Permissions.Resource.Color.notification_action_color_filter = global::Dictionary.Resource.Color.notification_action_color_filter;
+			global::Plugin.Permissions.Resource.Color.notification_icon_bg_color = global::Dictionary.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Permissions.Resource.Color.ripple_material_light = global::Dictionary.Resource.Color.ripple_material_light;
+			global::Plugin.Permissions.Resource.Color.secondary_text_default_material_light = global::Dictionary.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_max_width = global::Dictionary.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Permissions.Resource.Dimension.browser_actions_context_menu_min_padding = global::Dictionary.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_horizontal_material = global::Dictionary.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_inset_vertical_material = global::Dictionary.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_horizontal_material = global::Dictionary.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_button_padding_vertical_material = global::Dictionary.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_control_corner_material = global::Dictionary.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_height = global::Dictionary.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Permissions.Resource.Dimension.compat_notification_large_icon_max_width = global::Dictionary.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_icon_size = global::Dictionary.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_action_text_size = global::Dictionary.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_big_circle_margin = global::Dictionary.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_content_margin_start = global::Dictionary.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_height = global::Dictionary.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Permissions.Resource.Dimension.notification_large_icon_width = global::Dictionary.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Permissions.Resource.Dimension.notification_main_column_padding_top = global::Dictionary.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_media_narrow_margin = global::Dictionary.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_icon_size = global::Dictionary.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_right_side_padding_top = global::Dictionary.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_background_padding = global::Dictionary.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Permissions.Resource.Dimension.notification_small_icon_size_as_large = global::Dictionary.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Permissions.Resource.Dimension.notification_subtext_size = global::Dictionary.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad = global::Dictionary.Resource.Dimension.notification_top_pad;
+			global::Plugin.Permissions.Resource.Dimension.notification_top_pad_large_text = global::Dictionary.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Permissions.Resource.Drawable.notification_action_background = global::Dictionary.Resource.Drawable.notification_action_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg = global::Dictionary.Resource.Drawable.notification_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low = global::Dictionary.Resource.Drawable.notification_bg_low;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_normal = global::Dictionary.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_low_pressed = global::Dictionary.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal = global::Dictionary.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Permissions.Resource.Drawable.notification_bg_normal_pressed = global::Dictionary.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Permissions.Resource.Drawable.notification_icon_background = global::Dictionary.Resource.Drawable.notification_icon_background;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_bg = global::Dictionary.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_template_icon_low_bg = global::Dictionary.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Permissions.Resource.Drawable.notification_tile_bg = global::Dictionary.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Permissions.Resource.Drawable.notify_panel_notification_icon_bg = global::Dictionary.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Permissions.Resource.Id.accessibility_action_clickable_span = global::Dictionary.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_0 = global::Dictionary.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_1 = global::Dictionary.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_10 = global::Dictionary.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_11 = global::Dictionary.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_12 = global::Dictionary.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_13 = global::Dictionary.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_14 = global::Dictionary.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_15 = global::Dictionary.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_16 = global::Dictionary.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_17 = global::Dictionary.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_18 = global::Dictionary.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_19 = global::Dictionary.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_2 = global::Dictionary.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_20 = global::Dictionary.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_21 = global::Dictionary.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_22 = global::Dictionary.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_23 = global::Dictionary.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_24 = global::Dictionary.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_25 = global::Dictionary.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_26 = global::Dictionary.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_27 = global::Dictionary.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_28 = global::Dictionary.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_29 = global::Dictionary.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_3 = global::Dictionary.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_30 = global::Dictionary.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_31 = global::Dictionary.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_4 = global::Dictionary.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_5 = global::Dictionary.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_6 = global::Dictionary.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_7 = global::Dictionary.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_8 = global::Dictionary.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.Permissions.Resource.Id.accessibility_custom_action_9 = global::Dictionary.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.Permissions.Resource.Id.actions = global::Dictionary.Resource.Id.actions;
+			global::Plugin.Permissions.Resource.Id.action_container = global::Dictionary.Resource.Id.action_container;
+			global::Plugin.Permissions.Resource.Id.action_divider = global::Dictionary.Resource.Id.action_divider;
+			global::Plugin.Permissions.Resource.Id.action_image = global::Dictionary.Resource.Id.action_image;
+			global::Plugin.Permissions.Resource.Id.action_text = global::Dictionary.Resource.Id.action_text;
+			global::Plugin.Permissions.Resource.Id.all = global::Dictionary.Resource.Id.all;
+			global::Plugin.Permissions.Resource.Id.async = global::Dictionary.Resource.Id.async;
+			global::Plugin.Permissions.Resource.Id.blocking = global::Dictionary.Resource.Id.blocking;
+			global::Plugin.Permissions.Resource.Id.bottom = global::Dictionary.Resource.Id.bottom;
+			global::Plugin.Permissions.Resource.Id.browser_actions_header_text = global::Dictionary.Resource.Id.browser_actions_header_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_items = global::Dictionary.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_icon = global::Dictionary.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_item_text = global::Dictionary.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Permissions.Resource.Id.browser_actions_menu_view = global::Dictionary.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Permissions.Resource.Id.center = global::Dictionary.Resource.Id.center;
+			global::Plugin.Permissions.Resource.Id.center_horizontal = global::Dictionary.Resource.Id.center_horizontal;
+			global::Plugin.Permissions.Resource.Id.center_vertical = global::Dictionary.Resource.Id.center_vertical;
+			global::Plugin.Permissions.Resource.Id.chronometer = global::Dictionary.Resource.Id.chronometer;
+			global::Plugin.Permissions.Resource.Id.clip_horizontal = global::Dictionary.Resource.Id.clip_horizontal;
+			global::Plugin.Permissions.Resource.Id.clip_vertical = global::Dictionary.Resource.Id.clip_vertical;
+			global::Plugin.Permissions.Resource.Id.dialog_button = global::Dictionary.Resource.Id.dialog_button;
+			global::Plugin.Permissions.Resource.Id.end = global::Dictionary.Resource.Id.end;
+			global::Plugin.Permissions.Resource.Id.fill = global::Dictionary.Resource.Id.fill;
+			global::Plugin.Permissions.Resource.Id.fill_horizontal = global::Dictionary.Resource.Id.fill_horizontal;
+			global::Plugin.Permissions.Resource.Id.fill_vertical = global::Dictionary.Resource.Id.fill_vertical;
+			global::Plugin.Permissions.Resource.Id.forever = global::Dictionary.Resource.Id.forever;
+			global::Plugin.Permissions.Resource.Id.icon = global::Dictionary.Resource.Id.icon;
+			global::Plugin.Permissions.Resource.Id.icon_group = global::Dictionary.Resource.Id.icon_group;
+			global::Plugin.Permissions.Resource.Id.info = global::Dictionary.Resource.Id.info;
+			global::Plugin.Permissions.Resource.Id.italic = global::Dictionary.Resource.Id.italic;
+			global::Plugin.Permissions.Resource.Id.left = global::Dictionary.Resource.Id.left;
+			global::Plugin.Permissions.Resource.Id.line1 = global::Dictionary.Resource.Id.line1;
+			global::Plugin.Permissions.Resource.Id.line3 = global::Dictionary.Resource.Id.line3;
+			global::Plugin.Permissions.Resource.Id.none = global::Dictionary.Resource.Id.none;
+			global::Plugin.Permissions.Resource.Id.normal = global::Dictionary.Resource.Id.normal;
+			global::Plugin.Permissions.Resource.Id.notification_background = global::Dictionary.Resource.Id.notification_background;
+			global::Plugin.Permissions.Resource.Id.notification_main_column = global::Dictionary.Resource.Id.notification_main_column;
+			global::Plugin.Permissions.Resource.Id.notification_main_column_container = global::Dictionary.Resource.Id.notification_main_column_container;
+			global::Plugin.Permissions.Resource.Id.right = global::Dictionary.Resource.Id.right;
+			global::Plugin.Permissions.Resource.Id.right_icon = global::Dictionary.Resource.Id.right_icon;
+			global::Plugin.Permissions.Resource.Id.right_side = global::Dictionary.Resource.Id.right_side;
+			global::Plugin.Permissions.Resource.Id.start = global::Dictionary.Resource.Id.start;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_actions = global::Dictionary.Resource.Id.tag_accessibility_actions;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_clickable_spans = global::Dictionary.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_heading = global::Dictionary.Resource.Id.tag_accessibility_heading;
+			global::Plugin.Permissions.Resource.Id.tag_accessibility_pane_title = global::Dictionary.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.Permissions.Resource.Id.tag_screen_reader_focusable = global::Dictionary.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.Permissions.Resource.Id.tag_transition_group = global::Dictionary.Resource.Id.tag_transition_group;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_event_manager = global::Dictionary.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Permissions.Resource.Id.tag_unhandled_key_listeners = global::Dictionary.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Permissions.Resource.Id.text = global::Dictionary.Resource.Id.text;
+			global::Plugin.Permissions.Resource.Id.text2 = global::Dictionary.Resource.Id.text2;
+			global::Plugin.Permissions.Resource.Id.time = global::Dictionary.Resource.Id.time;
+			global::Plugin.Permissions.Resource.Id.title = global::Dictionary.Resource.Id.title;
+			global::Plugin.Permissions.Resource.Id.top = global::Dictionary.Resource.Id.top;
+			global::Plugin.Permissions.Resource.Integer.status_bar_notification_info_maxnum = global::Dictionary.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_page = global::Dictionary.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Permissions.Resource.Layout.browser_actions_context_menu_row = global::Dictionary.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Permissions.Resource.Layout.custom_dialog = global::Dictionary.Resource.Layout.custom_dialog;
+			global::Plugin.Permissions.Resource.Layout.notification_action = global::Dictionary.Resource.Layout.notification_action;
+			global::Plugin.Permissions.Resource.Layout.notification_action_tombstone = global::Dictionary.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Permissions.Resource.Layout.notification_template_custom_big = global::Dictionary.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Permissions.Resource.Layout.notification_template_icon_group = global::Dictionary.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_chronometer = global::Dictionary.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Permissions.Resource.Layout.notification_template_part_time = global::Dictionary.Resource.Layout.notification_template_part_time;
+			global::Plugin.Permissions.Resource.String.status_bar_notification_info_overflow = global::Dictionary.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification = global::Dictionary.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Info = global::Dictionary.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Dictionary.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Time = global::Dictionary.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Permissions.Resource.Style.TextAppearance_Compat_Notification_Title = global::Dictionary.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionContainer = global::Dictionary.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Permissions.Resource.Style.Widget_Compat_NotificationActionText = global::Dictionary.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Permissions.Resource.Style.Widget_Support_CoordinatorLayout = global::Dictionary.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem = global::Dictionary.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_alpha = global::Dictionary.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_alpha = global::Dictionary.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Permissions.Resource.Styleable.ColorStateListItem_android_color = global::Dictionary.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout = global::Dictionary.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_keylines = global::Dictionary.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Dictionary.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Permissions.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Dictionary.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily = global::Dictionary.Resource.Styleable.FontFamily;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont = global::Dictionary.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_font = global::Dictionary.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Dictionary.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Dictionary.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Dictionary.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Dictionary.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_font = global::Dictionary.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontStyle = global::Dictionary.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Dictionary.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_fontWeight = global::Dictionary.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Permissions.Resource.Styleable.FontFamilyFont_ttcIndex = global::Dictionary.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderAuthority = global::Dictionary.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderCerts = global::Dictionary.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Dictionary.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Dictionary.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderPackage = global::Dictionary.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Permissions.Resource.Styleable.FontFamily_fontProviderQuery = global::Dictionary.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor = global::Dictionary.Resource.Styleable.GradientColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem = global::Dictionary.Resource.Styleable.GradientColorItem;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_color = global::Dictionary.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Permissions.Resource.Styleable.GradientColorItem_android_offset = global::Dictionary.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerColor = global::Dictionary.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerX = global::Dictionary.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_centerY = global::Dictionary.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endColor = global::Dictionary.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endX = global::Dictionary.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_endY = global::Dictionary.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_gradientRadius = global::Dictionary.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startColor = global::Dictionary.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startX = global::Dictionary.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_startY = global::Dictionary.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_tileMode = global::Dictionary.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_type = global::Dictionary.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Permissions.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::Dictionary.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::Dictionary.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Dictionary.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::Dictionary.Resource.Attribute.fontProviderAuthority;
@@ -12570,154 +12792,157 @@ namespace Dictionary
 			public const int dictionary = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int flag_english = 2131165293;
-			
-			// aapt resource value: 0x7F070075
-			public const int icon = 2131165301;
+			public const int download = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int ic_clock_black_24dp = 2131165294;
-			
-			// aapt resource value: 0x7F07006F
-			public const int ic_keyboard_black_24dp = 2131165295;
-			
-			// aapt resource value: 0x7F070070
-			public const int ic_menu_camera = 2131165296;
-			
-			// aapt resource value: 0x7F070071
-			public const int ic_mtrl_checked_circle = 2131165297;
-			
-			// aapt resource value: 0x7F070072
-			public const int ic_mtrl_chip_checked_black = 2131165298;
-			
-			// aapt resource value: 0x7F070073
-			public const int ic_mtrl_chip_checked_circle = 2131165299;
-			
-			// aapt resource value: 0x7F070074
-			public const int ic_mtrl_chip_close_circle = 2131165300;
+			public const int flag_english = 2131165294;
 			
 			// aapt resource value: 0x7F070076
-			public const int logout = 2131165302;
+			public const int icon = 2131165302;
+			
+			// aapt resource value: 0x7F07006F
+			public const int ic_clock_black_24dp = 2131165295;
+			
+			// aapt resource value: 0x7F070070
+			public const int ic_keyboard_black_24dp = 2131165296;
+			
+			// aapt resource value: 0x7F070071
+			public const int ic_menu_camera = 2131165297;
+			
+			// aapt resource value: 0x7F070072
+			public const int ic_mtrl_checked_circle = 2131165298;
+			
+			// aapt resource value: 0x7F070073
+			public const int ic_mtrl_chip_checked_black = 2131165299;
+			
+			// aapt resource value: 0x7F070074
+			public const int ic_mtrl_chip_checked_circle = 2131165300;
+			
+			// aapt resource value: 0x7F070075
+			public const int ic_mtrl_chip_close_circle = 2131165301;
 			
 			// aapt resource value: 0x7F070077
-			public const int material_cursor_drawable = 2131165303;
+			public const int logout = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int material_ic_calendar_black_24dp = 2131165304;
+			public const int material_cursor_drawable = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int material_ic_clear_black_24dp = 2131165305;
+			public const int material_ic_calendar_black_24dp = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int material_ic_edit_black_24dp = 2131165306;
+			public const int material_ic_clear_black_24dp = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165307;
+			public const int material_ic_edit_black_24dp = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165308;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165309;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165310;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165311;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165312;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int mtrl_dialog_background = 2131165313;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int mtrl_dropdown_arrow = 2131165314;
+			public const int mtrl_dialog_background = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int mtrl_ic_arrow_drop_down = 2131165315;
+			public const int mtrl_dropdown_arrow = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int mtrl_ic_arrow_drop_up = 2131165316;
+			public const int mtrl_ic_arrow_drop_down = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int mtrl_ic_cancel = 2131165317;
+			public const int mtrl_ic_arrow_drop_up = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int mtrl_ic_error = 2131165318;
+			public const int mtrl_ic_cancel = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int mtrl_popupmenu_background = 2131165319;
+			public const int mtrl_ic_error = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int mtrl_popupmenu_background_dark = 2131165320;
+			public const int mtrl_popupmenu_background = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int mtrl_tabs_default_indicator = 2131165321;
+			public const int mtrl_popupmenu_background_dark = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int navigation_empty_icon = 2131165322;
+			public const int mtrl_tabs_default_indicator = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int notification_action_background = 2131165323;
+			public const int navigation_empty_icon = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int notification_bg = 2131165324;
+			public const int notification_action_background = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int notification_bg_low = 2131165325;
+			public const int notification_bg = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int notification_bg_low_normal = 2131165326;
+			public const int notification_bg_low = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int notification_bg_low_pressed = 2131165327;
+			public const int notification_bg_low_normal = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int notification_bg_normal = 2131165328;
+			public const int notification_bg_low_pressed = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int notification_bg_normal_pressed = 2131165329;
+			public const int notification_bg_normal = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int notification_icon_background = 2131165330;
+			public const int notification_bg_normal_pressed = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_template_icon_bg = 2131165331;
+			public const int notification_icon_background = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_template_icon_low_bg = 2131165332;
+			public const int notification_template_icon_bg = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_tile_bg = 2131165333;
+			public const int notification_template_icon_low_bg = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notify_panel_notification_icon_bg = 2131165334;
+			public const int notification_tile_bg = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int quizes = 2131165335;
+			public const int notify_panel_notification_icon_bg = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int ripple = 2131165336;
+			public const int quizes = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int settings = 2131165337;
+			public const int ripple = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int side_nav_bar = 2131165338;
+			public const int settings = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int test_custom_background = 2131165339;
+			public const int side_nav_bar = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int tooltip_frame_dark = 2131165340;
+			public const int test_custom_background = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int tooltip_frame_light = 2131165341;
+			public const int tooltip_frame_dark = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int volume_up = 2131165342;
+			public const int tooltip_frame_light = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int volume_up = 2131165343;
 			
 			static Drawable()
 			{
@@ -13261,133 +13486,133 @@ namespace Dictionary
 			public const int FUNCTION = 2131230724;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int ghost_view = 2131230905;
+			public const int generate_file = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int ghost_view_holder = 2131230906;
+			public const int generate_file_button = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int gone = 2131230907;
+			public const int ghost_view = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int graph = 2131230908;
+			public const int ghost_view_holder = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int graph_wrap = 2131230909;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int grouping = 2131230911;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int groups = 2131230912;
+			public const int gone = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int group_divider = 2131230910;
+			public const int graph = 2131230910;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int graph_wrap = 2131230911;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int guideline = 2131230913;
+			public const int grouping = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int header = 2131230914;
+			public const int groups = 2131230914;
+			
+			// aapt resource value: 0x7F0800C0
+			public const int group_divider = 2131230912;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int header_title = 2131230915;
+			public const int guideline = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int hideable = 2131230916;
+			public const int header = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int home = 2131230917;
+			public const int header_title = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int homeAsUp = 2131230918;
+			public const int hideable = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int honorRequest = 2131230919;
+			public const int home = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int icon = 2131230920;
+			public const int homeAsUp = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int icon_group = 2131230921;
+			public const int honorRequest = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int ifRoom = 2131230922;
+			public const int icon = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int ignore = 2131230923;
+			public const int icon_group = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int ignoreRequest = 2131230924;
+			public const int ifRoom = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int image = 2131230925;
+			public const int ignore = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int imageView = 2131230926;
+			public const int ignoreRequest = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int info = 2131230927;
+			public const int image = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int input_game = 2131230928;
+			public const int imageView = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int invisible = 2131230929;
+			public const int info = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int inward = 2131230930;
+			public const int input_game = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int italic = 2131230931;
+			public const int invisible = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int item_touch_helper_previous_elevation = 2131230932;
+			public const int inward = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int jumpToEnd = 2131230933;
+			public const int italic = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int jumpToStart = 2131230934;
-			
-			// aapt resource value: 0x7F0800D8
-			public const int labeled = 2131230936;
+			public const int item_touch_helper_previous_elevation = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int labelGroup = 2131230935;
+			public const int jumpToEnd = 2131230935;
 			
-			// aapt resource value: 0x7F0800D9
-			public const int largeLabel = 2131230937;
+			// aapt resource value: 0x7F0800D8
+			public const int jumpToStart = 2131230936;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int layout = 2131230938;
+			public const int labeled = 2131230938;
+			
+			// aapt resource value: 0x7F0800D9
+			public const int labelGroup = 2131230937;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int left = 2131230939;
+			public const int largeLabel = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int leftToRight = 2131230940;
+			public const int layout = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int line1 = 2131230941;
+			public const int left = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int line3 = 2131230942;
+			public const int leftToRight = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int linear = 2131230943;
+			public const int line1 = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int listMode = 2131230944;
+			public const int line3 = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int list_item = 2131230945;
+			public const int linear = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int log_out = 2131230946;
+			public const int listMode = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int log_out_button = 2131230947;
+			public const int list_item = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
 			public const int main_appbar = 2131230948;

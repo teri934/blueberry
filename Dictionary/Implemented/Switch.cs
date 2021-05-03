@@ -22,6 +22,5 @@ namespace Dictionary.Implemented
 
 			((MainActivity)CrossCurrentActivity.Current.Activity).RestartApp();
 		}
-
 	}
 }

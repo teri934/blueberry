@@ -6,6 +6,7 @@ using System;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary.Implemented;
+using Dictionary;
 
 namespace Dictionary.Fragments
 {
@@ -32,7 +33,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Recordings_Click(object sender, EventArgs e)
+		private void Recordings_Click(object sender, EventArgs e)
 		{
 			Recordings();
 		}
@@ -42,7 +43,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Settings_Click(object sender, EventArgs e)
+		private void Settings_Click(object sender, EventArgs e)
 		{
 			Settings();
 		}
@@ -52,7 +53,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Quizes_Click(object sender, EventArgs e)
+		private void Quizes_Click(object sender, EventArgs e)
 		{
 			Quizes();
 		}
@@ -107,7 +108,7 @@ namespace Dictionary.Fragments
 		/// setting the design and functionality of the search window
 		/// in the dictionary part of the app
 		/// </summary>
-		void SetUpSearchView()
+		private void SetUpSearchView()
 		{
 			mySearchView.SetIconifiedByDefault(false);
 			mySearchView.SetOnQueryTextListener(new SearchViewListener());
@@ -125,6 +126,9 @@ namespace Dictionary.Fragments
 		{
 			View view = inflater.Inflate(Dictionary.Resource.Layout.content_settings, container, false);
 
+			ImageButton generate_button = (ImageButton)view.FindViewById(Dictionary.Resource.Id.generate_file_button);
+			generate_button.Click += Generate_button_Click;
+
 			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
 			if (Preferences.Get("dark", false))
@@ -133,6 +137,11 @@ namespace Dictionary.Fragments
 			themeSwitch.SetOnCheckedChangeListener(new CompoundListener());
 
 			return view;
+		}
+
+		private void Generate_button_Click(object sender, EventArgs e)
+		{
+			DatabaseFileManager.Generate();
 		}
 	}
 
@@ -156,7 +165,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Start_Click(object sender, EventArgs e)
+		private void Start_Click(object sender, EventArgs e)
 		{
 			Game.round++;
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
@@ -170,7 +179,7 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Scores_Click(object sender, EventArgs e)
+		private void Scores_Click(object sender, EventArgs e)
 		{
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Replace(Dictionary.Resource.Id.place_holder, new ScoresFragment());
