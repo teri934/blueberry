@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using SQLite;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Dictionary.Database
 {

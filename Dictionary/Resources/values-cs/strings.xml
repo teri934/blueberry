@@ -2,6 +2,7 @@
     <string name="welcome">Vítej zpět!</string>
     <string name="darkMode">Noční režim</string>
     <string name="generate_file">Vygeneruj a stáhni si výsledky</string>
+    <string name="synchronize">Synchronizuj si svoje výsledky ze složky pro stahování</string>
     <string name="back">Zpět</string>
   
     <string name="english">Angličtina</string>

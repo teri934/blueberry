@@ -6,7 +6,10 @@ using System;
 using Xamarin.Essentials;
 using Plugin.CurrentActivity;
 using Dictionary.Implemented;
-using Dictionary;
+using Dictionary.Database;
+using System.IO;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Dictionary.Fragments
 {
@@ -129,6 +132,9 @@ namespace Dictionary.Fragments
 			ImageButton generate_button = (ImageButton)view.FindViewById(Dictionary.Resource.Id.generate_file_button);
 			generate_button.Click += Generate_button_Click;
 
+			ImageButton synchronize_button = (ImageButton)view.FindViewById(Dictionary.Resource.Id.synchronize_button);
+			synchronize_button.Click += Synchronize_button_Click;
+
 			//switch button functionality
 			Switch themeSwitch = (Switch)view.FindViewById(Dictionary.Resource.Id.modeSwitch);
 			if (Preferences.Get("dark", false))
@@ -139,9 +145,24 @@ namespace Dictionary.Fragments
 			return view;
 		}
 
+
+		private void Synchronize_button_Click(object sender, EventArgs e)
+		{
+			//TODO substitute for downloads folder
+			string basePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+			string path = Path.Combine(basePath, "results.xml");
+
+			List<Database.Result> list;
+			if (File.Exists(path))
+			{
+				list = DatabaseFileManager.Deserialize(path);
+				DatabaseFileManager.Synchronize(list);
+			}
+		}
+
 		private void Generate_button_Click(object sender, EventArgs e)
 		{
-			DatabaseFileManager.Generate();
+			DatabaseFileManager.GetDatabaseToDownloads();
 		}
 	}
 

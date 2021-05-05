@@ -1,9 +1,11 @@
 ﻿using SQLite;
 using System;
+using System.Xml.Serialization;
 
 namespace Dictionary.Database
 {
-	class Result : Java.Lang.Object
+	[XmlType("result")]
+	public class Result : Java.Lang.Object
 	{
 		[PrimaryKey, AutoIncrement]
 		public int ID { get; set; }

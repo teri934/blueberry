@@ -69,7 +69,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseFileManager.cs" />
+    <Compile Include="Database\DatabaseFileManager.cs" />
     <Compile Include="Database\ResultsDatabase.cs" />
     <Compile Include="Database\Result.cs" />
     <Compile Include="Database\Constants.cs" />

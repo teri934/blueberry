@@ -179,13 +179,14 @@ namespace Dictionary.Fragments
 			TextView overall = (TextView)view.FindViewById(Dictionary.Resource.Id.overall_score);
 			overall.Text = $"{MainActivity.GetLocalString("@string/overall_score")} {Game.overallScore}/{Game.numberRounds}";
 			overall.SetTextColor(color);
-			Game.overallScore = 0;
 
 			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
 			ResultsDatabase database = (ResultsDatabase)activity.GetType().GetField("database", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(activity);
 
 			var result = new Database.Result() {Score = Game.overallScore, Rounds = Game.numberRounds, date = DateTime.Now};
 			Task.Run(() => database.SaveResultAsync(result)).GetAwaiter();
+
+			Game.overallScore = 0;
 
 			return view;
 		}
