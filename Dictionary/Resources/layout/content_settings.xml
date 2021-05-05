@@ -108,7 +108,7 @@
                 android:layout_margin="@dimen/button_extra"
                 android:padding="@dimen/button_extra"
                 android:layout_centerHorizontal="true" 
-                android:src="@drawable/download"
+                android:src="@drawable/sync"
                 android:background="@drawable/ripple"/>
 
         </LinearLayout>

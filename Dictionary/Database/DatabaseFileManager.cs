@@ -86,10 +86,10 @@ namespace Dictionary.Database
             Task.Run(() => ResultsDatabase.Database.DropTableAsync<Result>()).GetAwaiter();  
             Task.Run(() => ResultsDatabase.Database.CreateTableAsync<Result>()).GetAwaiter();
 
-            //insert the list records
+            //TODO insert the list records
         }
 
-        private static async Task<List<Database.Result>> GetDatabaseResults()
+        private static async Task<List<Result>> GetDatabaseResults()
 		{
             MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
             ResultsDatabase database = (ResultsDatabase)activity.GetType().GetField("database", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(activity);
