@@ -47,5 +47,16 @@ namespace Dictionary.Database
         {
             return await Database .DeleteAsync(item);
         }
+
+        public async Task<int> FillTableAsync(List<Result> list)
+        {
+            return await Database.InsertAllAsync(list);
+        }
+
+        public async Task<CreateTableResult> DeleteTableAsync()
+        {
+            await Database.DropTableAsync<Result>();
+            return await Database.CreateTableAsync<Result>();
+        }
     }
 }

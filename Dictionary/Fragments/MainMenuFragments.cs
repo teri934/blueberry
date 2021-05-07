@@ -145,7 +145,11 @@ namespace Dictionary.Fragments
 			return view;
 		}
 
-
+		/// <summary>
+		/// checks file in downloads folder, deserializes it and updates the database table
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void Synchronize_button_Click(object sender, EventArgs e)
 		{
 			//TODO substitute for downloads folder

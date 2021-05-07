@@ -6,6 +6,7 @@ using PP = Plugin.Permissions.Abstractions;
 using Plugin.Permissions;
 using Plugin.CurrentActivity;
 using Xamarin.Forms;
+using SQLitePCL;
 
 namespace Dictionary.Database
 {
@@ -14,12 +15,16 @@ namespace Dictionary.Database
         const string message = "In order to save and extract your results the permission for storage access is needed.";
         const string results_list = "results_list";
 
+        /// <summary>
+        /// serializes the database and copies it to Downloads folder
+        /// </summary>
         public static void GetDatabaseToDownloads()
 		{
             string basePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string path = Path.Combine(basePath, "results.xml");
 
-            var list = Task.Run(() => GetDatabaseResults()).GetAwaiter().GetResult();
+            ResultsDatabase database = GetInstanceDatabase();
+            var list = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
             Serialize(path, list);
 
             //TODO copy file to downloads
@@ -76,34 +81,21 @@ namespace Dictionary.Database
             return list;
         }
 
-        /// <summary>
-        /// checks file in downloads folder, deserializes it and updates the database table
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public static void Synchronize(List<Result> list)
-		{
-            Task.Run(() => ResultsDatabase.Database.DropTableAsync<Result>()).GetAwaiter();  
-            Task.Run(() => ResultsDatabase.Database.CreateTableAsync<Result>()).GetAwaiter();
+        public static async void Synchronize(List<Result> list)
+        {
+            ResultsDatabase database = GetInstanceDatabase();
 
-            //TODO insert the list records
-        }
+            await database.DeleteTableAsync();  
 
-        private static async Task<List<Result>> GetDatabaseResults()
+			await database.FillTableAsync(list);
+		}
+
+        private static ResultsDatabase GetInstanceDatabase()
 		{
             MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
             ResultsDatabase database = (ResultsDatabase)activity.GetType().GetField("database", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).GetValue(activity);
 
-            return await database.GetResultsAsync();
+            return database;
         }
-
-        //        using (var reader = new StreamReader(path))
-        //        {
-        //            string line;
-        //            while ((line = reader.ReadLine()) != null)
-        //{
-        //                Console.WriteLine();
-        //}
-        //        }
     }
 }
