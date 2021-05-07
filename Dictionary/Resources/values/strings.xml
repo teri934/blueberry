@@ -30,6 +30,7 @@
 
     <string name="score_name">Score</string>
     <string name="rounds_name">Rounds</string>
+    <string name="date_name">Date</string>
 
   
     <string name="change_language">Change language</string>

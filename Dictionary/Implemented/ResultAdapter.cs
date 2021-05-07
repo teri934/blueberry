@@ -2,6 +2,7 @@
 using Android.Views;
 using Android.Widget;
 using DD = Dictionary.Database;
+using System;
 
 namespace Dictionary.Implemented
 {
@@ -34,6 +35,10 @@ namespace Dictionary.Implemented
 
 			TextView rounds = (TextView)v.FindViewById(Dictionary.Resource.Id.rounds);
 			rounds.Text = data[position].Rounds.ToString();
+
+			TextView date = (TextView)v.FindViewById(Dictionary.Resource.Id.date);
+			DateTime d = data[position].date;
+			date.Text = $"{d.Day}.{d.Month}.";
 
 			return v;
 		}

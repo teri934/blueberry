@@ -33,4 +33,4 @@ Target platform
 
 The application will be written in Xamarin using C# for programming part and XML files
 will contain the GUI and design part. The result of this endeavour will be available
-for Android users targeting the version Pie 9.0 and above. Further support for iOS is possible in the future.
+for Android users. Further support for iOS is possible in the future.
