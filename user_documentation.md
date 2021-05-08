@@ -5,11 +5,6 @@
 
 !blueberry is a an application which is primarily used to help people (beginners) learn foreign language. The default language of !blueberry is English but there is support for Slovak and Czech when it comes to language settings on the phone. For now, the available language is English. The orientation in the app is pretty straightforward but some of the app's highlight will be discussed below. 
 
-## Installation  
-
-?????????????????????????????????
-
-
 ## Features  
 
 ### Main Menu
@@ -40,7 +35,7 @@ How it looks like when the user is taking a quiz.
 
 ## Access old data on new phone
 
-The generated file database.xml (see Settings) is stored in Downloads folder. You need to transfer the file to your new phone. Then when it is in Downloads folder the old data can be accessed and seen in My Scores.
+The generated file database.xml (see Settings "Generate and download results" button) is stored in Downloads folder. You need to transfer the file to your new phone. Then when it is in Downloads folder the old data can be accessed and seen in My Scores (see Settings "Synchronize your results" button). Then don't forget to remove the file Downloads folder because when clicking the button later again your new progress will be lost!
 
 ## Common problems  
 
