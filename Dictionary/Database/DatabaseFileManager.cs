@@ -18,17 +18,17 @@ namespace Dictionary.Database
         /// <summary>
         /// serializes the database and copies it to Downloads folder
         /// </summary>
-        public static void GetDatabaseToDownloads()
+        public static async void GetDatabaseToDownloads()
 		{
             string basePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string path = Path.Combine(basePath, "results.xml");
 
             ResultsDatabase database = GetInstanceDatabase();
-            var list = Task.Run(() => database.GetResultsAsync()).GetAwaiter().GetResult();
+            var list = await database.GetResultsAsync();
             Serialize(path, list);
 
             //TODO copy file to downloads
-            Task.Run(() => CheckPermission()).GetAwaiter().GetResult();
+            await CheckPermission();
         }
 
         private static async Task<bool> CheckPermission()
