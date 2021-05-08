@@ -1,1 +1,2 @@
-add local database 
+maybe add more functionalities to the database
+solve the problem with the access to the phone storage
