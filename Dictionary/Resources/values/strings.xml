@@ -3,7 +3,7 @@
     <string name="empty"></string>
     <string name="darkMode">Dark mode</string>
     <string name="generate_file">Generate and download results</string>
-    <string name="synchronize">Synchronize your results from Downloads folder</string>
+    <string name="synchronize">Synchronize your results</string>
     <string name="back">Back</string>
   
     <string name="english">English</string>
