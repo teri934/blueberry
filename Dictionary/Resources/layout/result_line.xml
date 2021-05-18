@@ -10,6 +10,7 @@
         android:paddingTop="@dimen/border"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:minHeight="40dp"
         android:layout_centerInParent="true" >
 
         <TextView

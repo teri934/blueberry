@@ -4,6 +4,8 @@
     <string name="generate_file">Vygeneruj a stáhni si výsledky</string>
     <string name="synchronize">Synchronizuj si svoje výsledky</string>
     <string name="back">Zpět</string>
+    <string name="toast_sync">Tvé výsledky jsou teď aktuální!</string>
+    <string name="toast_generate">Tvé aktuální výsledky jsou teď dostupné!</string>
   
     <string name="english">Angličtina</string>
     <string name="toast_language">Tento jazyk již používáš</string>

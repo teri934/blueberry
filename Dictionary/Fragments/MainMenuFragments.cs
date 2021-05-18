@@ -162,11 +162,14 @@ namespace Dictionary.Fragments
 				list = DatabaseFileManager.Deserialize(path);
 				DatabaseFileManager.Synchronize(list);
 			}
+
+			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_sync"), ToastLength.Short).Show();
 		}
 
 		private void Generate_button_Click(object sender, EventArgs e)
 		{
 			DatabaseFileManager.GetDatabaseToDownloads();
+			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_generate"), ToastLength.Short).Show();
 		}
 	}
 

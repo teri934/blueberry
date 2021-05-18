@@ -5,6 +5,8 @@
     <string name="generate_file">Generate and download results</string>
     <string name="synchronize">Synchronize your results</string>
     <string name="back">Back</string>
+    <string name="toast_sync">Your results are up-to-date!</string>
+    <string name="toast_generate">Your current results are now available!</string>
   
     <string name="english">English</string>
     <string name="toast_language">This language is already set</string>
