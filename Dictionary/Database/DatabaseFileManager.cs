@@ -6,6 +6,8 @@ using PP = Plugin.Permissions.Abstractions;
 using Plugin.Permissions;
 using Plugin.CurrentActivity;
 using Xamarin.Forms;
+using Android.Widget;
+using Android.Content;
 using SQLitePCL;
 
 namespace Dictionary.Database
@@ -14,21 +16,30 @@ namespace Dictionary.Database
 	{
         const string message = "In order to save and extract your results the permission for storage access is needed.";
         const string results_list = "results_list";
+        public const string xml_file = "blueberry_results.xml";
 
-        /// <summary>
-        /// serializes the database and copies it to Downloads folder
-        /// </summary>
-        public static async void GetDatabaseToDownloads()
+		/// <summary>
+		/// serializes the database and copies it to Downloads folder
+		/// </summary>
+		public static async void GetDatabaseToDownloads()
 		{
             string basePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string path = Path.Combine(basePath, "results.xml");
+            string path = Path.Combine(basePath, xml_file);
 
             ResultsDatabase database = GetInstanceDatabase();
             var list = await database.GetResultsAsync();
             Serialize(path, list);
 
-            //TODO copy file to downloads
-            await CheckPermission();
+            bool value = await CheckPermission();
+
+            if(value)
+			{
+				var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
+                string destinationPath = folder.Path;
+                File.Copy(path, destinationPath);
+
+                Toast.MakeText(Android.App.Application.Context, MainActivity.GetLocalString("@string/toast_generate"), ToastLength.Short).Show();
+            }
         }
 
         private static async Task<bool> CheckPermission()
@@ -46,14 +57,6 @@ namespace Dictionary.Database
 
             if (status == PP.PermissionStatus.Granted)
             {
-                //Context context = CrossCurrentActivity.Current.AppContext;
-                //var folder2 = context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads);
-                //var ffff = await folder2.ListFilesAsync();
-
-                //var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
-                //var files = await folder.ListFilesAsync();
-                //var f = Directory.GetFiles(folder.AbsolutePath);
-
                 return true;
             }
 

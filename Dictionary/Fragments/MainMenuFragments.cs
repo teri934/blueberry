@@ -152,24 +152,25 @@ namespace Dictionary.Fragments
 		/// <param name="e"></param>
 		private void Synchronize_button_Click(object sender, EventArgs e)
 		{
-			//TODO substitute for downloads folder
-			string basePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-			string path = Path.Combine(basePath, "results.xml");
+			var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
+			string path = Path.Combine(folder.Path, DatabaseFileManager.xml_file);
 
 			List<Database.Result> list;
 			if (File.Exists(path))
 			{
 				list = DatabaseFileManager.Deserialize(path);
 				DatabaseFileManager.Synchronize(list);
-			}
 
-			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_sync"), ToastLength.Short).Show();
+				string personalPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+				File.Copy(path, personalPath, true);
+
+				Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_sync"), ToastLength.Short).Show();
+			}
 		}
 
 		private void Generate_button_Click(object sender, EventArgs e)
 		{
 			DatabaseFileManager.GetDatabaseToDownloads();
-			Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_generate"), ToastLength.Short).Show();
 		}
 	}
 
