@@ -15,3 +15,6 @@ This part consists mainly of the class English which task is to load the availab
 
 ### Database
 
+Conceptually this is the part which is responsible for accessing the local database which is represented by Result class. ResultsDatabase class implements methods that work directly with the database, e.g. adding an element, removing it etc. 
+The most complex class is DatabaseFileManager where serialization of the database and its deserialization from a file is implemented. There is a runtime check for accessing the storage data from the user (method CheckPermission). Then the file is copied tom Downloads folder (either in internal or external storage) and from there it can be accessed by the app in a new or an old phone. 
+
