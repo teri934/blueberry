@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 using Android.App;
 using Plugin.CurrentActivity;
@@ -28,6 +27,10 @@ namespace Dictionary
         Languages language;
         const string white = "#FFFFFF";
         const string black = "#000000";
+        public const string nothing = "nothing";
+        public const string dialog = "dialog";
+        public const string game = "game";
+        public const string dark = "dark";
         ResultsDatabase database;
         public List<Word> Dictionary { get; private set;}
         protected override void OnCreate(Bundle savedInstanceState)
@@ -36,7 +39,7 @@ namespace Dictionary
             Platform.Init(this, savedInstanceState);
 
             bool dark;
-            Preferences.Set("dialog", "nothing");
+            Preferences.Set(dialog, nothing);
 
 			//Preferences used here to remember if the app was
             //in a day or night mode before closing
@@ -137,9 +140,9 @@ namespace Dictionary
                 ft.Commit();
                 base.OnBackPressed();
             }
-            else if(Preferences.Get("dialog", "nothing") == "game" || Preferences.Get("dialog", "nothing") == "login")  //dialog window is already open
+            else if(Preferences.Get(dialog, nothing) == game)  //dialog window is already open
 			{
-                Preferences.Set("dialog", "nothing");
+                Preferences.Set(dialog, nothing);
                 base.OnBackPressed();
 			}
             else if(Game.round >= 1 && Game.round <= Game.numberRounds)  //quiz is in the process

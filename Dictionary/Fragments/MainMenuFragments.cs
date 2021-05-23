@@ -152,6 +152,9 @@ namespace Dictionary.Fragments
 		/// <param name="e"></param>
 		private void Synchronize_button_Click(object sender, EventArgs e)
 		{
+			#pragma warning disable 618
+			//the file should be stored in a public directory for user's convenience
+			//other way it would be stored in app's folder which would be removed after uninstalling the app
 			var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
 			string path = Path.Combine(folder.Path, DatabaseFileManager.xml_file);
 

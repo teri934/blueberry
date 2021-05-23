@@ -34,9 +34,12 @@ namespace Dictionary.Database
 
             if(value)
 			{
-				var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
+                #pragma warning disable 618
+                //the file should be stored in a public directory for user's convenience
+                //other way it would be stored in app's folder which would be removed after uninstalling the app
+                var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
                 string destinationPath = folder.Path;
-                File.Copy(path, destinationPath);
+                File.Copy(path, destinationPath, true);
 
                 Toast.MakeText(Android.App.Application.Context, MainActivity.GetLocalString("@string/toast_generate"), ToastLength.Short).Show();
             }

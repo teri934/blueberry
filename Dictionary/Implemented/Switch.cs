@@ -16,9 +16,9 @@ namespace Dictionary.Implemented
 		public void OnCheckedChanged(CompoundButton buttonView, bool isChecked)
 		{
 			if (isChecked)
-				Preferences.Set("dark", true);
+				Preferences.Set(MainActivity.dark, true);
 			else
-				Preferences.Set("dark", false);
+				Preferences.Set(MainActivity.dark, false);
 
 			((MainActivity)CrossCurrentActivity.Current.Activity).RestartApp();
 		}

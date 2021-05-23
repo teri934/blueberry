@@ -38,7 +38,7 @@ namespace Dictionary.Fragments
 			Dismiss();
 			MainActivity activity = (MainActivity)CrossCurrentActivity.Current.Activity;
 			GameFragment fragment = (GameFragment)FragmentManager.FindFragmentByTag("GameFragment");
-			Preferences.Set("dialog", "game");  //important
+			Preferences.Set(MainActivity.dialog, MainActivity.game);  //important
 
 			Android.Support.V4.App.FragmentTransaction ft = FragmentManager.BeginTransaction();
 			ft.Remove(fragment);

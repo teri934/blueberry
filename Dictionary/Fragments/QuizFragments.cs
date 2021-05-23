@@ -3,7 +3,6 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.Media;
 using Android.Graphics;
@@ -91,7 +90,7 @@ namespace Dictionary.Fragments
 			if (input.Text.ToLower() == activity.Dictionary[Game.indexAudio].Translation)
 			{
 				Color color;
-				if (Preferences.Get("dark", false))
+				if (Preferences.Get(MainActivity.dark, false))
 					color = Color.LawnGreen;
 				else
 					color = Color.DarkGreen;
@@ -148,7 +147,7 @@ namespace Dictionary.Fragments
 	struct Game
 	{
 		internal static int round = 0;
-		internal const int numberRounds = 2;
+		internal const int numberRounds = 10;
 		internal static int indexAudio = 0;
 		internal static int overallScore = 0;
 	}
@@ -171,7 +170,7 @@ namespace Dictionary.Fragments
 			Game.round = 0;
 
 			Color color;
-			if (Preferences.Get("dark", false))
+			if (Preferences.Get(MainActivity.dark, false))
 				color = Color.LightSkyBlue;
 			else
 				color = Color.RoyalBlue;
