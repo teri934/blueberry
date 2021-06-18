@@ -6,6 +6,7 @@
     <string name="back">Zpět</string>
     <string name="toast_sync">Tvé výsledky jsou teď aktuální!</string>
     <string name="toast_generate">Tvé aktuální výsledky jsou teď dostupné!</string>
+    <string name="toast_missing">Pravděpodobne budeš muset použít SD kartu, aby bylo možné generovat a synchronizovat tvé výsledky.</string>
   
     <string name="english">Angličtina</string>
     <string name="toast_language">Tento jazyk již používáš</string>

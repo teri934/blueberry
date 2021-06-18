@@ -7,6 +7,7 @@
     <string name="back">Back</string>
     <string name="toast_sync">Your results are up-to-date!</string>
     <string name="toast_generate">Your current results are now available!</string>
+    <string name="toast_missing">You will probably need to insert SD card to generate and sync your results.</string>
   
     <string name="english">English</string>
     <string name="toast_language">This language is already set</string>
