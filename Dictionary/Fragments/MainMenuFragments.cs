@@ -9,7 +9,6 @@ using Dictionary.Implemented;
 using Dictionary.Database;
 using System.IO;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Dictionary.Fragments
 {
@@ -150,24 +149,29 @@ namespace Dictionary.Fragments
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void Synchronize_button_Click(object sender, EventArgs e)
+		private async void Synchronize_button_Click(object sender, EventArgs e)
 		{
-			#pragma warning disable 618
-			//the file should be stored in a public directory for user's convenience
-			//other way it would be stored in app's folder which would be removed after uninstalling the app
-			var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
-			string path = Path.Combine(folder.Path, DatabaseFileManager.xml_file);
+			bool value = await DatabaseFileManager.CheckPermission();
 
-			List<Database.Result> list;
-			if (File.Exists(path))
+			if(value)
 			{
-				list = DatabaseFileManager.Deserialize(path);
-				DatabaseFileManager.Synchronize(list);
+				#pragma warning disable 618
+				//the file should be stored in a public directory for user's convenience
+				//other way it would be stored in app's folder which would be removed after uninstalling the app
+				var folder = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
+				string path = Path.Combine(folder.Path, DatabaseFileManager.xml_file);
 
-				string personalPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-				File.Copy(path, personalPath, true);
+				List<Database.Result> list;
+				if (File.Exists(path))
+				{
+					list = DatabaseFileManager.Deserialize(path);
+					DatabaseFileManager.Synchronize(list);
 
-				Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_sync"), ToastLength.Short).Show();
+					string personalPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+					File.Copy(path, personalPath, true);
+
+					Toast.MakeText(Application.Context, MainActivity.GetLocalString("@string/toast_sync"), ToastLength.Short).Show();
+				}
 			}
 		}
 

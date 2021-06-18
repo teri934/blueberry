@@ -45,7 +45,7 @@ namespace Dictionary.Database
             }
         }
 
-        private static async Task<bool> CheckPermission()
+        public static async Task<bool> CheckPermission()
         {
             var status = await CrossPermissions.Current.CheckPermissionStatusAsync<StoragePermission>();
             if (status != PP.PermissionStatus.Granted)
