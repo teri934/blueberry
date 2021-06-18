@@ -40,4 +40,4 @@ The generated file database.xml (see Settings "Generate and download results" bu
 ## Common problems  
 
 When accesing  the old data in your Downloads folder you need to check both your internal or external storage (when you have inserted SD card) and then move the file to both of them to be sure. It depends on the configuration of the phone manufacturer so in some more complicated situations you will need to have inserted SD card.
-Another point important to mention is the fact that when you don't allow !blueberry to access your storage then you will need to do it later manually in the settings.
+Another important point to mention is the fact that when you don't allow !blueberry to access your storage then you will need to do it later manually in the settings.
