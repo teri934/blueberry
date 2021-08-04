@@ -3,13 +3,13 @@
 
 ## Usage
 
-!blueberry is a an application which is primarily used to help people (beginners) learn foreign language. The default language of !blueberry is English but there is support for Slovak and Czech when it comes to language settings on the phone. For now, the available language is English. The orientation in the app is pretty straightforward but some of the app's highlight will be discussed below. 
+!blueberry is a an application which is primarily used to help people (beginners) to learn foreign language. The default language of !blueberry is English but there is support for Slovak and Czech when it comes to language settings on the phone. For now, the available language is English. The orientation in the app is pretty straightforward but some of the app's highlight will be discussed below. 
 
 ## Features  
 
 ### Main Menu
 
-* Quizes contain results of previous taken quizes (can be seen when connected to the Internet) and the user has the possibility to start a new quiz.
+* Quizes contain results of previous taken quizes and the user has the possibility to start a new quiz.
 * Dictionary contains some words in the foreign language, their translations and recordings of them.
 * Settings provide the possibility to generate XML file with stored quiz results or change the theme (light/dark mode).
 
